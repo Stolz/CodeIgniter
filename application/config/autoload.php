@@ -54,6 +54,8 @@ $autoload['packages'] = array();
 
 $autoload['libraries'] = array();
 
+if(ENVIRONMENT == 'development')
+	$autoload['libraries'][] = 'firephp';
 
 /*
 | -------------------------------------------------------------------
@@ -73,7 +75,7 @@ $autoload['helper'] = array();
 | -------------------------------------------------------------------
 | Prototype:
 |
-|	$autoload['config'] = array('config1', 'config2');
+|	$autoload['config'] = array(config1', 'config2');
 |
 | NOTE: This item is intended for use ONLY if you have created custom
 | config files.  Otherwise, leave it blank.
@@ -81,6 +83,9 @@ $autoload['helper'] = array();
 */
 
 $autoload['config'] = array();
+
+if(ENVIRONMENT == 'development')
+	$autoload['config'][] = 'htmltidy';
 
 
 /*
