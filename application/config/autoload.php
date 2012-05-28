@@ -73,7 +73,7 @@ $autoload['helper'] = array();
 | -------------------------------------------------------------------
 | Prototype:
 |
-|	$autoload['config'] = array('config1', 'config2');
+|	$autoload['config'] = array('htmltidy', 'config1', 'config2');
 |
 | NOTE: This item is intended for use ONLY if you have created custom
 | config files.  Otherwise, leave it blank.

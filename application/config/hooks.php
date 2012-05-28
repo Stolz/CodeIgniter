@@ -10,6 +10,12 @@
 |
 */
 
+/* HTML Tidy hook */
+$hook['display_override'][] = array(
+	'function' => 'clean',
+	'filename' => 'tidy.php',
+	'filepath' => 'hooks'
+);
 
 
 /* End of file hooks.php */
