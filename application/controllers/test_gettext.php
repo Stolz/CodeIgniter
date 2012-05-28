@@ -5,7 +5,7 @@ class Test_gettext extends CI_Controller {
 	/**
 	 * Controller to test gettext installation
 	 */
-	public function index($lang)
+	public function index($lang = 'es_ES')
 	{
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
 
