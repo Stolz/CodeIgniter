@@ -45,25 +45,34 @@
 | the active record class
 */
 
-$active_group = 'default';
+$active_group = ENVIRONMENT;
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
-$db['default']['dbdriver'] = 'mysql';
-$db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = TRUE;
-$db['default']['db_debug'] = TRUE;
-$db['default']['cache_on'] = FALSE;
-$db['default']['cachedir'] = '';
-$db['default']['char_set'] = 'utf8';
-$db['default']['dbcollat'] = 'utf8_general_ci';
-$db['default']['swap_pre'] = '';
-$db['default']['autoinit'] = TRUE;
-$db['default']['stricton'] = FALSE;
+//Production
+$db['production']['hostname'] = 'localhost';
+$db['production']['username'] = 'ci';
+$db['production']['password'] = 'to-do set your db passw';
+$db['production']['database'] = 'ci';
+$db['production']['dbdriver'] = 'mysqli'; //Set to 'mysql' if your PHP package is compiled without mysqli support
+$db['production']['dbprefix'] = '';
+$db['production']['pconnect'] = TRUE;
+$db['production']['db_debug'] = FALSE;
+$db['production']['cache_on'] = FALSE;
+$db['production']['cachedir'] = '';
+$db['production']['char_set'] = 'utf8';
+$db['production']['dbcollat'] = 'utf8_general_ci';
+$db['production']['swap_pre'] = '';
+$db['production']['autoinit'] = TRUE;
+$db['production']['stricton'] = FALSE;
 
+//Testing
+$db['testing'] = $db['production'];
+$db['testing']['db_debug'] = TRUE;
+
+//Development
+$db['development'] = $db['production'];
+$db['development']['db_debug'] = TRUE;
+$db['development']['stricton'] = TRUE;
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */
