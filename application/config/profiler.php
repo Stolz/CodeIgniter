@@ -11,16 +11,16 @@
 |
 */
 
-// $config['get']				= FALSE;
-// $config['memory_usage']		= FALSE;
-// $config['uri_string']		= FALSE;
-// $config['http_headers']		= FALSE;
-// $config['config']			= FALSE;
-// $config['benchmarks']		= FALSE;
-// $config['controller_info']	= FALSE;
-$config['post']				= FALSE;
-$config['queries']			= FALSE;
-$config['session_data']		= FALSE;
+$config['get']				= FALSE;
+$config['memory_usage']		= FALSE;
+$config['uri_string']		= FALSE;
+$config['http_headers']		= FALSE;
+$config['config']			= FALSE;
+$config['benchmarks']		= FALSE;
+$config['controller_info']	= FALSE;
+// $config['post']				= FALSE;
+// $config['queries']			= FALSE;
+// $config['session_data']		= FALSE;
 
 /* End of file profiler.php */
 /* Location: ./application/config/profiler.php */

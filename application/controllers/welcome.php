@@ -19,7 +19,12 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$data = array(
+			'title'	=> 'Welcome to CodeIgniter!',
+			'views'	=> array('welcome_message')
+		);
+
+		$this->load->view('template',$data);
 	}
 }
 
