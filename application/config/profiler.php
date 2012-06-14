@@ -11,6 +11,8 @@
 |
 */
 
+//Uncomment a seccion to enable it
+
 $config['get']				= FALSE;
 $config['memory_usage']		= FALSE;
 $config['uri_string']		= FALSE;
