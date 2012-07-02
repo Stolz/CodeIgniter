@@ -11,7 +11,7 @@
  * Copyright 2012, The Dojo Foundation
  * Released under the MIT, BSD, and GPL Licenses.
  *
- * Date: Fri Jun 29 2012 13:07:33 GMT+0200 (CEST)
+ * Date: Mon Jul 02 2012 10:14:15 GMT+0200 (CEST)
  */
 (function( window, undefined ) {
 var
@@ -804,27 +804,6 @@ jQuery.extend({
 
 	now: function() {
 		return ( new Date() ).getTime();
-	},
-
-	sub: function() {
-		function jQuerySub( selector, context ) {
-			return new jQuerySub.fn.init( selector, context );
-		}
-		jQuery.extend( true, jQuerySub, this );
-		jQuerySub.superclass = this;
-		jQuerySub.fn = jQuerySub.prototype = this();
-		jQuerySub.fn.constructor = jQuerySub;
-		jQuerySub.sub = this.sub;
-		jQuerySub.fn.init = function init( selector, context ) {
-			if ( context && context instanceof jQuery && !(context instanceof jQuerySub) ) {
-				context = jQuerySub( context );
-			}
-
-			return jQuery.fn.init.call( this, selector, context, rootjQuerySub );
-		};
-		jQuerySub.fn.init.prototype = jQuerySub.fn;
-		var rootjQuerySub = jQuerySub(document);
-		return jQuerySub;
 	}
 });
 
@@ -6284,6 +6263,27 @@ if ( browser.webkit ) {
 
 jQuery.browser = browser;
 
+jQuery.sub = function() {
+	function jQuerySub( selector, context ) {
+		return new jQuerySub.fn.init( selector, context );
+	}
+	jQuery.extend( true, jQuerySub, this );
+	jQuerySub.superclass = this;
+	jQuerySub.fn = jQuerySub.prototype = this();
+	jQuerySub.fn.constructor = jQuerySub;
+	jQuerySub.sub = this.sub;
+	jQuerySub.fn.init = function init( selector, context ) {
+		if ( context && context instanceof jQuery && !(context instanceof jQuerySub) ) {
+			context = jQuerySub( context );
+		}
+
+		return jQuery.fn.init.call( this, selector, context, rootjQuerySub );
+	};
+	jQuerySub.fn.init.prototype = jQuerySub.fn;
+	var rootjQuerySub = jQuerySub(document);
+	return jQuerySub;
+};
+	
 })();
 // order is important!
 jQuery.cssExpand = [ "Top", "Right", "Bottom", "Left" ];
