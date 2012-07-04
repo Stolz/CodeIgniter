@@ -244,7 +244,7 @@ $config['encryption_key'] = 'to-do set a new key for every new project';
 | 'sess_time_to_update'		= how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_cookie_name']		= 'cisession'; //To avoid problems with some browsers don't use underscores in sess_cookie_name
+$config['sess_cookie_name']		= 'cisession'; //to-do if you reuse your webapp set to a unique value for each of them to avoid cookie stealing atacks. Also make sure to NOT USE underscores!
 $config['sess_expiration']		= 7200;
 $config['sess_expire_on_close']	= TRUE;
 $config['sess_encrypt_cookie']	= TRUE;
