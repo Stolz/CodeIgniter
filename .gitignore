@@ -9,4 +9,5 @@ application/logs/*
 !application/logs/.htaccess
 
 #Ignore editor backup files
+*~
 .*~
