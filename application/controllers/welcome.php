@@ -21,6 +21,7 @@ class Welcome extends CI_Controller {
 	{
 		$data = array(
 			'title'	=> 'Welcome to CodeIgniter!',
+			'css'	=> array('style'),
 			'views'	=> array('welcome_message')
 		);
 

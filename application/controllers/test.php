@@ -68,7 +68,7 @@ BLOCK;
 	{
 		$this->load->config('htmltidy');
 		$this->config->set_item('tidy_enabled', TRUE);
-		echo 'This page has deliberately a wrong HTML markup, you should see HTMLTidy warnings and the source code should be corrected';
+		echo '<br/><br/><br/><br/><br/>This page has deliberately a wrong HTML markup, you should see HTMLTidy warnings in the top right corner.';
 	}
 
 	public function firephp()
@@ -120,6 +120,18 @@ BLOCK;
 		);
 		$this->load->view('template',$data);
 	}
+
+	public function foundation_icons()
+	{
+		$data = array(
+			'title'	=> 'Foundation icons test page',
+			'foundation' => TRUE,
+			'css'	=> array('foundation-icons'),
+			'views'	=> array('test/foundation_icons_test_page')
+		);
+		$this->load->view('template',$data);
+	}
+
 }
 
 /* End of file test.php */

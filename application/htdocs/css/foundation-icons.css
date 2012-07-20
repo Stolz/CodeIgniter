@@ -1,0 +1,11 @@
+@import url("foundation-icons-general-enclosed/stylesheets/foundation-icons-general-enclosed.css");
+@import url("foundation-icons-general/stylesheets/foundation-icons-general.css");
+@import url("foundation-icons-social/stylesheets/foundation-icons-social.css");
+
+.glyph { cursor: default; font-size: 16px; line-height: 1; }
+.glyph.general { font-family: "FoundationIconsGeneral"; }
+.glyph.general-enclosed { font-family: "FoundationIconsGeneralEnclosed"; }
+.glyph.social { font-family: "FoundationIconsSocial"; }
+
+.demo .glyph{font-size: 50px;}
+.demo .glyph+p{text-align:center}

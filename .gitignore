@@ -11,3 +11,4 @@ application/logs/*
 #Ignore editor backup files
 *~
 .*~
+.nfs00*
