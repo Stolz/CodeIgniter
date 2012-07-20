@@ -1,5 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+//to-do borrar este controlador
+
 class Test extends CI_Controller {
 
 	public function index()
@@ -103,7 +105,18 @@ BLOCK;
 	{
 		$data = array(
 			'title'	=> 'HTML test page with almost all HTML elemens',
-			'views'	=> array('html_test_page')
+			'views'	=> array('test/html_test_page')
+		);
+		$this->load->view('template',$data);
+	}
+
+	public function foundation()
+	{
+		$this->config->set_item('tidy_enabled', FALSE);
+		$data = array(
+			'title'	=> 'Foundation CSS test page',
+			'foundation' => TRUE,
+			'views'	=> array('test/foundation_test_page')
 		);
 		$this->load->view('template',$data);
 	}
