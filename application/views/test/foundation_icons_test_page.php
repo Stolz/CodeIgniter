@@ -1,11 +1,4 @@
 <div class="row demo">
-	<div class="twelve columns panel">
-		aa
-
-	</div>
-</div>
-
-<div class="row demo">
 	<div class="four columns panel">
 		<p>&lt;span class="<span class="class">glyph general</span>"&gt;<em>letter</em>&lt;/span&gt;</p>
 		<ul class="block-grid five-up">
