@@ -2,8 +2,8 @@
 
 /** All supported providers:
 	Blooie
-	Facebook	https://facebook.com/developers
-	Foursquare	https://foursquare.com/oauth/register
+	Facebook	https://facebook.com/developers https://developers.facebook.com/apps
+	Foursquare	https://foursquare.com/oauth/register https://developer.foursquare.com/
 	Github		https://github.com/settings/applications/new
 	Google		https://code.google.com/apis/console/
 	Instagram
@@ -12,7 +12,7 @@
 	Paypal		https://devportal.x.com/paypal_auth/authenticate/login
 	Soundcloud
 	Vkontakte
-	Windowslive
+	Windowslive	https://manage.dev.live.com
 	Yandex
 */
 
@@ -26,6 +26,23 @@ $config['providers'] = array(
 		'secret' => 'to-do-your-secret'),
 
 	'facebook' => array(
+		'id' => 'to-do-your-id',
+		'secret' => 'to-do-your-secret'),
+
+	'windowslive' => array(
+		'id' => 'to-do-your-id',
+		'secret' => 'to-do-your-secret'),
+
+	'foursquare' => array(
+		'id' => 'to-do-your-id',
+		'secret' => 'to-do-your-secret'),
+
+
+	'github' => array(
+		'id' => 'to-do-your-id',
+		'secret' => 'to-do-your-secret'),
+
+	'paypal' => array(
 		'id' => 'to-do-your-id',
 		'secret' => 'to-do-your-secret'),
 );
