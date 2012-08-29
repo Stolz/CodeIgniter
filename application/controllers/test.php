@@ -98,7 +98,8 @@ BLOCK;
 		$this->firephp->warn('Warn Message');
 		$this->firephp->error('Error Message');
 
-		echo 'If Firephp installation and Firebug settings are correct, you should be seeing see some sample messages in your Firebug console. Press F12 to toggle console.';
+		echo 'If Firephp installation and Firebug settings are correct (<a href="http://www.firephp.org/Wiki/Reference/FAQ">FAQ</a>),
+			you should see some sample messages in your Firebug console. Press F12 to toggle console.';
 	}
 
 	public function html()
