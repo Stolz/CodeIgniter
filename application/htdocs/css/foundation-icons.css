@@ -1,11 +1,18 @@
-@import url("foundation-icons-general-enclosed/stylesheets/foundation-icons-general-enclosed.css");
-@import url("foundation-icons-general/stylesheets/foundation-icons-general.css");
-@import url("foundation-icons-social/stylesheets/foundation-icons-social.css");
+@import url("foundation_icons_accessibility/stylesheets/accessibility_foundicons.css");
+@import url("foundation_icons_general_enclosed/stylesheets/general_enclosed_foundicons.css");
+@import url("foundation_icons_general/stylesheets/general_foundicons.css");
+@import url("foundation_icons_social/stylesheets/social_foundicons.css");
 
-.glyph { cursor: default; font-size: 16px; line-height: 1; }
-.glyph.general { font-family: "FoundationIconsGeneral"; }
-.glyph.general-enclosed { font-family: "FoundationIconsGeneralEnclosed"; }
-.glyph.social { font-family: "FoundationIconsSocial"; }
+/*[if lt IE 8]
+@import url("foundation_icons_accessibility/stylesheets/accessibility_foundicons_ie7.css");
+@import url("foundation_icons_general_enclosed/stylesheets/general_enclosed_foundicons_ie7.css");
+@import url("foundation_icons_general/stylesheets/general_foundicons_ie7.css");
+@import url("foundation_icons_social/stylesheets/social_foundicons_ie7.css");
+*/
 
-.demo .glyph{font-size: 50px;}
-.demo .glyph+p{text-align:center}
+[class*="accessibility foundicon-"]:before {font-family: "AccessibilityFoundicons";}
+[class*="social foundicon-"]:before {font-family: "SocialFoundicons";}
+[class*="general foundicon-"]:before {font-family: "GeneralFoundicons";}
+[class*="enclosed foundicon-"]:before {font-family: "GeneralEnclosedFoundicons";}
+
+.demo {font-size: 50px;}
