@@ -114,10 +114,21 @@ BLOCK;
 	public function foundation()
 	{
 		$this->config->set_item('tidy_enabled', FALSE);
+		$this->load->helper('url');
 		$data = array(
 			'title'	=> 'Foundation CSS test page',
 			'foundation' => TRUE,
-			'views'	=> array('test/foundation_test_page')
+			'current_url'=> current_url(),
+			'views'	=> array(
+				'test/foundation/top_bar',
+				'test/foundation/grid',
+				'test/foundation/typography',
+				'test/foundation/buttons',
+				'test/foundation/forms',
+				'test/foundation/reveal',
+				'test/foundation/orbit',
+// 				'test/foundation_test_page',
+			)
 		);
 		$this->load->view('template',$data);
 	}
