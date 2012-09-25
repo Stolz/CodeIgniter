@@ -2,12 +2,12 @@
 
 <a name="forms"></a>
 <div class="row">
-	<h1>Forms</h1>
-	<p class="text-center">All inputs will run as wide as the column that contains them so for sizing them you only need to create row/column elements inside your form. However you can also size inputs using a column sizes class, like <code>.six.</code></p>
+	<h2>Forms</h2>
+	<p>All inputs will run as wide as the column that contains them so for sizing them you only need to create grid elements (row/column) inside your form. However you can also size inputs using a column sizes class, like <code>.six.</code>, <code>.four</code>, etc.</p>
 
 	<form class="custom">
 
-		<h4>Row layouts</h4>
+		<h4>Row layouts <small>Using the grid</small></h4>
 
 		<label>This is a label.</label>
 		<input type="text" placeholder="Standard Input" />
@@ -22,24 +22,24 @@
 		</div>
 
 		<h4>Errors</h4>
-		<p>You can attach a class of <code>error</code> either to the individual elements or to the parent container:</p>
+		<p>You can attach a class of <code>.error</code> either to the individual elements or to the parent container:</p>
 
-		<div class="four columns">
+		<div class="three columns">
 			<label class="error">This is a label.</label>
 			<input type="text" class="error" placeholder="Standard Input" />
 			<small class="error">Invalid entry</small>
 		</div>
-		<div class="four columns error text-center">
-			<p><br/>&larr; Individual class | Parent class &rarr;</p>
+		<div class="six columns error text-center">
+			<p><br/>&larr; Class individually assigned | Class assigned to the parent &rarr;</p>
 		</div>
-		<div class="four columns error">
+		<div class="three columns error">
 			<label>This is a label.</label>
 			<input type="text" placeholder="Standard Input" />
 			<small>Invalid entry</small>
 		</div>
 
 		<h4>Custom fields</h4>
-		<p>Attach a class of <code>custom</code> to the form in order to have custom radio/checkbox/dropdownw</p>
+		<p>Attach a class of <code>.custom</code> to the form in order to have custom radio/checkbox/dropdown. In order to avoid potential flash (waiting for js to load and replace your default elements) you can provide extra markup. Check out he code for details.</p>
 
 		<div class="row">
 			<!--no extra markup. Can potential flash (waiting for js to load and replace your default elements)-->
@@ -149,7 +149,7 @@
 				<input type="text" />
 			</div>
 			<div class="four mobile-one columns">
-				<a href="#" class="postfix button expand">Search</a>
+				<a href="javascript:void(0)" class="postfix button expand">Search</a>
 			</div>
 			</div>
 		</div>

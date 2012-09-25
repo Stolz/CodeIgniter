@@ -124,10 +124,12 @@ BLOCK;
 				'test/foundation/grid',
 				'test/foundation/typography',
 				'test/foundation/buttons',
+				'test/foundation/elements',
+				'test/foundation/nav',
+				'test/foundation/tabs',
 				'test/foundation/forms',
 				'test/foundation/reveal',
 				'test/foundation/orbit',
-// 				'test/foundation_test_page',
 			)
 		);
 		$this->load->view('template',$data);

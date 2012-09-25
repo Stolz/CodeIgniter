@@ -46,14 +46,48 @@
 				<li class="has-dropdown ">
 					<a  href="<?=$current_url?>#buttons"><?= _('Elements') ?></a>
 					<ul class="dropdown">
-						<li><label>Buttons</label></li>
-						<li><a href="<?=$current_url?>#buttons"><?= _('Example') ?></a></li>
-						<li><a href="<?=$current_url?>#buttons_groups"><?= _('button-group') ?></a></li>
-						<li><a href="<?=$current_url?>#buttons_bar"><?= _('buttons-bar') ?></a></li>
-						<li><a href="<?=$current_url?>#buttons_even"><?= _('Evenly sized') ?></a></li>
-						<li><label>Special</label></li>
-						<li><a href="<?=$current_url?>#buttons_drop"><?= _('Dropdown/split') ?></a></li>
+						<li class="has-dropdown">
+							<a href="javascript:void(0)" class="">Buttons</a>
+							<ul class="dropdown">
+								<li><a href="<?=$current_url?>#buttons"><?= _('Basics') ?></a></li>
+								<li><a href="<?=$current_url?>#buttons_groups"><?= _('Group') ?></a></li>
+								<li><a href="<?=$current_url?>#buttons_bar"><?= _('Bar') ?></a></li>
+								<li><a href="<?=$current_url?>#buttons_even"><?= _('Evenly sized') ?></a></li>
+								<li><a href="<?=$current_url?>#buttons_drop"><?= _('Dropdown/split') ?></a></li>
+							</ul>
+						</li>
 						<li class="divider"></li>
+						<li class="has-dropdown">
+							<a href="javascript:void(0)" class="">Navigation</a>
+							<ul class="dropdown">
+								<li><a href="<?=$current_url?>#linklist"><?= _('Link list') ?></a></li>
+								<li><a href="<?=$current_url?>#subnav"><?= _('Sub nav') ?></a></li>
+								<li><a href="<?=$current_url?>#philltabs"><?= _('Phill tabs') ?></a></li>
+								<li><a href="<?=$current_url?>#verticaltabs"><?= _('Vertical tabs') ?></a></li>
+								<li><a href="<?=$current_url?>#navbar"><?= _('Horizontal bar') ?></a></li>
+								<li><a href="<?=$current_url?>#vnavbar"><?= _('Vertical bar') ?></a></li>
+								<li><a href="<?=$current_url?>#vnavbar"><?= _('Side nav') ?></a></li>
+								<li><a href="<?=$current_url?>#pagination"><?= _('Pagination') ?></a></li>
+								<li><a href="<?=$current_url?>#breadcrumbs"><?= _('Breadcrumbs') ?></a></li>
+							</ul>
+						</li>
+						<li class="divider"></li>
+						<li class="has-dropdown">
+							<a href="javascript:void(0)" class="">Bloks</a>
+							<ul class="dropdown">
+								<li><a href="<?=$current_url?>#tabs"><?= _('Tabs') ?></a></li>
+								<li><a href="<?=$current_url?>#accordion"><?= _('Accordion') ?></a></li>
+								<li><a href="<?=$current_url?>#panels"><?= _('Panels') ?></a></li>
+							</ul>
+						</li>
+						<li class="divider"></li>
+						<li><label>Misc</label></li>
+						<li><a href="<?=$current_url?>#alerts"><?= _('Alerts') ?></a></li>
+						<li><a href="<?=$current_url?>#labels"><?= _('Labels') ?></a></li>
+						<li><a href="<?=$current_url?>#tooltips"><?= _('Tooltips') ?></a></li>
+						<li><a href="<?=$current_url?>#progressbars"><?= _('Progress Bars') ?></a></li>
+						<li><a href="<?=$current_url?>#thumbnails"><?= _('Thumbnails') ?></a></li>
+						<li><a href="<?=$current_url?>#video"><?= _('Video') ?></a></li>
 					</ul>
 				</li>
 			</ul>
@@ -80,6 +114,8 @@
 						<li><a href="<?=$current_url?>#reveal"><?= _('Reveal') ?></a></li>
 						<li><label>Image slider</label></li>
 						<li><a href="<?=$current_url?>#orbit"><?= _('Orbit') ?></a></li>
+						<li><label>Media query</label></li>
+						<li><a><?= _('Press Ctr+M') ?></a></li>
 					</ul>
 				</li>
 			</ul>

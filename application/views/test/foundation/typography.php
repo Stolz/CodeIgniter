@@ -1,9 +1,7 @@
-<hr/>
-
 <a name="typography"></a>
+<hr/>
 <div class="row">
-	<h1 class="text-center">Typography</h1>
-
+	<h2>Typography</h2>
 	<h1>h1. This is a very large header.</h1>
 	<h2>h2. This is a large header.</h2>
 	<h3>h3. This is a medium header.</h3>
@@ -23,7 +21,7 @@
 
 	<hr/>
 
-	<h4>blockquote+cite</h4>
+	<h3>blockquote + cite</h3>
 	<blockquote>
 	I do not fear computers. I fear the lack of them.
 	<cite>Isaac Asimov</cite>
@@ -34,7 +32,7 @@
 
 <a name="lists"></a>
 <div class="row">
-	<h3 class="text-center">Lists</h3>
+	<h3>Lists</h3>
 	<div class="four columns">
 		<h5>ul.disc</h5>
 		<ul class="disc">
@@ -92,14 +90,14 @@
 <a name="align"></a>
 <div class="row">
 	<hr/>
-	<h3 class="text-center">Align and Float</h3>
-	<p class="text-center">Just add a class <code>left</code> or <code>right</code> for floating elements, as well as <code>text-center</code> or <code>text-right</code> for aligning text</p>
+	<h3>Align and Float</h3>
+	<p>Just add a class <code>.left</code> or <code>.right</code> for floating elements, as well as <code>.text-center</code> or <code>.text-right</code> for aligning text.</p>
 
 	<div class="panel left">left</div>
 	<div class="panel right">right</div>
 	<div class="panel text-center">text-center</div>
 
-	<h3 class="text-center">Print</h3>
+	<h3>Print</h3>
 	<p>Foundation includes a couple of simple classes you can use to control elements printing, or not printing. Simply attached <code>.print-only</code> on an element to only show when printing, and <code>.hide-on-print</code> to hide something when printing. It aslo includes all the print styles from <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.</p>
 
 </div>

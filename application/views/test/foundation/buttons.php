@@ -1,8 +1,8 @@
+<a name="buttons"></a>
 <hr/>
 <div class="row">
-	<a name="buttons"></a>
 	<h2>Buttons</h2>
-	<h4 class="subheader">Button classes can also applied to anchor elements, button elements, as well as input type="submit" elements.</h4>
+	<p>Button classes usally are applied to <code>anchor</code> elements, but they can also be applied to <code>button</code> elements, as well as <code>input type="submit"</code> elements.</p>
 </div>
 
 <div class="row text-center">
@@ -42,23 +42,23 @@
 	</div>
 	<div class="six columns">
 		<ul class="button-group rounded">
-			<li><a href="javascript:void(0)" class="success button">Button 1</a></li>
-			<li><a href="javascript:void(0)" class=" button">Button 2</a></li>
-			<li><a href="javascript:void(0)" class="secondary button">Button 3</a></li>
+			<li><a href="javascript:void(0)" class="success button">rounded 1</a></li>
+			<li><a href="javascript:void(0)" class=" button">rounded 2</a></li>
+			<li><a href="javascript:void(0)" class="secondary button">rounded 3</a></li>
 		</ul>
 	</div>
 	<div class="six columns">
 		<ul class="button-group radius">
-			<li><a href="javascript:void(0)" class="alert button">Button 1</a></li>
-			<li><a href="javascript:void(0)" class="button">Button 2</a></li>
-			<li><a href="javascript:void(0)" class="success button">Button 3</a></li>
+			<li><a href="javascript:void(0)" class="secondary button">radius 1</a></li>
+			<li><a href="javascript:void(0)" class="button">radius 2</a></li>
+			<li><a href="javascript:void(0)" class="success button">radius 3</a></li>
 		</ul>
 	</div>
 	<div class="six columns">
 		<ul class="button-group round">
-			<li><a href="javascript:void(0)" class="secondary button">Button 1</a></li>
-			<li><a href="javascript:void(0)" class="secondary button">Button 2</a></li>
-			<li><a href="javascript:void(0)" class="secondary button">Button 3</a></li>
+			<li><a href="javascript:void(0)" class="secondary button">round 1</a></li>
+			<li><a href="javascript:void(0)" class="secondary button">round 2</a></li>
+			<li><a href="javascript:void(0)" class="secondary button">round 3</a></li>
 		</ul>
 	</div>
 </div>
@@ -67,6 +67,7 @@
 <div class="row">
 	<a name="buttons_bar"></a>
 	<h4>Buttons bar</h4>
+	<p>For creating inline buttons groups.</p>
 	<div class="twelve columns button-bar">
 		<ul class="button-group round">
 			<li><a href="javascript:void(0)" class="button">Button 1</a></li>

@@ -2,6 +2,12 @@ var $doc = $(document), Modernizr = window.Modernizr;
 
 $doc.ready(function() { // It's pecific to jQuery. Occurs first, after the HTML-Document is loaded and DOM is ready.
 
+	//Cosmetic: Toggle class on foudnation .sub-nav before loading the link
+	$('dl.sub-nav dd').on('click.fndtn', function (event) {
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+
+
 	//Zurb Foundation
 	$.fn.foundationAlerts           ? $doc.foundationAlerts() : null;
 	$.fn.foundationAccordion        ? $doc.foundationAccordion() : null;
@@ -10,8 +16,8 @@ $doc.ready(function() { // It's pecific to jQuery. Occurs first, after the HTML-
 	$.fn.foundationButtons          ? $doc.foundationButtons() : null;
 	$.fn.foundationNavigation       ? $doc.foundationNavigation() : null;
 	$.fn.foundationTopBar           ? $doc.foundationTopBar({breakPoint: 940}) : null;
-// 	$.fn.foundationMediaQueryViewer ? $doc.foundationMediaQueryViewer() : null;
-// 	$.fn.foundationTabs             ? $doc.foundationTabs() : null;
+	$.fn.foundationMediaQueryViewer ? $doc.foundationMediaQueryViewer() : null;
+	$.fn.foundationTabs             ? $doc.foundationTabs() : null;
 	$.fn.foundationCustomForms      ? $doc.foundationCustomForms() : null;
 
 	// UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE8 SUPPORT AND ARE USING .block-grids
@@ -19,11 +25,6 @@ $doc.ready(function() { // It's pecific to jQuery. Occurs first, after the HTML-
 	// $('.block-grid.three-up>li:nth-child(3n+1)').css({clear: 'both'});
 	// $('.block-grid.four-up>li:nth-child(4n+1)').css({clear: 'both'});
 	// $('.block-grid.five-up>li:nth-child(5n+1)').css({clear: 'both'});
-
-	//Cosmetic: Toggle class on foudnation .sub-nav before loading the link
-	$('dl.sub-nav dd').on('click.fndtn', function (event) {
-		$(this).addClass('active').siblings().removeClass('active');
-	});
 
 	// Hide address bar on mobile devices
 	if (Modernizr.touch) {
