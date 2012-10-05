@@ -2,6 +2,12 @@ var $doc = $(document), Modernizr = window.Modernizr;
 
 $doc.ready(function() { // It's pecific to jQuery. Occurs first, after the HTML-Document is loaded and DOM is ready.
 
+	//Exec pending tasks pushed in view files
+	if(typeof whenready != 'undefined' && whenready instanceof Array)
+		for (var i = 0; i < whenready.length; i++)
+			if (whenready[i] != null)
+				(whenready[i])();
+
 	//Cosmetic: Toggle class on foudnation .sub-nav before loading the link
 	$('dl.sub-nav dd').on('click.fndtn', function (event) {
 		$(this).addClass('active').siblings().removeClass('active');

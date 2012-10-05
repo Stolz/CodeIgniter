@@ -15,3 +15,12 @@
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
 </div>
+
+<script type="text/javascript">
+whenready = ( typeof whenready != 'undefined' && whenready instanceof Array ) ? whenready : [];
+whenready.push(function() {
+
+	console.log("Pushing anonymous functions to the 'whenready' array will execute them within jQuery's $(document).ready(function()) even if jQuery has been loaded in the bottom of <body>");
+
+});
+</script>

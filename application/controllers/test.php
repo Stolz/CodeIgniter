@@ -45,16 +45,18 @@ class Test extends CI_Controller {
 	{
 		$test_view  = <<<BLOCK
 <div id="result"></div><script type="text/javascript">
-
-$.get('ajax/test', function(data){
-	$('#result').html(data);
-	alert('AJAX load was successfully performed');
-})
-.error(function(){
-	alert('AJAX error')
+whenready = ( typeof whenready != 'undefined' && whenready instanceof Array ) ? whenready : [];
+whenready.push(function() {
+	$.get('ajax/test', function(data){
+		$('#result').html(data);
+		alert('AJAX load was successfully performed');
+	})
+	.error(function(){
+		alert('AJAX error')
+	});
 });
-
 </script>
+
 BLOCK;
 
 		$data = array(

@@ -31,17 +31,6 @@
 	<?php endif; if(isset($css)) foreach($css as $file) : ?>
 	<link type="text/css" rel="stylesheet" href="<?= $assets ?>css/<?= $file ?>.css" />
 	<?php endforeach ?>
-
-	<!-- JavaScript -->
-	<?php if($foundation) : /* foundation.min.js includes JQuery */?>
-	<script type="text/javascript" src="<?= $assets ?>js/foundation.min.js"></script>
-	<?php else : ?>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script type="text/javascript">if (typeof jQuery == 'undefined')document.write(unescape("%3Cscript src='<?= $assets ?>js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));</script>
-	<?php endif; if(isset($js)) foreach($js as $file) : ?>
-	<script type="text/javascript" src="<?= $assets ?>js/<?= $file ?>.js"></script>
-	<?php endforeach ?>
-	<script type="text/javascript" src="<?= $assets ?>js/app.js"></script>
 </head>
 <body>
 <?php
@@ -55,5 +44,17 @@
 	if( ! $is_mobile AND ENVIRONMENT != 'production')
 		$this->output->enable_profiler(TRUE);
 ?>
+
+<!-- JavaScript -->
+<?php if($foundation) : /* foundation.min.js includes JQuery */?>
+<script type="text/javascript" src="<?= $assets ?>js/foundation.min.js"></script>
+<?php else : ?>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">if (typeof jQuery == 'undefined')document.write(unescape("%3Cscript src='<?= $assets ?>js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<?php endif; if(isset($js)) foreach($js as $file) : ?>
+<script type="text/javascript" src="<?= $assets ?>js/<?= $file ?>.js"></script>
+<?php endforeach ?>
+<script type="text/javascript" src="<?= $assets ?>js/app.js"></script>
+
 </body>
 </html>
