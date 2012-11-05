@@ -35,7 +35,7 @@ class Test extends CI_Controller {
 		}
 
 		$data = array(
-			'title'	=> 'GNU Gettext test',
+			'title'	=> 'GNU Gettext test page',
 			'views'	=> array(-1 => $output)
 		);
 		$this->load->view('template',$data);
@@ -60,7 +60,7 @@ whenready.push(function() {
 BLOCK;
 
 		$data = array(
-			'title'	=> 'Ajax test',
+			'title'	=> 'Ajax test page',
 			'views'	=> array(-1 => $test_view)
 		);
 		$this->load->view('template',$data);
@@ -107,7 +107,7 @@ BLOCK;
 	public function html()
 	{
 		$data = array(
-			'title'	=> 'HTML test page with almost all HTML elemens',
+			'title'	=> 'HTML test page with almost all HTML elements',
 			'views'	=> array('test/html_test_page')
 		);
 		$this->load->view('template',$data);
@@ -164,7 +164,7 @@ BLOCK;
 			$output .= '</ul>';
 
 			$data = array(
-				'title'	=> 'Oauth2 provider selection',
+				'title'	=> 'Oauth2 test page',
 				'views'	=> array(-1 => $output)
 			);
 
@@ -211,6 +211,50 @@ BLOCK;
 		}
 	}
 
+	public function datammaper($provider = NULL)
+	{
+		if( ! defined('DATAMAPPERPATH'))
+			show_error('You must load third_party/datamapper/bootstrap.php in your index.php');
+
+		//Create required DB structure
+		$this->db->query('DROP TABLE IF EXISTS datamapperexamples');
+		$this->db->query('
+		CREATE TABLE IF NOT EXISTS datamapperexamples (
+			id mediumint(1) unsigned NOT NULL auto_increment PRIMARY KEY,
+			foo varchar(64) NOT NULL UNIQUE,
+			created datetime,
+			updated datetime
+		) ENGINE=InnoDB;');
+
+
+		//ORM
+		$output = "<p><b>Observe Profiler output to better understanding what is going on on a DB level</b></p>\n";
+		$output .= "<p><i>Lets try to save incorrect data (validation rules will run)...</i></p>\n";
+		$data = new Datamapperexample();
+		$data->foo = 'foo';
+		$output .=  ($data->save()) ? "<p>Successfully created ID {$data->id}</p>\n" : $data->error->string;
+
+		$output .= "<p><i>... and now lets try again but with valid data</i></p>\n";
+		$data = new Datamapperexample();
+		$data->foo = 'foobar';
+		$output .=  ($data->save()) ? "<p>Successfully created ID {$data->id}</p>\n" : $data->error->string;
+
+		$output .= "<p><i>Finally lets try an update...</i></p>\n";
+		$data->foo = 'boggie';
+		$output .=  ($data->save()) ? "<p>Successfully updated ID {$data->id}</p>\n" : $data->error->string;
+
+
+
+		//Clean DB structure
+		$this->db->query('DROP TABLE IF EXISTS datamapperexamples');
+
+		//Show output
+		$data = array(
+			'title'	=> 'Datamapper ORM test page',
+			'views'	=> array(-1 => $output)
+		);
+		$this->load->view('template',$data);
+	}
 }
 
 /* End of file test.php */
