@@ -191,6 +191,12 @@ if (defined('ENVIRONMENT'))
 		define('APPPATH', BASEPATH.$application_folder.'/');
 	}
 
+/* --------------------------------------------------------------------
+ * LOAD THE DATAMAPPER BOOTSTRAP FILE http://datamapper.wanwizard.eu/
+ * --------------------------------------------------------------------
+ */
+// require_once APPPATH.'third_party/datamapper/bootstrap.php'; //to-do uncomment out if you want to use DATAMAPPER ORM
+
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
