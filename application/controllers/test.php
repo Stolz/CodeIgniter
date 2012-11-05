@@ -148,6 +148,69 @@ BLOCK;
 		$this->load->view('template',$data);
 	}
 
+	public function oauth2($provider = NULL)
+	{
+		$this->config->load('oauth2', TRUE);
+		$providers = $this->config->item('providers', 'oauth2');
+
+		if(is_null($provider)) //Show providers list
+		{
+			$this->load->helper('url');
+
+			$output = '<h3>CI Oauth 2 login test</h3> <p>Remember to set first your API keys in <i>application/config/oauth2.php</i></p> <p>Please, select an Oauth 2 provider:</p><ul>';
+
+			foreach($providers as $provider => $not_used)
+				$output .= '<li>'.anchor("test/oauth2/$provider",'Login with '.ucfirst($provider));
+			$output .= '</ul>';
+
+			$data = array(
+				'title'	=> 'Oauth2 provider selection',
+				'views'	=> array(-1 => $output)
+			);
+
+			$this->load->view('template',$data);
+			return;
+		}
+
+		if( ! in_array($provider,array_keys($providers)))
+			show_error('Unknown provider');
+
+		$this->load->library('OAuth2/OAuth2');
+		$this->load->library('session');
+
+		$provider = $this->oauth2->provider($provider, $providers[$provider]);
+
+		/** NOTE: Make sure $config['allow_get_array'] is set to TRUE in application/config.php */
+
+		if ( ! $this->input->get('code'))
+		{
+			// By sending no options it'll come back here
+			$provider->authorize();
+		}
+		else
+		{
+			// Howzit?
+			try
+			{
+				$token = $provider->access($_GET['code']);
+				$user = $provider->get_user_info($token);
+
+				// Here you should use this information to A) look for a user B) help a new user sign up with existing data.
+				// If you store it all in a cookie and redirect to a registration page this is crazy-simple.
+				echo "<pre>Tokens: ";
+				print_r($token);
+
+				echo "\n\nUser Info: ";
+				print_r($user);
+			}
+
+			catch (OAuth2_Exception $e)
+			{
+				show_error('That didn\'t work: '.$e);
+			}
+		}
+	}
+
 }
 
 /* End of file test.php */
