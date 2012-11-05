@@ -4,6 +4,17 @@
 
 class Test extends CI_Controller {
 
+	function __construct()
+	{
+		parent::__construct();
+
+		//Prevent usage in not development environments
+		if(ENVIRONMENT != 'development')
+			show_error('ENVIRONMENT != development');
+	}
+
+
+	//List all available tests
 	public function index()
 	{
 		$this->config->set_item('tidy_enabled', FALSE);
@@ -12,6 +23,7 @@ class Test extends CI_Controller {
 			echo '<li>',anchor('test/'.$t,$t);
 	}
 
+	//Tests GNU Gettext translation
 	public function gettext($locale = 'es_ES')
 	{
 
@@ -41,6 +53,7 @@ class Test extends CI_Controller {
 		$this->load->view('template',$data);
 	}
 
+	//Tests jQuery Ajax
 	public function ajax()
 	{
 		$test_view  = <<<BLOCK
@@ -66,6 +79,7 @@ BLOCK;
 		$this->load->view('template',$data);
 	}
 
+	//Test HTML Tidy validation http://tidy.sourceforge.net
 	public function htmltidy()
 	{
 		$this->load->config('htmltidy');
@@ -73,6 +87,7 @@ BLOCK;
 		echo '<br/><br/><br/><br/><br/>This page has deliberately a wrong HTML markup, you should see HTMLTidy warnings in the top right corner.';
 	}
 
+	//Tests FirePHP (a FireBug extension) http://www.firephp.org/
 	public function firephp()
 	{
 		/**
@@ -104,6 +119,7 @@ BLOCK;
 			you should see some sample messages in your Firebug console. Press F12 to toggle console.';
 	}
 
+	//Shows a sample of almost all HTML elements
 	public function html()
 	{
 		$data = array(
@@ -113,6 +129,7 @@ BLOCK;
 		$this->load->view('template',$data);
 	}
 
+	//Tests Zurb Foundation Framework http://foundation.zurb.com/
 	public function foundation()
 	{
 		$this->config->set_item('tidy_enabled', FALSE);
@@ -137,6 +154,7 @@ BLOCK;
 		$this->load->view('template',$data);
 	}
 
+	//Test Zurb Foundation text based icons http://www.zurb.com/playground/foundation-icons
 	public function foundation_icons()
 	{
 		$data = array(
@@ -148,6 +166,7 @@ BLOCK;
 		$this->load->view('template',$data);
 	}
 
+	//Test Oauth autentication https://github.com/philsturgeon/codeigniter-oauth2
 	public function oauth2($provider = NULL)
 	{
 		$this->config->load('oauth2', TRUE);
@@ -211,6 +230,7 @@ BLOCK;
 		}
 	}
 
+	//Tests DataMapper ORM http://datamapper.wanwizard.eu/ and https://github.com/WanWizard/sparks-datamapper
 	public function datammaper($provider = NULL)
 	{
 		if( ! defined('DATAMAPPERPATH'))
