@@ -15,4 +15,5 @@
 [class*="general foundicon-"]:before {font-family: "GeneralFoundicons";}
 [class*="enclosed foundicon-"]:before {font-family: "GeneralEnclosedFoundicons";}
 
-.demo {font-size: 50px;}
+.demo{font-size: 55px;}
+.demo *:hover {color:orange;}

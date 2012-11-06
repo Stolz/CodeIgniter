@@ -73,8 +73,9 @@
 						</li>
 						<li class="divider"></li>
 						<li class="has-dropdown">
-							<a href="javascript:void(0)" class="">Bloks</a>
+							<a href="javascript:void(0)" class="">Blocks</a>
 							<ul class="dropdown">
+								<li><a href="<?=$current_url?>#blockgrid"><?= _('Block grids') ?></a></li>
 								<li><a href="<?=$current_url?>#tabs"><?= _('Tabs') ?></a></li>
 								<li><a href="<?=$current_url?>#accordion"><?= _('Accordion') ?></a></li>
 								<li><a href="<?=$current_url?>#panels"><?= _('Panels') ?></a></li>
