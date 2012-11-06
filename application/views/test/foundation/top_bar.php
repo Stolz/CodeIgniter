@@ -113,10 +113,26 @@
 					<ul class="dropdown">
 						<li><label>Modal dialog</label></li>
 						<li><a href="<?=$current_url?>#reveal"><?= _('Reveal') ?></a></li>
+						<li class="divider"></li>
+
 						<li><label>Image slider</label></li>
 						<li><a href="<?=$current_url?>#orbit"><?= _('Orbit') ?></a></li>
+						<li class="divider"></li>
+
+						<li><label>Image gallery</label></li>
+						<li><a href="<?=$current_url?>#clearing"><?= _('Clearing') ?></a></li>
+						<li class="divider"></li>
+
+						<li><label>Sticky navigation</label></li>
+						<li><a href="<?=$current_url?>#magellan"><?= _('Magellan') ?></a></li>
+						<li class="divider"></li>
+
+						<li><label>Feature tour</label></li>
+						<li><a href="http://foundation.zurb.com/docs/joyride.php"><?= _('Joyride') ?></a></li>
+						<li class="divider"></li>
+
 						<li><label>Media query</label></li>
-						<li><a><?= _('Press Ctr+M') ?></a></li>
+						<li><a><?= _('Press Ctrl + M') ?></a></li>
 					</ul>
 				</li>
 			</ul>
@@ -158,7 +174,7 @@
 					</ul>
 				</li>
 				<li class="divider hide-for-small"></li>
-				<li class="has-button"><a class="small radius button" href="javascript:void(0)"><?= _('Button') ?></a></li>
+				<li class="has-button"><a class="small radius button" href="http://foundation.zurb.com/docs/"><?= _('Button') ?></a></li>
 			</ul>
 		</section>
 	</nav>

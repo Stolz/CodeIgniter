@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-//to-do borrar este controlador
+//to-do Delete this controller in production environments
 
 class Test extends CI_Controller {
 
@@ -22,6 +22,7 @@ class Test extends CI_Controller {
 		foreach($tests as $t) if( ! in_array($t,array('index','__construct','get_instance')))
 			echo '<li>',anchor('test/'.$t,$t);
 	}
+
 
 	//Tests GNU Gettext translation
 	public function gettext($locale = 'es_ES')
@@ -53,6 +54,7 @@ class Test extends CI_Controller {
 		$this->load->view('template',$data);
 	}
 
+
 	//Tests jQuery Ajax
 	public function ajax()
 	{
@@ -79,6 +81,7 @@ BLOCK;
 		$this->load->view('template',$data);
 	}
 
+
 	//Test HTML Tidy validation http://tidy.sourceforge.net
 	public function htmltidy()
 	{
@@ -86,6 +89,7 @@ BLOCK;
 		$this->config->set_item('tidy_enabled', TRUE);
 		echo '<br/><br/><br/><br/><br/>This page has deliberately a wrong HTML markup, you should see HTMLTidy warnings in the top right corner.';
 	}
+
 
 	//Tests FirePHP (a FireBug extension) http://www.firephp.org/
 	public function firephp()
@@ -119,6 +123,7 @@ BLOCK;
 			you should see some sample messages in your Firebug console. Press F12 to toggle console.';
 	}
 
+
 	//Shows a sample of almost all HTML elements
 	public function html()
 	{
@@ -128,6 +133,7 @@ BLOCK;
 		);
 		$this->load->view('template',$data);
 	}
+
 
 	//Tests Zurb Foundation Framework http://foundation.zurb.com/
 	public function foundation()
@@ -149,10 +155,13 @@ BLOCK;
 				'test/foundation/forms',
 				'test/foundation/reveal',
 				'test/foundation/orbit',
+				'test/foundation/clearing',
+				'test/foundation/magellan',
 			)
 		);
 		$this->load->view('template',$data);
 	}
+
 
 	//Test Zurb Foundation text based icons http://www.zurb.com/playground/foundation-icons
 	public function foundation_icons()
@@ -165,6 +174,7 @@ BLOCK;
 		);
 		$this->load->view('template',$data);
 	}
+
 
 	//Test Oauth autentication https://github.com/philsturgeon/codeigniter-oauth2
 	public function oauth2($provider = NULL)
@@ -229,6 +239,7 @@ BLOCK;
 			}
 		}
 	}
+
 
 	//Tests DataMapper ORM http://datamapper.wanwizard.eu/ and https://github.com/WanWizard/sparks-datamapper
 	public function datammaper($provider = NULL)

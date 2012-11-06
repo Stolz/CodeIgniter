@@ -1,5 +1,4 @@
 <?php
-	$assets = '/application/htdocs/';
 	$is_mobile = $this->agent->is_mobile();
 	$foundation = isset($foundation);
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -12,7 +11,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="description" content="to-do set your description" />
 	<meta name="author" content="Stolz to-do set your name" />
-	<link type="text/plain" rel="author" href="<?= $assets ?>humans.txt" />
+	<link type="text/plain" rel="author" href="<?= ASSETS ?>humans.txt" />
 
 	<!-- Favicon -->
 	<!-- to-do -->
@@ -27,9 +26,9 @@
 
 	<!-- CSS -->
 	<?php if($foundation) : ?>
-	<link type="text/css" rel="stylesheet" href="<?= $assets ?>css/foundation.min.css" />
+	<link type="text/css" rel="stylesheet" href="<?= ASSETS ?>css/foundation.min.css" />
 	<?php endif; if(isset($css)) foreach($css as $file) : ?>
-	<link type="text/css" rel="stylesheet" href="<?= $assets ?>css/<?= $file ?>.css" />
+	<link type="text/css" rel="stylesheet" href="<?= ASSETS ?>css/<?= $file ?>.css" />
 	<?php endforeach ?>
 </head>
 <body>
@@ -47,14 +46,14 @@
 
 <!-- JavaScript -->
 <?php if($foundation) : /* foundation.min.js includes JQuery */?>
-<script type="text/javascript" src="<?= $assets ?>js/foundation.min.js"></script>
+<script type="text/javascript" src="<?= ASSETS ?>js/foundation.min.js"></script>
 <?php else : ?>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript">if (typeof jQuery == 'undefined')document.write(unescape("%3Cscript src='<?= $assets ?>js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">if (typeof jQuery == 'undefined')document.write(unescape("%3Cscript src='<?= ASSETS ?>js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));</script>
 <?php endif; if(isset($js)) foreach($js as $file) : ?>
-<script type="text/javascript" src="<?= $assets ?>js/<?= $file ?>.js"></script>
+<script type="text/javascript" src="<?= ASSETS ?>js/<?= $file ?>.js"></script>
 <?php endforeach ?>
-<script type="text/javascript" src="<?= $assets ?>js/app.js"></script>
+<script type="text/javascript" src="<?= ASSETS ?>js/app.js"></script>
 
 </body>
 </html>

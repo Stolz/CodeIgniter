@@ -1,14 +1,13 @@
 <hr/>
 <a name="orbit"></a>
 <div class="row">
-	<h2>Orbit</h2>
-	<h3 class="subheader">Image slider</h3>
+	<h2>Orbit <small>Image slider</small></h2>
+	<h3 class="subheader">For fixed-size content</h3>
 
 	<div class="do-orbit text-center">
-		<img src="http://foundation.zurb.com/images/orbit-demo/demo1.jpg">
-		<img src="http://foundation.zurb.com/images/orbit-demo/demo1.jpg">
-		<img src="http://foundation.zurb.com/images/orbit-demo/demo2.jpg">
-		<img src="http://foundation.zurb.com/images/orbit-demo/demo3.jpg">
+		<?php for($i = 1 ; $i <= 15; $i++) : ?>
+		<img src="<?= ASSETS ?>images/liquids/large/<?=$i?>.jpg" alt="<?=$i?>.jpg"/>
+		<?php endfor ?>
 	</div>
 
 	<h5>Options</h5>

@@ -10,6 +10,8 @@
 define('PROJECT_NAME', 'My Codeigniter project');
 define('PROJECT_DOMAIN', 'myproject.com'); //No trailing slash!
 define('PROJECT_EMAIL', 'contact@'.PROJECT_DOMAIN);
+define('ASSETS', '/application/htdocs/');
+
 
 /*
 |--------------------------------------------------------------------------
