@@ -34,4 +34,4 @@ $config['extensions_path'] = 'third_party/datamapper/extensions'; //relative to 
 $config['extensions'] = array();
 
 /* End of file datamapper.php */
-/* Location: ./sparks/Datamapper-ORM/config/datamapper.php */
+/* Location: ./application/config/datamapper.php */
