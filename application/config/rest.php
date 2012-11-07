@@ -10,7 +10,7 @@
 |	Default: xml
 |
 */
-$config['rest_default_format'] = 'xml';
+$config['rest_default_format'] = 'json';
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ $config['rest_default_format'] = 'xml';
 |	Default: false
 |
 */
-$config['enable_emulate_request'] = TRUE;
+$config['enable_emulate_request'] = FALSE;
 
 
 /*
