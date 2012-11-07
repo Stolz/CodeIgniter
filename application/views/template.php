@@ -10,7 +10,7 @@
 	<!-- Meta -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="description" content="to-do set your description" />
-	<meta name="author" content="Stolz to-do set your name" />
+	<meta name="author" content="Javi (@Stolz)" /><!--to-do set your name-->
 	<link type="text/plain" rel="author" href="<?= ASSETS ?>humans.txt" />
 
 	<!-- Favicon -->

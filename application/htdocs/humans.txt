@@ -3,7 +3,7 @@
 /* to-do set your own details */
 
 /* TEAM */
-Developer: Stolz
+Developer: Javi
 Email: your@email.com
 Twitter: @Stolz
 Location: Valencia, Spain.
@@ -12,4 +12,4 @@ Location: Valencia, Spain.
 Last update: YYYY/MM/DD
 Standards: HTML5, CSS3,
 Components: Modernizr, jQuery, Foundation.
-Software: Git, Kate (http://kate-editor.org)
+Software: Git, Kate (http://kate-editor.org), Gentoo Linux (http://www.gentoo.org/main/en/about.xml)
