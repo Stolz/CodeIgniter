@@ -17,10 +17,33 @@ class Test extends CI_Controller {
 	//List all available tests
 	public function index()
 	{
-		$this->config->set_item('tidy_enabled', FALSE);
-		$tests = get_class_methods('Test');
-		foreach($tests as $t) if( ! in_array($t,array('index','__construct','get_instance')))
-			echo '<li>',anchor('test/'.$t,$t);
+		$output = '<ol>';
+		foreach(get_class_methods('Test') as $t) if( ! in_array($t,array('index','__construct','get_instance')))
+			$output .= '<li>'.anchor('test/'.$t,$t);
+
+		$data = array(
+			'title'	=> 'Available tests',
+			'views'	=> array(-1 => $output.'</ol>')
+		);
+		$this->load->view('template',$data);
+	}
+
+
+	//Tests included basic auth system
+	public function login()
+	{
+		$this->load->library('session');
+
+		if( ! $user = $this->session->user_is_logged())
+			redirect('auth/login');
+		else
+			$output = 'Current user: '.$user->name.' '.anchor('auth/logout', _('log out'));
+
+		$data = array(
+			'title'	=> 'Login test page',
+			'views'	=> array(-1 => $output)
+		);
+		$this->load->view('template',$data);
 	}
 
 
@@ -139,7 +162,7 @@ BLOCK;
 	public function foundation()
 	{
 		$this->config->set_item('tidy_enabled', FALSE);
-		$this->load->helper('url');
+
 		$data = array(
 			'title'	=> 'Foundation CSS test page',
 			'foundation' => TRUE,
@@ -184,8 +207,6 @@ BLOCK;
 
 		if(is_null($provider)) //Show providers list
 		{
-			$this->load->helper('url');
-
 			$output = '<h3>CI Oauth 2 login test</h3> <p>Remember to set first your API keys in <i>application/config/oauth2.php</i></p> <p>Please, select an Oauth 2 provider:</p><ul>';
 
 			foreach($providers as $provider => $not_used)

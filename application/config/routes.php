@@ -40,6 +40,8 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
+$route['login'] = 'auth/login';
+$route['logout'] = 'auth/logout';
 
 
 /* End of file routes.php */
