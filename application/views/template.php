@@ -14,11 +14,19 @@
 	<link type="text/plain" rel="author" href="<?= ASSETS ?>humans.txt" />
 
 	<!-- Favicon -->
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= ASSETS ?>images/favicons/apple-touch-icon-144x144-precomposed.png"><!-- For third-generation iPad with high-resolution Retina display: -->
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= ASSETS ?>images/favicons/apple-touch-icon-114x114-precomposed.png"><!-- For iPhone with high-resolution Retina display: -->
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= ASSETS ?>images/favicons/apple-touch-icon-72x72-precomposed.png">	<!-- For first- and second-generation iPad: -->
-	<link rel="apple-touch-icon-precomposed" href="<?= ASSETS ?>images/favicons/apple-touch-icon-precomposed.png">	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-	<link rel="icon" href="<?= ASSETS ?>images/favicons/favicon.png" type="image/x-icon" />	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<!-- For third-generation iPad with high-resolution Retina display: -->
+	<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= ASSETS ?>images/favicons/apple-touch-icon-144x144-precomposed.png"/> -->
+	<!-- For iPhone with high-resolution Retina display: -->
+	<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= ASSETS ?>images/favicons/apple-touch-icon-114x114-precomposed.png"/> -->
+	<!-- For first- and second-generation iPad: -->
+	<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= ASSETS ?>images/favicons/apple-touch-icon-72x72-precomposed.png"/> -->
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<!-- <link rel="apple-touch-icon-precomposed" href="<?= ASSETS ?>images/favicons/apple-touch-icon-precomposed.png"/> -->
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="icon" href="<?= ASSETS ?>images/favicons/favicon.png" type="image/x-icon" />
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/rss+xml" title="<?= _('News')?>" href="<?= site_url('feed/news')?>" />
 
 	<!-- Mobile -->
 	<?php if($is_mobile) : ?>

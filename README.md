@@ -2,8 +2,8 @@
 
 Specifically, it includes:
 
- - Single-page layout generic template**[*]**.
- - Basic authentication system (*libraries/MY_Session.php*).
+ - Single-page layout generic template **[*]**.
+ - Basic authentication system (Check *application/libraries/MY_Session.php*).
  - [Oauth v2](http://oauth.net/2/) authentication using [Phil Sturgeon’s library](https://github.com/philsturgeon/codeigniter-oauth2).
  - [Zurb Foundation](http://foundation.zurb.com) framework.
  - [Zurb Foundation](http://www.zurb.com/playground/foundation-icons) icons.
@@ -13,7 +13,10 @@ Specifically, it includes:
  - [Fire PHP](http://www.firephp.org) debugging.
  - Controller to handle AJAX requests.
  - Controller to test your CSS styles with almost all the existing HTML tags.
+ - Controller to create an RSS feed.
  - **All the included external libraries are kept up to date as far as possible**.
+
+----
 
 **[*]** A single-file boilerplate containing the structure, CSS and JS that is common to all the site. Out of the box it already includes many HTML recommended practices such as mobile ready meta tags, favicon meta tags for Apple devices, loading [jQuery](http://jquery.com) from [Google CDN hosted libraries](https://developers.google.com/speed/libraries/devguide) (with fallback to local copy) or loading JS files at the bottom of the page.
 
