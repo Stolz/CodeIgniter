@@ -14,7 +14,11 @@
 	<link type="text/plain" rel="author" href="<?= ASSETS ?>humans.txt" />
 
 	<!-- Favicon -->
-	<!-- to-do -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= ASSETS ?>images/favicons/apple-touch-icon-144x144-precomposed.png"><!-- For third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= ASSETS ?>images/favicons/apple-touch-icon-114x114-precomposed.png"><!-- For iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= ASSETS ?>images/favicons/apple-touch-icon-72x72-precomposed.png">	<!-- For first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" href="<?= ASSETS ?>images/favicons/apple-touch-icon-precomposed.png">	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="icon" href="<?= ASSETS ?>images/favicons/favicon.png" type="image/x-icon" />	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
 
 	<!-- Mobile -->
 	<?php if($is_mobile) : ?>
@@ -45,7 +49,7 @@
 ?>
 
 <!-- JavaScript -->
-<?php if($foundation) : /* foundation.min.js includes JQuery */?>
+<?php if($foundation) : /* foundation.min.js includes jQuery and Modernizr*/?>
 <script type="text/javascript" src="<?= ASSETS ?>js/foundation.min.js"></script>
 <?php else : ?>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
