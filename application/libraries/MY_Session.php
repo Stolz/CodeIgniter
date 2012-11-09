@@ -1,14 +1,18 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-/** To check if user is logged in you need this simple code in your controller:
+/** For controllers that require authentication you need this simple code:
+
 	function __construct()
 	{
 		parent::__construct();
 
 		//If user is not logged in, redirect to login page
 		if( ! $user = $this->session->user_is_logged())
-			redirect('auth/login');
+			redirect('login');
+
+		//OK, user is logged in. You can access its information using $user object
 	}
+
 */
 
 
@@ -52,13 +56,13 @@ class MY_Session extends CI_Session {
 
 		$user = (object) array('id' => 1, 'name' => 'Stolz', 'seed' => 12345, 'password' => sha1('secret'));
 		/* to-do replace with your own method/models to retrieve an user. Something like this should do the trick:
-		$user = $this->db->where(array('id' => $id_user, 'active' => 1))->get('users',1)->row(); */
+		$user = $this->db->where(array('id' => $id_user, 'active' => 1))->get('users', 1)->row(); */
 
 		if( ! $user)
 			return FALSE; //User does not exist or is not active
 
 		if($hash != $this->do_hash($user))
-			return FALSE; //User is spoofing
+			return FALSE; //Probably user is spoofing
 
 		return $user;
 	}
@@ -73,7 +77,7 @@ class MY_Session extends CI_Session {
 		For instance you may add $this->input->server('HTTP_USER_AGENT') or $this->input->server('REMOTE_ADDR') or $this->input->server('SERVER_NAME')
 		to make sure any change of them invalidates the current login.
 
-		Also remember if the user legitimately updates his/her password you must regenerate the hash */
+		Also remember if the user legitimately updates its password you must regenerate the session hash */
 
 		return sha1($user->id.$user->seed.$user->password);
 	}

@@ -21,8 +21,6 @@ class Auth extends CI_Controller {
 		if($this->session->user_is_logged(FALSE))
 			return $this->_redirect_to_previous_page();
 
-		$error = NULL;
-
 		//Check credentials
 		if($this->input->post('submit'))
 		{
@@ -41,11 +39,11 @@ class Auth extends CI_Controller {
 				$user = ($query->num_rows()) ? $query->row() : FALSE; */
 				if( ! $user)
 				{
-					$error = _('Wrong credentials');
+					$this->load->vars(array('eror' => _('Wrong credentials')));
 				}
 				else
 				{
-					//Success login
+					//Success login. It may be a good idea to update the 'last_login' timestamp on DB
 					$this->session->login(array('id_user' => $user->id, 'hash' => $this->session->do_hash($user)));
 					return $this->_redirect_to_previous_page();
 				}
@@ -53,12 +51,13 @@ class Auth extends CI_Controller {
 		}
 
 		//Load view
-		$this->load->helper('form');
 		$data = array(
 			'title'	=> _('Login'),
-			'views'	=> array(-1 => form_open('auth/login').form_label(_('User'), 'user').form_input('user', $this->input->post('user')).form_label(_('Password'),'password').form_password('password').form_submit('submit', _('Log in')).form_close().validation_errors().$error),
+			'views'	=> array('test/login'),
+			'foundation' => TRUE
 		);
-		$this->load->view('template',$data);
+		$this->load->helper('form');
+		$this->load->view('template', $data);
 	}
 
 
