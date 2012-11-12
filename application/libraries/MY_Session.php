@@ -69,17 +69,25 @@ class MY_Session extends CI_Session {
 
 
 	/**
-	* Generates a hash to avoid session/cookie spoofing
+	* Generates a hash to avoid session/cookie spoofing.
+	* If the user's password or seed are updated the hash will not be valid anymore and the login will be automatically revoked so if
+	* the user legitimately updates its password remember you must regenerate a new session hash
 	*/
  	function do_hash($user)
 	{
-		/*	to-do Feel free to add more entropy or randomness to this funcion.
-		For instance you may add also $this->CI->input->server('REMOTE_ADDR') or $this->CI->input->server('SERVER_NAME')
-		to make sure any change of them included values invalidates the current login.
+		$hash = $user->id.$user->seed.$user->password;
 
-		Also remember if the user legitimately updates its password you must regenerate the session hash */
+		if($this->sess_match_ip)
+			$hash .= $this->CI->input->ip_address();
 
-		return sha1($user->id.$user->seed.$user->password.$this->CI->input->server('HTTP_USER_AGENT'));
+		if($this->sess_match_useragent)
+			$hash .= trim(substr($this->CI->input->user_agent(), 0, 120));
+
+		/* to-do Feel free to add more entropy or randomness to $hash variable.
+		For instance you may add also $this->CI->input->server('SERVER_NAME') or similar
+		to make sure any change of them invalidates the current login. */
+
+		return sha1(md5($hash));
 	}
 }
 
