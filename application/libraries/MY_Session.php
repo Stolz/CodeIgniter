@@ -1,7 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 /** For controllers that require authentication you need this simple code:
-
 	function __construct()
 	{
 		parent::__construct();
@@ -10,42 +9,43 @@
 		if( ! $user = $this->session->user_is_logged())
 			redirect('login');
 
-		//OK, user is logged in. You can access its information using $user object
+		//OK, user is logged and its information is now accessible using the $user variable.
 	}
-
 */
-
 
 class MY_Session extends CI_Session {
 
-	function login($user_data, $remember_me = FALSE)
+	function __construct()
 	{
-		if( ! isset($user_data['id_user']) OR  ! isset($user_data['hash']))
-			throw new Exception(_("\$user_data array must include at least the two keys 'id_user' and 'hash' for the login system to work"));
+		parent::__construct();
 
-		$this->set_userdata($user_data);
-
-		if($remember_me)
-			$this->sess_expire_on_close = ! $remember_me;
+		//Override the $config['sess_expire_on_close'] set in config.php
+		$this->sess_expire_on_close = $this->userdata('expire_on_close');
 	}
 
+	function login($user_data)
+	{
+		if( ! isset($user_data['id_user']) OR ! isset($user_data['hash']) OR ! isset($user_data['expire_on_close']))
+			show_error('Not enought login parameters');
+
+		$this->sess_expire_on_close = $user_data['expire_on_close'];
+		$this->set_userdata($user_data);
+	}
 
 	function logout()
 	{
 		$this->sess_destroy();
-		$this->sess_expire_on_close = TRUE;
 	}
-
 
 	/**
 	* Checks if user is logged in
 	* @return (bool) FALSE if user is not logged in
 	* @return (object) $user information if user is rightfully logged in
 	*/
-	function user_is_logged($set_after_login_url = TRUE)
+	function user_is_logged($redirect_if_success = TRUE)
 	{
-		//After a success login user will be redireted to current URL
-		if($set_after_login_url)
+		//Wether or not after a success login we should redirect to the page that originated the login process
+		if($redirect_if_success)
 			$this->set_userdata('after_login_url', $this->CI->uri->uri_string()); //Use $this->CI->uri->segment(1) instead if you don't want to carry extra parameters
 
 		$id_user = $this->userdata('id_user');
@@ -74,12 +74,12 @@ class MY_Session extends CI_Session {
  	function do_hash($user)
 	{
 		/*	to-do Feel free to add more entropy or randomness to this funcion.
-		For instance you may add $this->input->server('HTTP_USER_AGENT') or $this->input->server('REMOTE_ADDR') or $this->input->server('SERVER_NAME')
-		to make sure any change of them invalidates the current login.
+		For instance you may add also $this->CI->input->server('REMOTE_ADDR') or $this->CI->input->server('SERVER_NAME')
+		to make sure any change of them included values invalidates the current login.
 
 		Also remember if the user legitimately updates its password you must regenerate the session hash */
 
-		return sha1($user->id.$user->seed.$user->password);
+		return sha1($user->id.$user->seed.$user->password.$this->CI->input->server('HTTP_USER_AGENT'));
 	}
 }
 

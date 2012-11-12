@@ -43,8 +43,14 @@ class Auth extends CI_Controller {
 				}
 				else
 				{
-					//Success login. It may be a good idea to update the 'last_login' timestamp on DB
-					$this->session->login(array('id_user' => $user->id, 'hash' => $this->session->do_hash($user)));
+					//Success login!
+					//This is a good moment to update the 'last_login' timestamp on DB
+					$data = array(
+						'id_user' => $user->id,
+						'hash' => $this->session->do_hash($user),
+						'expire_on_close' =>  ! $this->input->post('rememberme')
+					);
+					$this->session->login($data);
 					return $this->_redirect_to_previous_page();
 				}
 			}

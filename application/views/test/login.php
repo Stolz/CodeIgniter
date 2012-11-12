@@ -27,6 +27,11 @@
 
 		form_submit(array('name'=>'submit','class' => 'radius button','value' => _('Log in'))),
 
+		'<span class="right">',
+		form_checkbox(array('id' => 'rememberme', 'name' => 'rememberme', 'value'  => 1, 'checked' => $this->input->post('rememberme'))),
+		form_label(_('Remember me'), 'rememberme'),
+		'</span>',
+
 		form_close(); ?>
 	</div>
 </div>
