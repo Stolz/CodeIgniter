@@ -1,62 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>Error</title>
-<style type="text/css">
+	<head>
+		<meta charset="utf-8">
+		<title><?=  $heading; ?> :(</title>
+		<meta name="author" content="Javi (@Stolz)" /><!--to-do set your name-->
+		<link type="text/plain" rel="author" href="<?= ASSETS ?>humans.txt" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><!--Force latest IE rendering engine (& Chrome Frame if installed)-->
 
-::selection{ background-color: #E13300; color: white; }
-::moz-selection{ background-color: #E13300; color: white; }
-::webkit-selection{ background-color: #E13300; color: white; }
+		<!-- Favicon -->
+		<!-- For third-generation iPad with high-resolution Retina display: -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= ASSETS ?>images/favicons/apple-touch-icon-144x144-precomposed.png"/>
+		<!-- For iPhone with high-resolution Retina display: -->
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= ASSETS ?>images/favicons/apple-touch-icon-114x114-precomposed.png"/>
+		<!-- For first- and second-generation iPad: -->
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= ASSETS ?>images/favicons/apple-touch-icon-72x72-precomposed.png"/>
+		<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+		<link rel="apple-touch-icon-precomposed" href="<?= ASSETS ?>images/favicons/apple-touch-icon-57x57-precomposed.png"/>
+		<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+		<link rel="icon" href="<?= ASSETS ?>images/favicons/favicon.ico" type="image/x-icon" />
 
-body {
-	background-color: #fff;
-	margin: 40px;
-	font: 13px/20px normal Helvetica, Arial, sans-serif;
-	color: #4F5155;
-}
+		<!-- Mobile -->
+		<meta name="HandheldFriendly" content="True" /><!--BlackBerry-->
+		<meta name="MobileOptimized" content="960" /><!--Windows Mobile-->
+		<meta http-equiv="cleartype" content="on" /><!--Windows Mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><!--Webkit-->
 
-a {
-	color: #003399;
-	background-color: transparent;
-	font-weight: normal;
-}
+		<style>
+			::-moz-selection {
+				background: #b3d4fc;
+				text-shadow: none;
+			}
 
-h1 {
-	color: #444;
-	background-color: transparent;
-	border-bottom: 1px solid #D0D0D0;
-	font-size: 19px;
-	font-weight: normal;
-	margin: 0 0 14px 0;
-	padding: 14px 15px 10px 15px;
-}
+			::selection {
+				background: #b3d4fc;
+				text-shadow: none;
+			}
 
-code {
-	font-family: Consolas, Monaco, Courier New, Courier, monospace;
-	font-size: 12px;
-	background-color: #f9f9f9;
-	border: 1px solid #D0D0D0;
-	color: #002166;
-	display: block;
-	margin: 14px 0 14px 0;
-	padding: 12px 10px 12px 10px;
-}
+			html {
+				padding: 30px 10px;
+				font-size: 20px;
+				line-height: 1.4;
+				color: #737373;
+				background: #f0f0f0;
+				-webkit-text-size-adjust: 100%;
+				-ms-text-size-adjust: 100%;
+			}
 
-#container {
-	margin: 10px;
-	border: 1px solid #D0D0D0;
-	-webkit-box-shadow: 0 0 8px #D0D0D0;
-}
+			html,
+			input {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			}
 
-p {
-	margin: 12px 15px 12px 15px;
-}
-</style>
-</head>
-<body>
-	<div id="container">
-		<h1><?php echo $heading; ?></h1>
-		<?php echo $message; ?>
-	</div>
-</body>
+			body {
+				max-width: 600px;
+				_width: 600px;
+				padding: 30px 20px 50px;
+				border: 1px solid #b3b3b3;
+				border-radius: 4px;
+				margin: 0 auto;
+				box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
+				background: #fcfcfc;
+			}
+
+			h1 {
+				margin: 0 10px;
+				font-size: 50px;
+				text-align: center;
+			}
+
+			h1 span {
+				color: #bbb;
+			}
+
+			h3 {
+				margin: 1.5em 0 0.5em;text-align: center;
+			}
+
+			.container {
+				max-width: 500px;
+				_width: 500px;
+				margin: 0 auto;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1><?=  $heading; ?> <span>:(</span></h1>
+			<h3><?=  $message; ?></h3>
+
+			<h1><a href="<?= site_url() ?>">Go to main page</a></h1>
+		 
+		</div>
+	</body>
 </html>

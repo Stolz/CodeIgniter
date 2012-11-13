@@ -52,7 +52,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('user_agent');
+$autoload['libraries'] = array();
 
 if(defined('DATAMAPPERPATH')) //Required by Datamapper
 {

@@ -18,7 +18,8 @@
 		<p><b>Try them out!</b></p>
 
 		<ul>
-			<li>Single page layout including many HTML recommended practices (<a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> alike).</li>
+			<li>Single page layout including many HTML recommended practices from <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.</li>
+			<li>Improved default error messages.</li>
 			<li><a href="welcome/oauth2">Oauth v2 authentication</a>.</li>
 			<li><a href="welcome/foundation">Integrated <i>Zurb Foundation framework</i></a>.</li>
 			<li><a href="welcome/foundation_icons">Integrated <i>Zurb Foundation icons</i></a>.</li>

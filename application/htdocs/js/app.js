@@ -1,20 +1,38 @@
 var $doc = $(document), Modernizr = window.Modernizr;
 
-$doc.ready(function() { // It's pecific to jQuery. Occurs first, after the HTML-Document is loaded and DOM is ready.
+$doc.ready(function() { // This event is specific to jQuery. Occurs first, after the HTML-Document is loaded and DOM is ready.
 
-	//Exec pending tasks pushed in view files
+	// Exec pending tasks pushed in view files
 	if(typeof whenready != 'undefined' && whenready instanceof Array)
-		for (var i = 0; i < whenready.length; i++)
+		for (var i = 0, length = whenready.length; i < length; i++)
 			if (whenready[i] != null)
 				(whenready[i])();
 
-	//Cosmetic: Toggle class on foudnation .sub-nav before loading the link
+	// Avoid `console` errors in browsers that lack a console.
+	(function() {
+		var method;
+		var noop = function noop() {};
+		var methods = ['assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error', 'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log', 'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd', 'timeStamp', 'trace', 'warn'];
+		var length = methods.length;
+		var console = (window.console = window.console || {});
+
+		while (length--) {
+			method = methods[length];
+
+			// Only stub undefined methods.
+			if (!console[method]) {
+				console[method] = noop;
+			}
+		}
+	}());
+
+	// ========= Zurb Foundation ===============
+
+	// Cosmetic: Toggle class on foudnation .sub-nav before loading the link
 	$('dl.sub-nav dd').on('click.fndtn', function (event) {
 		$(this).addClass('active').siblings().removeClass('active');
 	});
-
-
-	//Zurb Foundation
+	
     $.fn.foundationAlerts           ? $doc.foundationAlerts() : null;
     $.fn.foundationButtons          ? $doc.foundationButtons() : null;
     $.fn.foundationAccordion        ? $doc.foundationAccordion() : null;
@@ -44,6 +62,6 @@ $doc.ready(function() { // It's pecific to jQuery. Occurs first, after the HTML-
 	}
 });
 
-$(window).load(function() { // It's a standard event in the DOM. Occurs later, after all content (e.g. images,frames,...) are fully loaded.
+$(window).load(function() { // This event is a standard event in the DOM. Occurs later, after all content (e.g. images,frames,...) are fully loaded.
 	$('.do-orbit').orbit({pauseOnHover: true, startClockOnMouseOut: true, startClockOnMouseOutAfter: 0});
 });

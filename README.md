@@ -2,11 +2,12 @@
 
 Specifically, it includes:
 
- - Single-page layout generic template **[*]**.
+ - Single-page layout **[*]** generic template including many HTML recommended practices from [HTML5 Boilerplate](http://html5boilerplate.com).
+ - Improved default error messages.
  - Basic authentication system (Check *application/libraries/MY_Session.php*).
  - [Oauth v2](http://oauth.net/2/) authentication using [Phil Sturgeon’s library](https://github.com/philsturgeon/codeigniter-oauth2).
- - [Zurb Foundation](http://foundation.zurb.com) framework.
- - [Zurb Foundation](http://www.zurb.com/playground/foundation-icons) icons.
+ - Integrated [Zurb Foundation](http://foundation.zurb.com) framework.
+ - Integrated [Zurb Foundation](http://www.zurb.com/playground/foundation-icons) icons.
  - [Datammaper ORM](http://datamapper.wanwizard.eu).
  - Scripts to extract and translate [GNU Gettext](http://www.gnu.org/software/gettext) translations. (Check *application/language/*).
  - [HTML Tidy](http://tidy.sourceforge.net) validation *on-the-fly*.
@@ -18,7 +19,7 @@ Specifically, it includes:
 
 ----
 
-**[*]** A single-file boilerplate containing the structure, CSS and JS that is common to all the site. Out of the box it already includes many HTML recommended practices such as mobile ready meta tags, favicon meta tags for Apple devices, loading [jQuery](http://jquery.com) from [Google CDN hosted libraries](https://developers.google.com/speed/libraries/devguide) (with fallback to local copy) or loading JS files at the bottom of the page.
+**[*]** A single-file boilerplate containing the structure, CSS and JS that is common to the whole site. Out of the box it already includes many HTML recommended practices such as mobile ready meta tags, favicon meta tags for Apple devices, loading [jQuery](http://jquery.com) from [Google CDN hosted libraries](https://developers.google.com/speed/libraries/devguide) (with fallback to local copy) or loading JS files at the bottom of the page.
 
 
 With single page layout instead of using ugly code like this…
