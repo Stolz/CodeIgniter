@@ -4,6 +4,7 @@ Specifically, it includes:
 
  - Single-page layout **[*]** generic template including many HTML recommended practices from [HTML5 Boilerplate](http://html5boilerplate.com).
  - Improved default error messages.
+ - Improved pagination library.
  - Basic authentication system (Check *application/libraries/MY_Session.php*).
  - [Oauth v2](http://oauth.net/2/) authentication using [Phil Sturgeon’s library](https://github.com/philsturgeon/codeigniter-oauth2).
  - Integrated [Zurb Foundation](http://foundation.zurb.com) framework.

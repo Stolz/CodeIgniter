@@ -2,6 +2,16 @@
 
 class Welcome extends CI_Controller {
 
+	function __construct()
+	{
+		parent::__construct();
+
+		//Prevent using testing methods in not development environment
+		if(ENVIRONMENT != 'development' AND $this->router->method != 'index')
+			show_404();
+	}
+
+	// List of all tests methods
 	public function index()
 	{
 		$data = array(
@@ -14,7 +24,7 @@ class Welcome extends CI_Controller {
 	}
 
 
-	//Tests included basic auth system
+	// Tests included basic auth system
 	public function login()
 	{
 		$this->load->library('session');
@@ -32,7 +42,7 @@ class Welcome extends CI_Controller {
 	}
 
 
-	//Tests GNU Gettext translation
+	// Tests GNU Gettext translation
 	public function gettext($locale = 'es_ES')
 	{
 
@@ -63,7 +73,7 @@ class Welcome extends CI_Controller {
 	}
 
 
-	//Tests jQuery Ajax
+	// Tests jQuery Ajax
 	public function ajax()
 	{
 		$data = array(
@@ -74,7 +84,7 @@ class Welcome extends CI_Controller {
 	}
 
 
-	//Test HTML Tidy validation http://tidy.sourceforge.net
+	// Test HTML Tidy validation http://tidy.sourceforge.net
 	public function htmltidy()
 	{
 		$this->load->config('htmltidy');
@@ -83,7 +93,7 @@ class Welcome extends CI_Controller {
 	}
 
 
-	//Tests FirePHP (a FireBug extension) http://www.firephp.org
+	// Tests FirePHP (a FireBug extension) http://www.firephp.org
 	public function firephp()
 	{
 		/**
@@ -116,7 +126,7 @@ class Welcome extends CI_Controller {
 	}
 
 
-	//Shows a sample of almost all HTML elements
+	// Shows a sample of almost all HTML elements
 	public function html()
 	{
 		$data = array(
@@ -128,7 +138,7 @@ class Welcome extends CI_Controller {
 	}
 
 
-	//Tests Zurb Foundation Framework http://foundation.zurb.com
+	// Tests Zurb Foundation Framework http://foundation.zurb.com
 	public function foundation()
 	{
 		$this->config->set_item('tidy_enabled', FALSE);
@@ -156,7 +166,7 @@ class Welcome extends CI_Controller {
 	}
 
 
-	//Test Zurb Foundation text based icons http://www.zurb.com/playground/foundation-icons
+	// Test Zurb Foundation text based icons http://www.zurb.com/playground/foundation-icons
 	public function foundation_icons()
 	{
 		$data = array(
@@ -232,7 +242,7 @@ class Welcome extends CI_Controller {
 	}
 
 
-	//Tests DataMapper ORM http://datamapper.wanwizard.eu/ and https://github.com/WanWizard/sparks-datamapper
+	// Tests DataMapper ORM http://datamapper.wanwizard.eu/ and https://github.com/WanWizard/sparks-datamapper
 	public function datammaper($provider = NULL)
 	{
 		if( ! defined('DATAMAPPERPATH'))
@@ -249,7 +259,7 @@ class Welcome extends CI_Controller {
 		) ENGINE=InnoDB;');
 
 
-		//ORM
+		//ORM stuff
 		$output = "<p><b>Observe Profiler output to better understanding what is going on on a DB level</b></p>\n";
 		$output .= "<p><i>Lets try to save incorrect data (validation rules will run)...</i></p>\n";
 		$data = new Datamapperexample();
@@ -266,7 +276,6 @@ class Welcome extends CI_Controller {
 		$output .=  ($data->save()) ? "<p>Successfully updated ID {$data->id}</p>\n" : $data->error->string;
 
 
-
 		//Clean DB structure
 		$this->db->query('DROP TABLE IF EXISTS datamapperexamples');
 
@@ -278,6 +287,37 @@ class Welcome extends CI_Controller {
 		$this->load->view('template', $data);
 	}
 
+	// Tests extended pagination library
+	function pagination()
+	{
+		//Set pagination
+		$config = array(
+			'per_page'		=> 10,
+			'table_header'	=> array('Number', 'Letter'),
+			'accepted_url_options' => array(
+				'orderby'	=> range(1, 10),	//Accepted values for 'orderby' (1 is the default)
+				'type'	=> array('foo', 'bar'),	//Accepted values for 'type' ('foo' is the default)
+				'dummy'	=> NULL),				//'dummy' accepts any value
+		);
+		$this->load->library('pagination', $config);
+
+		/* Usually you will use a model to retrieve your data according to your URL options ...
+		$this->load->model('my_model');
+		$this->pagination->total_rows = $this->my_model->count_all_items($this->pagination->url_options);
+		$items = $this->my_model->get_items($this->pagination->url_options + array('limit' => $this->pagination->per_page, 'offset' => $this->pagination->offset));
+
+		... but for the sake of simplicity lets fake the model with simple array functions */
+		$this->pagination->total_rows = count($all_items = range('A', 'Z'));
+		$items = array_slice($all_items, $this->pagination->offset, $this->pagination->per_page, TRUE);
+
+		//Load view
+		$data = array(
+			'title'			=> _('Pagination library test page'),
+			'views'			=> array('test/pagination'),
+			'items'			=> $items,
+		);
+		$this->load->view('template', $data);
+	}
 }
 
 /* End of file welcome.php */

@@ -12,6 +12,7 @@
 
 		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/index.html">User Guide</a>.</p>
 
+		<?php if(ENVIRONMENT == 'development') : ?>
 		<hr/>
 		<p><a href="https://github.com/Stolz/CodeIgniter">This GitHub repository</a> is based on the <i>master</i> branch of the official <a href="https://github.com/EllisLab/CodeIgniter">EllisLab's GitHub repository</a> (that is, stable code) but it adds a few extras in order to make CodeIgniter experience more convenient.</p>
 
@@ -27,6 +28,7 @@
 			<li><a href="welcome/gettext">Integrated <i>GNU Gettext</i> translation support</a>. Scripts to translate source code are in <i>application/language/</i>.</li>
 			<li><a href="welcome/htmltidy"><i>HTML Tidy</i> validation <i>on-the-fly</i></a>.</li>
 			<li><a href="welcome/firephp"><i>Fire PHP</i> debugging</a>.</li>
+			<li><a href="welcome/pagination">Improved pagination library</a>.</li>
 			<li><a href="welcome/login">Controller to have a basic authentication system</a>.</li>
 			<li><a href="welcome/ajax">Controller to handle <i>AJAX</i> requests</a>.</li>
 			<li><a href="welcome/html">Controller to test your <i>CSS</i> styles with almost all the existing <i>HTML</i> tags</a>.</li>
@@ -35,6 +37,7 @@
 		</ul>
 
 		<p>For fine-tuning the installation to fit your needs just search for the tag <i>to-do</i> in the source code (the provided <i>to-do.sh</i> can do it for you).</p>
+		<?php endif ?>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
