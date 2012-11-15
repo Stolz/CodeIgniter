@@ -21,7 +21,7 @@ $config['tidy_enabled'] = (ENVIRONMENT == 'development') ? TRUE : FALSE;
 |
 */
 $config['tidy_show_error'] = TRUE;
-$config['tidy_open_tag'] = '<div id="tidy_errors" style="position: absolute;right: 0;top: 0;z-index: 0;padding:1em;margin:1em;border:1px solid #DC0024;font-family: Sans-Serif;background-color:#FFE5E5;color:#DC0024"><a style="float:right;cursor:pointer;color:blue;margin:-15px" onclick="document.getElementById(\'tidy_errors\').style.visibility = \'hidden\'">[x]</a>';
+$config['tidy_open_tag'] = '<div id="tidy_errors" style="position: absolute;right: 0;top: 0;z-index: 0;padding:1em;margin:1em;border:1px solid #DC0024;font-family: Sans-Serif;background-color:#FFE5E5;color:#DC0024"><a style="float:right;cursor:pointer;color:blue;margin:-15px" onclick="document.getElementById(\'tidy_errors\').style.display = \'none\'">[x]</a>';
 $config['tidy_close_tag'] = '</div>';
 
 /*

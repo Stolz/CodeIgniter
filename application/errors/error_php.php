@@ -18,7 +18,7 @@ background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, .5) 25%, transp
 background-image: linear-gradient(-45deg, rgba(255, 255, 255, .5) 25%, transparent 25%,transparent 50%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .5) 75%,transparent 75%, transparent);
 ">
 
-	<a style="float:right;cursor:pointer;color:blue;margin:-4px" onclick="document.getElementById('<?= $id ?>').style.visibility = 'hidden'">[x]</a>
+	<a style="float:right;cursor:pointer;color:blue;margin:-4px" onclick="document.getElementById('<?= $id ?>').style.display = 'none'">[x]</a>
 
 	<div style="margin-bottom:3px">
 		PHP <span style="color:red;font-weight:bold;"><?= strtolower($severity); ?></span> at
