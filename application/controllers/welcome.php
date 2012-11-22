@@ -2,7 +2,7 @@
 
 class Welcome extends CI_Controller {
 
-	function __construct()
+	public function __construct()
 	{
 		parent::__construct();
 
@@ -288,7 +288,7 @@ class Welcome extends CI_Controller {
 	}
 
 	// Tests extended pagination library
-	function pagination()
+	public function pagination()
 	{
 		//Set pagination
 		$config = array(
@@ -318,7 +318,22 @@ class Welcome extends CI_Controller {
 		);
 		$this->load->view('template', $data);
 	}
-}
 
+	//Test Marckdown library
+	public function markdown()
+	{
+
+		$this->load->library('cimarkdown');
+		$markdown = $this->load->view('test/markdown', NULL, TRUE);
+
+		//Load view
+		$data = array(
+			'title'			=> _('Markdown library test page'),
+			'views'			=> array(-1 => $this->cimarkdown->markit($markdown)),
+		);
+
+		$this->load->view('template', $data);
+	}
+}
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */

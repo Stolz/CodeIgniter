@@ -9,6 +9,7 @@ Specifically, it includes:
  - [Oauth v2](http://oauth.net/2/) authentication using [Phil Sturgeon’s library](https://github.com/philsturgeon/codeigniter-oauth2).
  - Integrated [Zurb Foundation](http://foundation.zurb.com) framework.
  - Integrated [Zurb Foundation](http://www.zurb.com/playground/foundation-icons) icons.
+ - Integrated [Markdown](http://daringfireball.net/projects/markdown) library.
  - [Datammaper ORM](http://datamapper.wanwizard.eu).
  - Scripts to extract and translate [GNU Gettext](http://www.gnu.org/software/gettext) translations. (Check *application/language/*).
  - [HTML Tidy](http://tidy.sourceforge.net) validation *on-the-fly*.
