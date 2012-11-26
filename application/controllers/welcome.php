@@ -334,6 +334,21 @@ class Welcome extends CI_Controller {
 
 		$this->load->view('template', $data);
 	}
+
+	//Test Rickshaw JS charts library
+	public function rickshaw()
+	{
+		$this->config->set_item('tidy_enabled', FALSE);
+		//Load view
+		$data = array(
+			'title'			=> _('Rickshaw toolkit test page'),
+			'css'			=> array('rickshaw.min'),
+			'js'			=> array('rickshaw.min'),
+			'views'			=> array('test/rickshaw'),
+		);
+
+		$this->load->view('template', $data);
+	}
 }
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */

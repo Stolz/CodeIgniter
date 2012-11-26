@@ -10,6 +10,7 @@ Specifically, it includes:
  - Integrated [Zurb Foundation](http://foundation.zurb.com) framework.
  - Integrated [Zurb Foundation](http://www.zurb.com/playground/foundation-icons) icons.
  - Integrated [Markdown](http://daringfireball.net/projects/markdown) library.
+ - Integrated [Rickshaw](http://code.shutterstock.com/rickshaw) JS toolkit.
  - [Datammaper ORM](http://datamapper.wanwizard.eu).
  - Scripts to extract and translate [GNU Gettext](http://www.gnu.org/software/gettext) translations. (Check *application/language/*).
  - [HTML Tidy](http://tidy.sourceforge.net) validation *on-the-fly*.

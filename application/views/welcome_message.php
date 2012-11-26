@@ -27,6 +27,7 @@
 			<li><a href="welcome/datammaper">Integrated <i>Datammaper ORM</i></a>.</li>
 			<li><a href="welcome/gettext">Integrated <i>GNU Gettext</i> translation support</a>. Scripts to translate source code are in <i>application/language/</i>.</li>
 			<li><a href="welcome/markdown">Integrated <i>Markdown</i> library</a>.</li>
+			<li><a href="welcome/rickshaw">Integrated <i>Rickshaw</i></a> javascript toolkit for time series graphs.</li>
 			<li><a href="welcome/htmltidy"><i>HTML Tidy</i> validation <i>on-the-fly</i></a>.</li>
 			<li><a href="welcome/firephp"><i>Fire PHP</i> debugging</a>.</li>
 			<li><a href="welcome/pagination">Improved pagination library</a>.</li>
