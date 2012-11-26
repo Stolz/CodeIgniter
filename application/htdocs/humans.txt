@@ -11,5 +11,5 @@ Location: Valencia, Spain.
 /* SITE */
 Last update: YYYY/MM/DD
 Standards: HTML5, CSS3,
-Components: Modernizr, jQuery, Foundation.
-Software: Git, Kate (http://kate-editor.org), Gentoo Linux (http://www.gentoo.org/main/en/about.xml)
+Components: Modernizr, jQuery, Zurb Foundation.
+Software: Git, Datamapper ORM, Kate (http://kate-editor.org), Gentoo Linux (http://www.gentoo.org/main/en/about.xml)
