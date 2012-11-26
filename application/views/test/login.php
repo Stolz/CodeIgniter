@@ -5,7 +5,12 @@
 		<h3 class="subheader"><?= $title ?></h3>
 		<hr/>
 
-		<?php if(isset($error)) $this->load->view('msg', array('type' => 'alert','msg' => $error, 'close' => TRUE)); ?>
+		<?php if(isset($error)) : ?>
+		<div class="alert-box alert hide-on-print">
+			<?= $error ?>
+			<a class="close">&times;</a>
+		</div>
+		<?php endif ?>
 
 		<?= form_open('login'),
 

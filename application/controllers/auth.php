@@ -39,7 +39,7 @@ class Auth extends CI_Controller {
 				$user = ($query->num_rows()) ? $query->row() : FALSE; */
 				if( ! $user)
 				{
-					$this->load->vars(array('eror' => _('Wrong credentials')));
+					$this->load->vars(array('error' => _('Wrong credentials')));
 				}
 				else
 				{

@@ -18,6 +18,7 @@
 	<p class="lead">This modal has <?=$size?> size</p>
 	<p>Clicking the background will close it</p>
 	<div class="left"><a onclick="$('.reveal-modal.open').trigger('reveal:close')" class="secondary radius button">Cancel</a></div>
+	&nbsp;<!--Mobile separator-->
 	<div class="right"><a class="button radius">Accept</a></div>
 	<a class="close-reveal-modal">&#215;</a>
 </div>
