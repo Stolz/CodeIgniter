@@ -34,6 +34,7 @@
 			<li><a href="welcome/login">Controller to have a basic authentication system</a>.</li>
 			<li><a href="welcome/ajax">Controller to handle <i>AJAX</i> requests</a>.</li>
 			<li><a href="welcome/html">Controller to test your <i>CSS</i> styles with almost all the existing <i>HTML</i> tags</a>.</li>
+			<li><a href="welcome/soapclient">Controller with a working example of a <i>SOAP</i> client.</li>
 			<li><a href="feed/news">Controller to create an <i>RSS</i> feed</a>.</li>
 			<!--<li><a href="welcome/rest">Integrated <i>REST</i> API controller</a>.</li>-->
 		</ul>
