@@ -23,7 +23,7 @@ class Soap extends CI_Controller {
 		$wsdl = 'http://www.webservicex.net/globalweather.asmx?WSDL';
 		
 		try {
-			$client = new SoapClient($wsdl, array('trace' => 1));
+			$client = new SoapClient($wsdl, array('trace' => TRUE/*Required for >__getLast*() functions */, 'exceptions' => TRUE));
 
 			echo '<h3>List of SOAP functions</h3>';
 			$this->_pre($client->__getFunctions());
