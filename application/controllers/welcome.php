@@ -343,7 +343,7 @@ class Welcome extends CI_Controller {
 		$data = array(
 			'title'			=> _('Rickshaw toolkit test page'),
 			'ui'			=> TRUE,
-			'js'			=> array('rickshaw.min','extensions'),
+			'js'			=> array('rickshaw.min'),
 			'css'			=> array('rickshaw.min'),
 			'views'			=> array('test/rickshaw'),
 		);
@@ -363,10 +363,6 @@ class Welcome extends CI_Controller {
 
 		$this->load->view('template', $data);
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> rickshaw
 
 	//SOAP client usin native PHP SOAP extension
 	public function soapclient()
@@ -382,7 +378,6 @@ class Welcome extends CI_Controller {
 
 			echo '<h3>List of SOAP types</h3>';
 			echo '<pre>';print_r($client->__getTypes());echo '</pre>';
-
 
 			echo '<h3>SOAP request PHP object</h3>';
 			echo '<pre>';print_r($client->GetWeather(array('CountryName' => 'Spain', 'CityName' => 'Valencia')));
