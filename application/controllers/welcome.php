@@ -350,6 +350,19 @@ class Welcome extends CI_Controller {
 		$this->load->view('template', $data);
 	}
 
+	//Test jQuery and jQuery UI
+	public function jquery()
+	{
+		$data = array(
+			'title'			=> _('jQuery'),
+// 			'foundation'	=> TRUE,
+			'ui'			=> TRUE,
+			'views'			=> array('test/jquery'),
+		);
+
+		$this->load->view('template', $data);
+	}
+
 
 	public function soapclient()
 	{

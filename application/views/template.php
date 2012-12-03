@@ -35,6 +35,8 @@
 	<!-- CSS -->
 	<?php if($foundation = isset($foundation)) : ?>
 	<link type="text/css" rel="stylesheet" href="<?= ASSETS ?>css/foundation.min.css" />
+	<?php endif;if($ui = isset($ui)) : ?>
+	<link type="text/css" rel="stylesheet" href="<?= ASSETS ?>css/smoothness/jquery-ui-<?= JQUERY_UI_VERSION ?>.custom.min.css" />
 	<?php endif; if(isset($css)) foreach($css as $file) : ?>
 	<link type="text/css" rel="stylesheet" href="<?= ASSETS ?>css/<?= $file ?>.css" />
 	<?php endforeach ?>
@@ -55,9 +57,12 @@
 	<!-- JavaScript -->
 	<?php if($foundation) : /* foundation.min.js already includes jQuery and Modernizr */?>
 	<script type="text/javascript" src="<?= ASSETS ?>js/foundation.min.js"></script>
-	<?php else : ?>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script type="text/javascript">if (typeof jQuery == 'undefined')document.write(unescape("%3Cscript src='<?= ASSETS ?>js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));</script>
+	<?php else : /* Load JQuery from Google CDN with fallback to local */ ?>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/<?= JQUERY_VERSION ?>/jquery.min.js"></script>
+	<script type="text/javascript">if(typeof jQuery == 'undefined')document.write(unescape("%3Cscript src='<?= ASSETS ?>js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));</script>
+	<?php endif; if($ui) : /* Load JQuery UI from Google CDN with fallback to local */?>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/<?= JQUERY_UI_VERSION ?>/jquery-ui.min.js"></script>
+	<script type="text/javascript">!window.jQuery.ui && document.write(unescape("%3Cscript src='<?= ASSETS ?>js/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));</script>
 	<?php endif; if(isset($js)) foreach($js as $file) : ?>
 	<script type="text/javascript" src="<?= ASSETS ?>js/<?= $file ?>.js"></script>
 	<?php endforeach ?>
