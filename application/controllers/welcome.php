@@ -349,6 +349,41 @@ class Welcome extends CI_Controller {
 
 		$this->load->view('template', $data);
 	}
+
+
+	public function soapclient()
+	{
+		//Make sure your PHP installation is compiled with SOAP support (Gentoo: USE="soap")
+		$wsdl = 'http://www.webservicex.net/globalweather.asmx?WSDL';
+
+		try {
+			$client = new SoapClient($wsdl, array('exceptions' => TRUE, 'trace' => TRUE/*Required for >__getLast*() functions */));
+
+			echo '<h3>List of SOAP functions</h3>';
+			echo '<pre>';print_r($client->__getFunctions());echo '</pre>';
+
+			echo '<h3>List of SOAP types</h3>';
+			echo '<pre>';print_r($client->__getTypes());echo '</pre>';
+
+
+			echo '<h3>SOAP request PHP object</h3>';
+			echo '<pre>';print_r($client->GetWeather(array('CountryName' => 'Spain', 'CityName' => 'Valencia')));
+
+			echo '<h3>Last SOAP request</h3>';
+			echo '<pre>';print_r($client->__getLastRequestHeaders());echo '</pre>';
+			echo '<pre>';print_r($client->__getLastRequest());echo '</pre>';
+
+			echo '<h3>Last SOAP response</h3>';
+			echo '<pre>';print_r($client->__getLastResponseHeaders());echo '</pre>';
+			echo '<pre>';print_r($xml = $client->__getLastResponse());echo '</pre>';
+// 			echo '<pre>';print_r(simplexml_load_string($xml));echo '</pre>';
+		}
+		catch (Exception $e){
+			echo '<div style="color:red;border:1px solid red">';
+			echo nl2br($e->getMessage());
+			echo '</div>';
+		}
+	}
 }
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */
