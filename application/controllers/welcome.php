@@ -342,8 +342,9 @@ class Welcome extends CI_Controller {
 		//Load view
 		$data = array(
 			'title'			=> _('Rickshaw toolkit test page'),
+			'ui'			=> TRUE,
+			'js'			=> array('rickshaw.min','extensions'),
 			'css'			=> array('rickshaw.min'),
-			'js'			=> array('rickshaw.min'),
 			'views'			=> array('test/rickshaw'),
 		);
 
@@ -362,8 +363,12 @@ class Welcome extends CI_Controller {
 
 		$this->load->view('template', $data);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> rickshaw
 
+	//SOAP client usin native PHP SOAP extension
 	public function soapclient()
 	{
 		//Make sure your PHP installation is compiled with SOAP support (Gentoo: USE="soap")
