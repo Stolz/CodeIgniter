@@ -397,6 +397,39 @@ class Welcome extends CI_Controller {
 			echo '</div>';
 		}
 	}
+
+	public function assets()//to-do añadirla a listado de fucnones accesibles del controlador por defecto y al README.md
+	{
+		//Load library
+		$this->load->library('assets');
+
+		//Add some assets
+		$this->assets->add('jqueryui');
+		//You can also add more than one asset at a time ...
+		//$this->assets->add(array('foundation', 'jqueryui'));
+		//... or even load the library and add some assets all in one single call
+		//$this->load->library('assets', array('foundation', 'jqueryui'));
+
+
+		//Add some spare CSS
+		$this->assets->add_css('local_css_file.css');
+		//Again you can add more than one file at a time
+		$this->assets->add_css(array('http://remote/file.css','local_file_with_no_extension'));
+
+
+
+		//Add some spare JavaScript
+		$this->assets->add_js('local_js_file.js');
+		//Again you can add more than one file at a time
+		$this->assets->add_js(array('http://remote/file.js','local_file_with_no_extension'));
+
+
+		$this->config->set_item('tidy_enabled', 0);//to-do quitar y  hacer que se integre con template.php
+		//Build the HTML
+		echo $this->assets->build_css();
+		echo $this->assets->build_js();
+		
+	}
 }
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */

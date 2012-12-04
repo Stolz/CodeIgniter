@@ -11,9 +11,6 @@ define('PROJECT_NAME', 'My Codeigniter project');
 define('PROJECT_DOMAIN', 'myproject.com'); //No trailing slash!
 define('PROJECT_EMAIL', 'contact@'.PROJECT_DOMAIN);
 define('ASSETS', '/application/htdocs/');
-define('JQUERY_VERSION', '1.8.3');
-define('JQUERY_UI_VERSION', '1.9.2');
-
 
 /*
 |--------------------------------------------------------------------------
