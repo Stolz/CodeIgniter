@@ -26,7 +26,7 @@ $config['jquery-ui'] = array(
 	'css'		=> 'smoothness/jquery-ui-1.9.2.custom.min',
 	'cdn'		=> '//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js',
 	'fallback'	=> '!window.jQuery.ui',
-	'js'		=> 'jquery.min',
+	'js'		=> 'jquery-ui.min',
 );
 
 $config['app'] = array(
