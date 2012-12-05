@@ -11,12 +11,15 @@ class Welcome extends CI_Controller {
 			show_404();
 	}
 
+
 	// List of all tests methods
 	public function index()
 	{
+		$this->load->library('assets');
+		$this->assets->add_css('style');
+
 		$data = array(
 			'title'	=> 'Welcome to CodeIgniter!',
-			'css'	=> array('style'),
 			'views'	=> array('welcome_message')
 		);
 
@@ -80,6 +83,7 @@ class Welcome extends CI_Controller {
 			'title'	=> 'Ajax test page',
 			'views'	=> array('test/ajax')
 		);
+		$this->load->library('assets', array('jquery', 'app'));
 		$this->load->view('template', $data);
 	}
 
@@ -89,7 +93,13 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->config('htmltidy');
 		$this->config->set_item('tidy_enabled', TRUE);
-		echo '<br/><br/><br/><br/><br/>This page has deliberately a wrong HTML markup, you should see HTMLTidy warnings in the top right corner.';
+
+		$data = array(
+			'title'	=> 'GNU Gettext test page',
+			'views'	=> array(-1 => '<div style="padding-top:25%">This page deliberately has a wrong HTML markup, you should see HTMLTidy warnings in the top right corner.</div></li>')
+		);
+		$this->load->view('template', $data);
+
 	}
 
 
@@ -129,10 +139,12 @@ class Welcome extends CI_Controller {
 	// Shows a sample of almost all HTML elements
 	public function html()
 	{
+		$this->load->library('assets', array('foundation'));
+		//$this->assets->add_css(array('style1', 'style2')); //Add here your CSS files whose styles you want to try (and remove the sample 'foundation')
+
 		$data = array(
 			'title'	=> 'HTML test page with almost all HTML elements',
 			'views'	=> array('test/html_test_page'),
-			'css'	=> array() //Add you style sheet files to test them
 		);
 		$this->load->view('template', $data);
 	}
@@ -143,9 +155,9 @@ class Welcome extends CI_Controller {
 	{
 		$this->config->set_item('tidy_enabled', FALSE);
 
+		$this->load->library('assets', array('foundation'));
 		$data = array(
 			'title'	=> 'Foundation CSS test page',
-			'foundation' => TRUE,
 			'current_url'=> current_url(),
 			'views'	=> array(
 				'test/foundation/top_bar',
@@ -169,10 +181,10 @@ class Welcome extends CI_Controller {
 	// Test Zurb Foundation text based icons http://www.zurb.com/playground/foundation-icons
 	public function foundation_icons()
 	{
+
+		$this->load->library('assets', array('foundation-icons'));
 		$data = array(
 			'title'	=> 'Foundation icons test page',
-			'foundation' => TRUE,
-			'css'	=> array('foundation-icons'),
 			'views'	=> array('test/foundation_icons_test_page')
 		);
 		$this->load->view('template', $data);
@@ -339,28 +351,24 @@ class Welcome extends CI_Controller {
 	public function rickshaw()
 	{
 		$this->config->set_item('tidy_enabled', FALSE);
+		$this->load->library('assets', array('jquery', 'jquery-ui', 'rickshaw', 'app'));
+
 		//Load view
 		$data = array(
 			'title'			=> _('Rickshaw toolkit test page'),
-			'ui'			=> TRUE,
-			'js'			=> array('rickshaw.min'),
-			'css'			=> array('rickshaw.min'),
 			'views'			=> array('test/rickshaw'),
 		);
-
 		$this->load->view('template', $data);
 	}
 
 	//Test jQuery and jQuery UI
 	public function jquery()
 	{
+		$this->load->library('assets', array('jquery', 'jquery-ui', 'app'));
 		$data = array(
 			'title'			=> _('jQuery'),
-// 			'foundation'	=> TRUE,
-			'ui'			=> TRUE,
 			'views'			=> array('test/jquery'),
 		);
-
 		$this->load->view('template', $data);
 	}
 
@@ -398,37 +406,40 @@ class Welcome extends CI_Controller {
 		}
 	}
 
-	public function assets()//to-do añadirla a listado de fucnones accesibles del controlador por defecto y al README.md
+	public function assets()
 	{
 		//Load library
 		$this->load->library('assets');
 
-		//Add some assets
-		$this->assets->add('jqueryui');
-		//You can also add more than one asset at a time ...
-		//$this->assets->add(array('foundation', 'jqueryui'));
-		//... or even load the library and add some assets all in one single call
-		//$this->load->library('assets', array('foundation', 'jqueryui'));
+		//Add some assets (groups of JS+CSS). They should be previously defined in application/config/assets.php
+		$this->assets->add('foundation');
+		$this->assets->add('jquery-ui');
 
+		//You can also add more than one asset at a time ...
+		//$this->assets->add(array('foundation', 'jquery-ui'));
+		//... or even load the library and add some assets all in one single call
+		//$this->load->library('assets', array('foundation', 'jquery-ui'));
 
 		//Add some spare CSS
 		$this->assets->add_css('local_css_file.css');
 		//Again you can add more than one file at a time
-		$this->assets->add_css(array('http://remote/file.css','local_file_with_no_extension'));
+		$this->assets->add_css(array('http://remote/file.css','local_css_file_with_no_extension'));
+		//For local files (those not starting with 'http') you don't need to include the extension
 
-
-
-		//Add some spare JavaScript
+		//For adding spare JavaScript is exactly the same as for CSS
 		$this->assets->add_js('local_js_file.js');
-		//Again you can add more than one file at a time
-		$this->assets->add_js(array('http://remote/file.js','local_file_with_no_extension'));
+		$this->assets->add_js(array('http://remote/file.js','local_js_file_with_no_extension'));
 
+		//The library supports method chaining
+		$this->assets->add('jquery-ui')->add_js('another_local_js_file.js')->add_css('another_local_css_file.css');
 
-		$this->config->set_item('tidy_enabled', 0);//to-do quitar y  hacer que se integre con template.php
+		//No worry about duplicates, the library takes care of it for you
+		$this->assets->add('jquery-ui')->add_js('another_local_js_file.js')->add_css('another_local_css_file.css'); //Note the
+
+		$this->config->set_item('tidy_enabled', FALSE);
 		//Build the HTML
-		echo $this->assets->build_css();
-		echo $this->assets->build_js();
-		
+		echo 'CSS<pre>',htmlentities($this->assets->build_css()),'</pre>';
+		echo 'JS<pre>', htmlentities($this->assets->build_js()),'</pre>';
 	}
 }
 /* End of file welcome.php */

@@ -57,12 +57,12 @@ class Auth extends CI_Controller {
 		}
 
 		//Load view
+		$this->load->helper('form');
+		$this->load->library('assets', array('foundation'));
 		$data = array(
 			'title'	=> _('Login'),
-			'views'	=> array('test/login'),
-			'foundation' => TRUE
+			'views'	=> array('test/login')
 		);
-		$this->load->helper('form');
 		$this->load->view('template', $data);
 	}
 

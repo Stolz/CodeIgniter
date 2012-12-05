@@ -19,23 +19,25 @@
 		<p><b>Try them out!</b></p>
 
 		<ul>
-			<li>Single page layout including many HTML recommended practices from <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.</li>
-			<li>Improved default error messages.</li>
+			<li>Views layout based on <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.</li>
+			<li>Improved CI default error messages looking like the ones from <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.</li>
+			<li><a href="welcome/assets">Assets library</a> including out of the box:<ul>
+				<li><a href="welcome/jquery"><i>jQuery</i> and <i>jQuery UI</i></a>.</li>
+				<li><a href="welcome/foundation"><i>Zurb Foundation</i></a> framework.</li>
+				<li><a href="welcome/foundation_icons"><i>Zurb Foundation icons</i></a>.</li>
+				<li><a href="welcome/rickshaw"><i>Rickshaw</i></a> javascript toolkit for time series graphs.</li>
+				</ul></li>
 			<li><a href="welcome/oauth2">Oauth v2 authentication</a>.</li>
-			<li><a href="welcome/jquery">Integrated <i>jQuery</i> and <i>jQuery UI</i></a>.</li>
-			<li><a href="welcome/foundation">Integrated <i>Zurb Foundation framework</i></a>.</li>
-			<li><a href="welcome/foundation_icons">Integrated <i>Zurb Foundation icons</i></a>.</li>
 			<li><a href="welcome/datammaper">Integrated <i>Datammaper ORM</i></a>.</li>
 			<li><a href="welcome/gettext">Integrated <i>GNU Gettext</i> translation support</a>. Scripts to translate source code are in <i>application/language/</i>.</li>
 			<li><a href="welcome/markdown">Integrated <i>Markdown</i> library</a>.</li>
-			<li><a href="welcome/rickshaw">Integrated <i>Rickshaw</i></a> javascript toolkit for time series graphs.</li>
 			<li><a href="welcome/htmltidy"><i>HTML Tidy</i> validation <i>on-the-fly</i></a>.</li>
 			<li><a href="welcome/firephp"><i>Fire PHP</i> debugging</a>.</li>
 			<li><a href="welcome/pagination">Improved pagination library</a>.</li>
 			<li><a href="welcome/login">Controller to have a basic authentication system</a>.</li>
 			<li><a href="welcome/ajax">Controller to handle <i>AJAX</i> requests</a>.</li>
 			<li><a href="welcome/html">Controller to test your <i>CSS</i> styles with almost all the existing <i>HTML</i> tags</a>.</li>
-			<li><a href="welcome/soapclient">Controller with a working example of a <i>SOAP</i> client.</li>
+			<li><a href="welcome/soapclient">Controller with a working example of a <i>SOAP</i> client</a>.</li>
 			<li><a href="feed/news">Controller to create an <i>RSS</i> feed</a>.</li>
 			<!--<li><a href="welcome/rest">Integrated <i>REST</i> API controller</a>.</li>-->
 		</ul>
