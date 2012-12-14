@@ -3,6 +3,7 @@
 Specifically, it includes:
 
  - Single-page layout views system based on [HTML5 Boilerplate](http://html5boilerplate.com) and including many HTML recommended practices.
+ - Improved `.htaccess` file (it allows to: remove *www* from URL, force HTTPS for pages that require authentication, skip *index.php/...* from URL, etc).
  - Improved default error messages.
  - Improved pagination library.
  - Assets library including out of the box:
@@ -20,6 +21,7 @@ Specifically, it includes:
  - Controller to handle AJAX requests.
  - Controller to test your CSS styles with almost all the existing HTML tags.
  - Controller to create an RSS feed.
+ 
 
 ## All of it with a working sample code following CodeIgniter standars!
 
