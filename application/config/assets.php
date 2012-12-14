@@ -9,7 +9,7 @@ $config['ASSET_NAME'] = array(
 	'fallback'	=> JavaScript condition to test if CDN file was loaded successfully. If condition fails then all the 'js' files provided before will be loded
 );
 
-All keys are optional but 'fallback' is mandatory if 'cdn' was provided and 'js' is mandatory if 'fallback' was provided.
+All keys are optional but 'fallback' requires 'cdn' and 'js' to work.
 
 For 'css' and 'js', if the filename starts with 'http' then is assumed to be a remote link and it's loaded as is. Otherwise it is consider to be a local link and the proper prefix is automatically added (and also the extension if it was not provided).
 

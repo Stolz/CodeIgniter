@@ -9,7 +9,6 @@ class CI_Assets {
 	private $config;
 	private $assets = array();
 	private $css = array();
-	private $cdn = array();
 	private $js = array();
 
 	public function __construct($assets = array())
@@ -59,9 +58,9 @@ class CI_Assets {
 
 				if( ! empty($asset['css'])) //The asset has CSS
 					$this->add_css($asset['css']);
- 
-				if( ! empty($asset['cdn']) AND ! empty($asset['fallback'])) //The asset has CDN JS
-					$this->cdn[] = $asset;
+
+				if( ! empty($asset['cdn'])) //The asset has CDN JS
+					$this->js[] = $asset;
 				elseif( ! empty($asset['js'])) //The asset has JS
 					$this->add_js($asset['js']);
 			}
@@ -107,23 +106,23 @@ class CI_Assets {
 	public function build_js()
 	{
 		$output = '';
-		foreach($this->cdn as $asset)
-		{
-			$output .= '<script type="text/javascript" src="'.$asset['cdn'].'"></script>';
-			if( ! empty($asset['fallback']) AND ! empty($asset['js']))
-			{
-				$output .= '<script type="text/javascript">if('.$asset['fallback'].'){';
-				$js = (is_array($asset['js'])) ? $asset['js'] : array($asset['js']);
-				foreach($js as $file)
-					$output .= 'document.write(unescape("%3Cscript src=\''.$this->build_url('js', $file).'\' type=\'text/javascript\'%3E%3C/script%3E"));';
-				$output .= '}</script>';
-			}
-			$output .= "\n";
-		}
-
 		foreach($this->js as $file)
 		{
-			$output .= '<script type="text/javascript" src="'.$this->build_url('js', $file).'"></script>'."\n";
+			if( ! empty($file['cdn'])) //is a CDN
+			{
+				$output .= '<script type="text/javascript" src="'.$file['cdn'].'"></script>';
+				if( ! empty($file['fallback']) AND ! empty($file['js']))
+				{
+					$output .= '<script type="text/javascript">if('.$file['fallback'].'){';
+					$js = (is_array($file['js'])) ? $file['js'] : array($file['js']);
+					foreach($js as $file)
+						$output .= 'document.write(unescape("%3Cscript src=\''.$this->build_url('js', $file).'\' type=\'text/javascript\'%3E%3C/script%3E"));';
+					$output .= '}</script>';
+				}
+				$output .= "\n";
+			}
+			else
+				$output .= '<script type="text/javascript" src="'.$this->build_url('js', $file).'"></script>'."\n";
 		}
 
 		return $output;
