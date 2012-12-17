@@ -65,7 +65,7 @@ abstract class REST_Controller extends CI_Controller
 	 *
 	 * @var object
 	 */
-    protected $client = NULL;	 
+	 protected $client = NULL;	 
 
 	/**
 	 * The arguments for the GET request method
@@ -265,7 +265,7 @@ abstract class REST_Controller extends CI_Controller
 		// Should we answer if not over SSL?
 		if (config_item('force_https') AND !$this->_detect_ssl())
 		{
-    	   $this->response(array('status' => false, 'error' => 'Unsupported protocol'), 403);	
+			$this->response(array('status' => false, 'error' => 'Unsupported protocol'), 403);	
 		}
 		
 		$pattern = '/^(.*)\.('.implode('|', array_keys($this->_supported_formats)).')$/';
@@ -280,7 +280,7 @@ abstract class REST_Controller extends CI_Controller
 		$log_method = !(isset($this->methods[$controller_method]['log']) AND $this->methods[$controller_method]['log'] == FALSE);
 
 		// Use keys for this method?
-		$use_key = !(isset($this->methods[$controller_method]['key']) AND $this->methods[$controller_method]['key'] == FALSE);
+		$use_key = ! (isset($this->methods[$controller_method]['key']) AND $this->methods[$controller_method]['key'] == FALSE);
 
 		// Get that useless shitty key out of here
 		if (config_item('rest_enable_keys') AND $use_key AND $this->_allow === FALSE)
@@ -432,7 +432,7 @@ abstract class REST_Controller extends CI_Controller
 	 */
 	protected function _detect_ssl()
 	{
-    		return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on"));
+    		return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on");
 	}
 	
 	
@@ -605,11 +605,41 @@ abstract class REST_Controller extends CI_Controller
 
 			$this->rest->key = $this->client->{config_item('rest_key_column')};
 
-			/*
 			isset($row->user_id) AND $this->rest->user_id = $row->user_id;
 			isset($row->level) AND $this->rest->level = $row->level;
 			isset($row->ignore_limits) AND $this->rest->ignore_limits = $row->ignore_limits;
-			*/
+			
+			/*
+			 * If "is private key" is enabled, compare the ip address with the list
+			 * of valid ip addresses stored in the database.
+			 */
+			if(!empty($row->is_private_key))
+			{
+				// Check for a list of valid ip addresses
+				if(isset($row->ip_addresses))
+				{
+					// multiple ip addresses must be separated using a comma, explode and loop
+					$list_ip_addresses = explode(",", $row->ip_addresses);
+					$found_address = FALSE;
+					
+					foreach($list_ip_addresses as $ip_address)
+					{
+						if($this->input->ip_address() == trim($ip_address))
+						{
+							// there is a match, set the the value to true and break out of the loop
+							$found_address = TRUE;
+							break;
+						}
+					}
+					
+					return $found_address;
+				}
+				else
+				{
+					// There should be at least one IP address for this private key.
+					return FALSE;
+				}
+			}
 
 			return $this->client;
 		}
