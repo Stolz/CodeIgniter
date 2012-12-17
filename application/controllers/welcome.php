@@ -190,6 +190,17 @@ class Welcome extends CI_Controller {
 		$this->load->view('template', $data);
 	}
 
+	// Test SVG social icons https://github.com/adamfairhead/webicons
+	public function fc_webicons()
+	{
+		$this->load->library('assets', array('foundation')); /** Note: fc-webicons requires Modernizr with SVG detection. Zurb Foundation includes Modernizr */
+		$this->assets->add_css('fc-webicons');
+		$data = array(
+			'title'	=> 'FC Webicons test page',
+			'views'	=> array('test/fc-webicons')
+		);
+		$this->load->view('template', $data);
+	}
 
 	//Test Oauth authentication https://github.com/philsturgeon/codeigniter-oauth2
 	public function oauth2($provider = NULL)

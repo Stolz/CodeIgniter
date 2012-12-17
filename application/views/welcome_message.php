@@ -24,7 +24,8 @@
 			<li><a href="welcome/assets">Assets library</a> including out of the box:<ul>
 				<li><a href="welcome/jquery"><i>jQuery</i> and <i>jQuery UI</i></a>.</li>
 				<li><a href="welcome/foundation"><i>Zurb Foundation</i></a> framework.</li>
-				<li><a href="welcome/foundation_icons"><i>Zurb Foundation icons</i></a>.</li>
+				<li><a href="welcome/foundation_icons"><i>Zurb Foundation SVG icons</i></a>.</li>
+				<li><a href="welcome/fc_webicons"><i>FC SVG icons</i></a>.</li>
 				<li><a href="welcome/rickshaw"><i>Rickshaw</i></a> javascript toolkit for time series graphs.</li>
 				</ul></li>
 			<li><a href="welcome/oauth2">Oauth v2 authentication</a>.</li>

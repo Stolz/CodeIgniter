@@ -11,6 +11,7 @@ Specifically, it includes:
    - [Zurb Foundation](http://foundation.zurb.com) framework.
    - [Zurb Foundation](http://www.zurb.com/playground/foundation-icons) icons.
    - [Rickshaw](http://code.shutterstock.com/rickshaw) JavaScript toolkit for time series graphs.
+   - [FC Webicons](http://fairheadcreative.com/blog/fc-webicons-set-launched) SVG icons.
  - Basic authentication system (Check *application/libraries/MY_Session.php*).
  - [Oauth v2](http://oauth.net/2/) authentication using [Phil Sturgeon’s library](https://github.com/philsturgeon/codeigniter-oauth2).
  - Integrated [Markdown](http://daringfireball.net/projects/markdown) library.
