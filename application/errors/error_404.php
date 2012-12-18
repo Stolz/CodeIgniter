@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title><?=  $heading; ?> :(</title>
-		<meta name="author" content="Javi (@Stolz)" /><!--to-do set your name-->
+		<meta name="author" content="Javi (twitter: @Stolz)" /><!--to-do set your name-->
 		<link type="text/plain" rel="author" href="<?= ASSETS ?>humans.txt" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><!--Force latest IE rendering engine (& Chrome Frame if installed)-->
 
