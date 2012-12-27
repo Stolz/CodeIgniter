@@ -58,10 +58,13 @@ if(defined('DATAMAPPERPATH')) //Required by Datamapper
 {
 	$autoload['libraries'][] = 'database';
 	$autoload['libraries'][] = 'datamapper';
+	if(ENVIRONMENT == 'development')
+		$autoload['libraries'][] = 'debug';
 }
 
 if(ENVIRONMENT == 'development')
 	$autoload['libraries'][] = 'firephp';
+
 
 /*
 | -------------------------------------------------------------------
