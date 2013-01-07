@@ -24,6 +24,13 @@ $lang['decimal']			= _('The %s field must contain a decimal number.');
 $lang['less_than']			= _('The %s field must contain a number less than %s.');
 $lang['greater_than']		= _('The %s field must contain a number greater than %s.');
 
+// Custom validation rules (MY_Form_validation.php)
+$lang['is_date']			= _('Invalid date');
+// Backports of CI 3.0-dev into CI 2.x
+$lang['differs']			= _('The %s field must differ from the %s field.');
+$lang['less_than_equal_to']	= _('The %s field must contain a number less than or equal to %s.');
+$lang['valid_url']			= _('The %s field must contain a valid URL.');
+$lang['greater_than_equal_to']= _('The %s field must contain a number greater than or equal to %s.');
 
 /* End of file form_validation_lang.php */
 /* Location: ./application/language/english/form_validation_lang.php */

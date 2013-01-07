@@ -77,12 +77,15 @@ class Template extends DataMapper {
 	Rule			Parameter	Description
 	required		No		Returns FALSE if the form element is empty.
 	matches			Yes		Returns FALSE if the form element does not match the one in the parameter.
+	differs			Yes		Returns FALSE if the form element does not differ from the one in the parameter.
 	is_unique		Yes		Returns FALSE if the form element is not unique to the table and field name in the parameter.
 	min_length		Yes		Returns FALSE if the form element is shorter then the parameter value.
 	max_length		Yes		Returns FALSE if the form element is longer then the parameter value.
 	exact_length	Yes		Returns FALSE if the form element is not exactly the parameter value.
 	greater_than	Yes		Returns FALSE if the form element is less than the parameter value or not numeric.
+	greater_than_equal_to Yes Returns FALSE if the form element is less than or equal to the parameter value or not numeric.
 	less_than		Yes		Returns FALSE if the form element is greater than the parameter value or not numeric.
+	less_than_equal_to	Yes	Returns FALSE if the form element is greater than or equal to the parameter value or not numeric.
 	alpha			No		Returns FALSE if the form element contains anything other than alphabetical characters.
 	alpha_numeric	No		Returns FALSE if the form element contains anything other than alpha-numeric characters.
 	alpha_dash		No		Returns FALSE if the form element contains anything other than alpha-numeric characters, underscores or dashes.
@@ -95,6 +98,8 @@ class Template extends DataMapper {
 	valid_emails	No		Returns FALSE if any value provided in a comma separated list is not a valid email.
 	valid_ip		No		Returns FALSE if the supplied IP is not valid.
 	valid_base64	No		Returns FALSE if the supplied string contains anything other than valid Base64 characters.
+	valid_url		No		Returns FALSE if the supplied string is not a valid URL.
+	regex_match		Yes		Returns FALSE if the form element does not match the regular expression in the parameter.
 
 	Avaliable rules from DataMaper for columns
 
