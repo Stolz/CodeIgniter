@@ -108,10 +108,10 @@ class CI_Assets {
 		$output = '';
 		foreach($this->js as $file)
 		{
-			if(isset($file['cdn']) AND ! empty($file['cdn'])) //is a CDN
+			if(is_array($file) AND ! empty($file['cdn'])) //is a CDN
 			{
 				$output .= '<script type="text/javascript" src="'.$file['cdn'].'"></script>';
-				if(isset($file['fallback']) AND  ! empty($file['fallback']) AND isset($file['js']) AND ! empty($file['js']))
+				if(isset($file['fallback']) AND ! empty($file['fallback']) AND isset($file['js']) AND ! empty($file['js']))
 				{
 					$output .= '<script type="text/javascript">if('.$file['fallback'].'){';
 					$js = (is_array($file['js'])) ? $file['js'] : array($file['js']);
