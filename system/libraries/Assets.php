@@ -56,12 +56,12 @@ class CI_Assets {
 				$this->assets[] = $asset;
 				$asset = $this->config[$asset];
 
-				if( ! empty($asset['css'])) //The asset has CSS
+				if(isset($asset['css']) AND ! empty($asset['css'])) //The asset has CSS
 					$this->add_css($asset['css']);
 
-				if( ! empty($asset['cdn'])) //The asset has CDN JS
+				if(isset($asset['cdn']) AND ! empty($asset['cdn'])) //The asset has CDN JS
 					$this->js[] = $asset;
-				elseif( ! empty($asset['js'])) //The asset has JS
+				elseif(isset($asset['js']) AND ! empty($asset['js'])) //The asset has JS
 					$this->add_js($asset['js']);
 			}
 			else
@@ -108,10 +108,10 @@ class CI_Assets {
 		$output = '';
 		foreach($this->js as $file)
 		{
-			if( ! empty($file['cdn'])) //is a CDN
+			if(isset($file['cdn']) AND ! empty($file['cdn'])) //is a CDN
 			{
 				$output .= '<script type="text/javascript" src="'.$file['cdn'].'"></script>';
-				if( ! empty($file['fallback']) AND ! empty($file['js']))
+				if(isset($file['fallback']) AND  ! empty($file['fallback']) AND isset($file['js']) AND ! empty($file['js']))
 				{
 					$output .= '<script type="text/javascript">if('.$file['fallback'].'){';
 					$js = (is_array($file['js'])) ? $file['js'] : array($file['js']);
