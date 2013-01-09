@@ -26,6 +26,35 @@ class MY_Pagination extends CI_Pagination {
 	// Options that have been provided in the URL but don't belong to the $accepted_url_options
 	var $invalid_url_options = array(); //Automatically populated by the library.
 
+	//Overwrite URL options with valid values from $_POST
+	var $overwrite_with_post = FALSE;
+
+	//Zurb foundation tags
+	/*var $full_tag_open = '<ul class="pagination">';
+	var $full_tag_close = '</ul>';
+
+	var $first_link = '&laquo;';
+	var $first_tag_open = '<li class="arrow">';
+	var $first_tag_close = '</li>';
+
+	var $prev_link = '&lsaquo;';
+	var $prev_tag_open = '<li class="arrow">';
+	var $prev_tag_close = '</li>';
+
+	var $num_tag_open = '<li>';
+	var $num_tag_close = '</li>';
+
+	var $cur_tag_open = '<li class="current"><a>';
+	var $cur_tag_close = '</a></li>';
+
+	var $next_link = '&rsaquo;';
+	var $next_tag_open = '<li class="arrow">';
+	var $next_tag_close = '</li>';
+
+	var $last_link = '&raquo;';
+	var $last_tag_open = '<li class="arrow">';
+	var $last_tag_close = '</li>';*/
+
 	function __construct($params = array())
 	{
 		$this->CI =& get_instance();
@@ -44,6 +73,16 @@ class MY_Pagination extends CI_Pagination {
 		//Get offset
 		$params['offset'] = (isset($params['invalid_url_options']['offset'])) ? intval($params['invalid_url_options']['offset']) : 0;
 		unset($params['invalid_url_options']['offset']);
+
+		//Overwrite URL options with valid values from $_POST
+		if(isset($params['overwrite_with_post']) AND $params['overwrite_with_post'] === TRUE AND $post = $this->CI->input->post())
+		{
+			foreach(array_intersect_key($post, $params['accepted_url_options']) as $option => $value)
+			{
+				if( ! empty($value))
+					$params['invalid_url_options'][$option] = $value;
+			}
+		}
 
 		//Set defaults values and ignore unknown options
 		$params['url_options'] = array();
@@ -80,7 +119,7 @@ class MY_Pagination extends CI_Pagination {
 		if( ! in_array($option_name, array_keys($this->accepted_url_options)) OR ! $this->table_header)
 			show_error('Pagination library table header generator is missing one or more required params');
 
-		$url_options = $this->url_options;
+		$url_options = array_filter($this->url_options); //array_filter removes values not provided AKA remove values equal to FALSE
 		$current_order = (isset($url_options[$option_name])) ? intval($url_options[$option_name]) : $this->accepted_url_options[$option_name][0];
 		unset($url_options[$option_name]);
 
