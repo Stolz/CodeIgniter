@@ -5,7 +5,7 @@
 $config['ASSET_NAME'] = array(
 	'css'		=> File or array of CSS files to load.
 	'js'		=> Same as 'css' but for JavaScript files.
-	'cdn'		=> URL to load JS from a externaml content delivery network (CDN).
+	'cdn'		=> URL (or array of URLs) to load JS from a externaml content delivery network (CDN).
 	'fallback'	=> JavaScript condition to test if CDN file was loaded successfully. If condition fails then all the 'js' files provided before will be loded
 );
 
@@ -24,9 +24,9 @@ $config['jquery'] = array(
 
 $config['jquery-ui'] = array(
 	'css'		=> 'smoothness/jquery-ui-1.9.2.custom.min',
-	'cdn'		=> '//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js',
+	'cdn'		=> array('//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-es.js'),
 	'fallback'	=> '!window.jQuery.ui',
-	'js'		=> 'jquery-ui.min',
+	'js'		=> array('jquery-ui.min', 'jquery.ui.datepicker-es'),
 );
 
 $config['app'] = array(
