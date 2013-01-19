@@ -12,7 +12,7 @@
  * @author  	Phil DeJarnett (up to v1.7.1)
  * @author  	Simon Stenhouse (up to v1.6.0)
  * @link		http://datamapper.wanwizard.eu/
- * @version 	1.8.2
+ * @version 	1.8.3-dev
  */
 
 /**
@@ -388,10 +388,10 @@ class DataMapper implements IteratorAggregate {
 		if ($is_dmz)
 		{
 			// Load config settings
-			$this->config->load('datamapper', TRUE, TRUE);
+			$this->ci_config->load('datamapper', TRUE, TRUE);
 
 			// Get and store config settings
-			DataMapper::$config = $this->config->item('datamapper');
+			DataMapper::$config = $this->ci_config->item('datamapper');
 
 			// now double check that all required config values were set
 			foreach(DataMapper::$_dmz_config_defaults as $config_key => $config_value)
@@ -425,11 +425,11 @@ class DataMapper implements IteratorAggregate {
 			if(!empty($this->lang_file_format))
 			{
 				$lang_file = str_replace(array('${model}', '${table}'), array($this->model, $this->table), $this->lang_file_format);
-				$deft_lang = $this->config->item('language');
+				$deft_lang = $this->ci_config->item('language');
 				$idiom = ($deft_lang == '') ? 'english' : $deft_lang;
-				if(file_exists(APPPATH.'language/'.$idiom.'/'.$lang_file.'_lang'.EXT))
+				if(file_exists(APPPATH.'language/'.$idiom.'/'.$lang_file.'_lang' . '.php'))
 				{
-					$this->lang->load($lang_file, $idiom);
+					$this->ci_lang->load($lang_file, $idiom);
 				}
 			}
 
@@ -446,7 +446,7 @@ class DataMapper implements IteratorAggregate {
 				}
 				if(file_exists($cache_folder) && is_dir($cache_folder) && is_writeable($cache_folder))
 				{
-					$cache_file = $cache_folder . '/' . $common_key . EXT;
+					$cache_file = $cache_folder . '/' . $common_key . '.php';
 					if(file_exists($cache_file))
 					{
 						include($cache_file);
@@ -649,6 +649,9 @@ class DataMapper implements IteratorAggregate {
 	 */
 	public function reinitialize_model()
 	{
+		// determine the classname
+		$this_class = strtolower(get_class($this));
+
 		// this is to ensure that singular is only called once per model
 		if(isset(DataMapper::$common[DMZ_CLASSNAMES_KEY][$this_class])) {
 			$common_key = DataMapper::$common[DMZ_CLASSNAMES_KEY][$this_class];
@@ -708,7 +711,7 @@ class DataMapper implements IteratorAggregate {
 		foreach (array_merge(array(APPPATH),$paths, self::$model_paths) as $path)
 		{
 			// Prepare file
-			$file = $path . 'models/' . $class . EXT;
+			$file = $path . 'models/' . $class . '.php';
 
 			// Check if file exists, require_once if it does
 			if (file_exists($file))
@@ -783,7 +786,7 @@ class DataMapper implements IteratorAggregate {
 						$recursive_path = $path . '/' . $dir;
 
 						// Prepare file
-						$file = $recursive_path . '/' . $class . EXT;
+						$file = $recursive_path . '/' . $class . '.php';
 
 						// Check if file exists, require_once if it does
 						if (file_exists($file))
@@ -847,18 +850,18 @@ class DataMapper implements IteratorAggregate {
 			}
 
 			// determine the file name and class name
-			$file = DataMapper::$config['extensions_path'] . '/' . $name . EXT;
+			$file = DataMapper::$config['extensions_path'] . '/' . $name . '.php';
 
 			if ( ! file_exists($file))
 			{
 				if(strpos($name, '/') === FALSE)
 				{
-					$file = APPPATH . DataMapper::$config['extensions_path'] . '/' . $name . EXT;
+					$file = APPPATH . DataMapper::$config['extensions_path'] . '/' . $name . '.php';
 					$ext = $name;
 				}
 				else
 				{
-					$file = APPPATH . $name . EXT;
+					$file = APPPATH . $name . '.php';
 					$ext = array_pop(explode('/', $name));
 				}
 
@@ -1070,7 +1073,7 @@ class DataMapper implements IteratorAggregate {
 				isset($CI->form_validation) OR $CI->load->library('form_validation');
 
 				$this->form_validation =& $CI->form_validation;
-				$this->lang->load('form_validation');
+				$this->ci_lang->load('form_validation');
 			}
 
 			return $this->form_validation;
@@ -1621,11 +1624,15 @@ class DataMapper implements IteratorAggregate {
 					}
 
 					// Only go ahead with save if there is still data
-					if ( ! empty($data))
+					if (empty($data))
+					{
+						$result[] = TRUE;
+					}
+					else
 					{
 						// Update existing record
 						$this->db->where('id', $this->id);
-						$this->db->update($this->table, $data);
+						$result[] = $this->db->update($this->table, $data);
 
 						$trans_complete_label[] = 'update';
 					}
@@ -1633,7 +1640,6 @@ class DataMapper implements IteratorAggregate {
 					// Reset validated
 					$this->_validated = FALSE;
 
-					$result[] = TRUE;
 				}
 				else
 				{
@@ -1648,24 +1654,28 @@ class DataMapper implements IteratorAggregate {
 					}
 
 					// Create new record
-					$this->db->insert($this->table, $data);
-
-					if( ! $this->_force_save_as_new)
+					if ($result[] = $this->db->insert($this->table, $data))
 					{
-						// Assign new ID
-						$this->id = $this->db->insert_id();
+						if ( ! $this->_force_save_as_new)
+						{
+							// Assign new ID
+							$this->id = $this->db->insert_id();
+						}
 					}
 
 					$trans_complete_label[] = 'insert';
 
 					// Reset validated
 					$this->_validated = FALSE;
-
-					$result[] = TRUE;
 				}
 			}
 
 			$this->_refresh_stored_values();
+
+			if (!empty($this->_field_tracking['get_rules']))
+			{
+				$this->_run_get_rules();
+			}
 
 			// Check if a relationship is being saved
 			if ( ! empty($object))
@@ -1686,7 +1696,6 @@ class DataMapper implements IteratorAggregate {
 			}
 
 			$this->_auto_trans_complete($trans_complete_label);
-
 		}
 
 		$this->_force_save_as_new = FALSE;
@@ -2284,7 +2293,7 @@ class DataMapper implements IteratorAggregate {
 					{
 						if(!is_string($line))
 						{
-							if (FALSE === ($line = $this->lang->dm_line($rule)))
+							if (FALSE === ($line = $this->ci_lang->dm_line($rule)))
 							{
 								// Get corresponding error from language file
 								$line = 'Unable to access an error message corresponding to your rule name: '.$rule.'.';
@@ -4283,7 +4292,7 @@ class DataMapper implements IteratorAggregate {
 				$rule = 'transaction';
 
 				// Get corresponding error from language file
-				if (FALSE === ($line = $this->lang->dm_line($rule)))
+				if (FALSE === ($line = $this->ci_lang->dm_line($rule)))
 				{
 					$line = 'Unable to access the ' . $rule .' error message.';
 				}
@@ -4363,6 +4372,22 @@ class DataMapper implements IteratorAggregate {
 			}
 			else
 			{
+				foreach ($this->has_many as $relationship)
+				{
+					if (is_array($relationship) && isset($relationship['class']) && $relationship['class'] == $related_field)
+					{
+						return $relationship;
+					}
+				}
+
+				foreach ($this->has_one as $relationship)
+				{
+					if (is_array($relationship) && isset($relationship['class']) && $relationship['class'] == $related_field)
+					{
+						return $relationship;
+					}
+				}
+
 				if($try_singular)
 				{
 					$rf = singular($related_field);
@@ -4384,6 +4409,51 @@ class DataMapper implements IteratorAggregate {
 				}
 			}
 		}
+	}
+
+
+	public function _get_relationship_name($related_model, $try_singular = FALSE)
+	{
+		if (isset($this->has_many[$related_model]))
+		{
+			return $related_model;
+		}
+		else if (isset($this->has_one[$related_model]))
+		{
+			return $related_model;
+		}
+		else
+		{
+			foreach ($this->has_many as $relationship_name => $relationship)
+			{
+				if (is_array($relationship) && isset($relationship['class']) && $relationship['class'] == $related_model)
+				{
+					return $relationship_name;
+				}
+			}
+
+			foreach ($this->has_one as $relationship_name => $relationship)
+			{
+				if (is_array($relationship) && isset($relationship['class']) && $relationship['class'] == $related_model)
+				{
+					return $relationship_name;
+				}
+			}
+
+			if($try_singular)
+			{
+				$rf = singular($related_model);
+				$ret = $this->_get_related_properties($rf);
+				if (!is_null($ret))
+				{
+					$related_model = $rf;
+		        		return $rf;
+				}
+			}
+		}
+		show_error("Unable to relate {$this->model} with $related_model.");
+		// not related
+		return NULL;
 	}
 
 	// --------------------------------------------------------------------
@@ -4643,7 +4713,9 @@ class DataMapper implements IteratorAggregate {
 			if(preg_replace('/[!=<> ]/ ', '', $field) == 'id')
 			{
 				// special case to prevent joining unecessary tables
-				$field = $this->_add_related_table($object, $related_field, TRUE);
+				$column = $this->_add_related_table($object, $related_field, TRUE);
+				$field = str_replace('id', $column, $field);
+
 			}
 			else
 			{
@@ -5112,7 +5184,7 @@ class DataMapper implements IteratorAggregate {
 			{
 				$msg = 'dm_save_rel_failed';
 			}
-			$msg = $this->lang->dm_line($msg);
+			$msg = $this->ci_lang->dm_line($msg);
 			$this->error_message($related_field, sprintf($msg, $related_field));
 		}
 
@@ -5521,11 +5593,12 @@ class DataMapper implements IteratorAggregate {
 			if (is_object($arguments[0]))
 			{
 				$object = $arguments[0];
-				$related_field = $object->model;
+				$class = get_class($object);
+				$related_field = $this->_get_relationship_name($object->model);
 			}
 			else
 			{
-				$related_field = $arguments[0];
+				$related_field = $this->_get_relationship_name($arguments[0]);
 				// the TRUE allows conversion to singular
 				$related_properties = $this->_get_related_properties($related_field, TRUE);
 				$class = $related_properties['class'];
@@ -5539,6 +5612,13 @@ class DataMapper implements IteratorAggregate {
 
 			// Determine relationship table name, and join the tables
 			$rel_table = $this->_get_relationship_table($object, $related_field);
+
+			// only add $related_field to the table name if the 'class' and 'related_field' aren't equal
+			// and the related object is in a different table
+			if ( ($class != $related_field) or ($this->table == $object->table) )
+			{
+				$rel_table = str_replace('.', '_', $related_field . '_' . $rel_table);
+			}
 
 			// Add query clause
 			$extra = NULL;
@@ -5749,7 +5829,7 @@ class DataMapper implements IteratorAggregate {
 	 */
 	protected function _unique($field)
 	{
-		if ( ! empty($this->{$field}))
+		if (property_exists($this, $field) and ! is_null($this->{$field}))
 		{
 			$query = $this->db->get_where($this->table, array($field => $this->{$field}), 1, 0);
 
@@ -5782,19 +5862,22 @@ class DataMapper implements IteratorAggregate {
 	 */
 	protected function _unique_pair($field, $other_field = '')
 	{
-		if ( ! empty($this->{$field}) && ! empty($this->{$other_field}))
+		if (property_exists($this, $field) and ! is_null($this->{$field}))
 		{
-			$query = $this->db->get_where($this->table, array($field => $this->{$field}, $other_field => $this->{$other_field}), 1, 0);
-
-			if ($query->num_rows() > 0)
+			if (property_exists($this, $other_field) and ! is_null($this->{$other_field}))
 			{
-				$row = $query->row();
+				$query = $this->db->get_where($this->table, array($field => $this->{$field}, $other_field => $this->{$other_field}), 1, 0);
 
-				// If unique pair value does not belong to this object
-				if ($this->id != $row->id)
+				if ($query->num_rows() > 0)
 				{
-					// Then it is not a unique pair
-					return FALSE;
+					$row = $query->row();
+
+					// If unique pair value does not belong to this object
+					if ($this->id != $row->id)
+					{
+						// Then it is not a unique pair
+						return FALSE;
+					}
 				}
 			}
 		}
@@ -5968,6 +6051,37 @@ class DataMapper implements IteratorAggregate {
 
 	// --------------------------------------------------------------------
 
+	/**
+	 * Serialize
+	 * Custom serialize rule that deals with non-arrays
+	 *
+	 * @ignore
+	 */
+	protected function _serialize($field) {
+		$this->{$field} = is_array($this->{$field}) ? serialize($this->{$field}) : array($this->{$field});
+	}
+
+	// --------------------------------------------------------------------
+
+	/**
+	 * Unserialize
+	 * Custom unserialize rule that deals with empty strings
+	 *
+	 * @ignore
+	 */
+	protected function _unserialize($field) {
+		if (empty($this->{$field}))
+		{
+			$this->{$field} = array();
+		}
+		elseif(is_string($this->{$field}))
+		{
+			$this->{$field} = unserialize($this->{$field});
+		}
+	}
+
+	// --------------------------------------------------------------------
+
 
 	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 	 *																   *
@@ -5998,7 +6112,7 @@ class DataMapper implements IteratorAggregate {
 			$r[] = $field;
 		}
 		$key = str_replace($s, $r, $key);
-		return $this->lang->dm_line($key);
+		return $this->ci_lang->dm_line($key);
 	}
 
 	// --------------------------------------------------------------------
@@ -6099,7 +6213,7 @@ class DataMapper implements IteratorAggregate {
 			if(file_exists($cache_folder) && is_dir($cache_folder) && is_writeable($cache_folder))
 			{
 				$common_key = DataMapper::$common[DMZ_CLASSNAMES_KEY][strtolower(get_class($this))];
-				$cache_file = $cache_folder . '/' . $common_key . EXT;
+				$cache_file = $cache_folder . '/' . $common_key . '.php';
 				$cache = "<"."?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); \n";
 
 				$cache .= '$cache = ' . var_export(DataMapper::$common[$common_key], TRUE) . ';';
@@ -6503,18 +6617,18 @@ class DataMapper implements IteratorAggregate {
 		if ($CI || $CI =& get_instance())
 		{
 			// make sure these exists to not trip __get()
-			$this->load = NULL;
-			$this->config = NULL;
-			$this->lang = NULL;
+			$this->ci_load = NULL;
+			$this->ci_config = NULL;
+			$this->ci_lang = NULL;
 
 			// access to the loader
-			$this->load =& $CI->load;
+			$this->ci_load =& $CI->load;
 
 			// to the config
-			$this->config =& $CI->config;
+			$this->ci_config =& $CI->config;
 
 			// and the language class
-			$this->lang =& $CI->lang;
+			$this->ci_lang =& $CI->lang;
 		}
 	}
 
@@ -6531,7 +6645,7 @@ class DataMapper implements IteratorAggregate {
 	{
 
 		// Load the DataMapper language file
-		$this->lang->load('datamapper');
+		$this->ci_lang->load('datamapper');
 	}
 
 	// --------------------------------------------------------------------
@@ -6546,10 +6660,10 @@ class DataMapper implements IteratorAggregate {
 	protected function _load_helpers()
 	{
 		// Load inflector helper for singular and plural functions
-		$this->load->helper('inflector');
+		$this->ci_load->helper('inflector');
 
 		// Load security helper for prepping functions
-		$this->load->helper('security');
+		$this->ci_load->helper('security');
 	}
 }
 
