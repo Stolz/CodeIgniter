@@ -25,11 +25,20 @@ class Debug {
 		$this->_ci->firephp->log($x, $label);
 	}
 
-	/** Debug Datamaper Object(s) */
+	/** Debug Datamapper Object(s) */
 	public function dm($object, $label = NULL, $collapse = FALSE)
 	{
+		if( ! is_object($object))
+			return $this->_ci->firephp->log('Not a Datamapper ORM object, use $this->debug->d() instead');
+
 		$is_iterated = isset($object->_dm_dataset_iterator);
-		$count = ($is_iterated) ? $object->_dm_dataset_iterator->count() : count($object->all);
+		if($is_iterated)
+			$count = $object->_dm_dataset_iterator->count();
+		elseif(isset($object->all) AND is_array($object->all))
+			$count = count($object->all);
+		else
+			$count = 0;
+
 		$class = get_class($object);
 		if( ! empty($label))
 			$label = "$label ";
@@ -61,7 +70,7 @@ class Debug {
 		}
 	}
 
-	//Show query results used to retieve Datamaper Object(s)
+	//Show query results used to retieve Datamapper Object(s)
 	public function q($object, $limit = 10)
 	{
 		$query = $this->_ci->db->query($object->get_sql($limit));
@@ -74,7 +83,7 @@ class Debug {
 	}
 
 
-	/** Purge Datammaper metada data, leaving only the data */
+	/** Purge Datamapper metada data, leaving only the data */
 	private function purge($o)
 	{
 		$x = new stdClass();

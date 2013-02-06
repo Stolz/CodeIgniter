@@ -435,20 +435,21 @@ class Welcome extends CI_Controller {
 		$this->assets->add_css('local_css_file.css');
 		//Again you can add more than one file at a time
 		$this->assets->add_css(array('http://remote/file.css','local_css_file_with_no_extension'));
-		//For local files (those not starting with 'http') you don't need to include the extension
+		//Note for local files (those not starting with 'http') you don't need to include the ".css" extension
 
 		//For adding spare JavaScript is exactly the same as for CSS
 		$this->assets->add_js('local_js_file.js');
 		$this->assets->add_js(array('http://remote/file.js','local_js_file_with_no_extension'));
+		//Note for local files (those not starting with 'http') you don't need to include the ".js" extension
 
 		//The library supports method chaining
 		$this->assets->add('jquery-ui')->add_js('another_local_js_file.js')->add_css('another_local_css_file.css');
 
 		//No worry about duplicates, the library takes care of it for you
-		$this->assets->add('jquery-ui')->add_js('another_local_js_file.js')->add_css('another_local_css_file.css'); //Note the
+		$this->assets->add('jquery-ui')->add_js('another_local_js_file.js')->add_css('another_local_css_file.css'); //Note the another_local_css_file.css is loaded only once
 
-		$this->config->set_item('tidy_enabled', FALSE);
 		//Build the HTML
+		$this->config->set_item('tidy_enabled', FALSE);
 		echo 'CSS<pre>',htmlentities($this->assets->build_css()),'</pre>';
 		echo 'JS<pre>', htmlentities($this->assets->build_js()),'</pre>';
 	}

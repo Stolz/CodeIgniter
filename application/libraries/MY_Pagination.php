@@ -106,13 +106,12 @@ class MY_Pagination extends CI_Pagination {
 		parent::initialize($params);
 	}
 
-	/** CSS to use the classes added to the likns
-	th a.enabled_primary, th a.enabled_secondary, th a.disabled{padding-right:12px}
-	th a.enabled_primary{background:url(up2.jpg) no-repeat 100% 50% transparent;//flecha arriba roja}
-	th a.enabled_primary:hover{background:url(down2.jpg) no-repeat 100% 50% transparent;//flecha abajo roja}
-	th a.enabled_secondary{background:url(down2.jpg) no-repeat 100% 50% transparent;//flecha abajo roja}
-	th a.enabled_secondary:hover{background:url(up2.jpg) no-repeat 100% 50% transparent;//flecha arriba roja}
-	th a.disabled:hover{background:url(up.jpg) no-repeat 100% 50% transparent;//flecha arriba regra}
+	/** CSS to use the classes added to the links
+	th a.enabled_primary:after{position:absolute;content: "↑";}
+	th a.enabled_primary:hover:after{position:absolute;content: "↓";color:black;}
+	th a.enabled_secondary:after{position:absolute;content: "↓";}
+	th a.enabled_secondary:hover:after{position:absolute;content: "↑";}
+	th a.disabled:hover:after{position:absolute;content: "↑";color:black;}
 	*/
 	function table_header($option_name/*Name of the URL option that is used to sort results*/, $controller_prefix = NULL)
 	{

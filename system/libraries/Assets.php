@@ -53,8 +53,8 @@ class CI_Assets {
 		{
 			if(isset($this->config[$asset]) AND ! in_array($asset, $this->assets)) //The asset exist and has not been added yet
 			{
-				$this->assets[] = $asset;
-				$asset = $this->config[$asset];
+				$this->assets[] = $asset; //Add asset to the list of loaded assets
+				$asset = $this->config[$asset]; //Get asset information from config
 
 				if(isset($asset['css']) AND ! empty($asset['css'])) //The asset has CSS
 					$this->add_css($asset['css']);
@@ -110,7 +110,10 @@ class CI_Assets {
 		{
 			if(is_array($file) AND ! empty($file['cdn'])) //is a CDN
 			{
-				$output .= '<script type="text/javascript" src="'.$file['cdn'].'"></script>';
+				$cdn = (is_array($file['cdn'])) ? $file['cdn'] : array($file['cdn']);
+				foreach($cdn as $cdn_file)
+					$output .= '<script type="text/javascript" src="'.$cdn_file.'"></script>';
+
 				if(isset($file['fallback']) AND ! empty($file['fallback']) AND isset($file['js']) AND ! empty($file['js']))
 				{
 					$output .= '<script type="text/javascript">if('.$file['fallback'].'){';
