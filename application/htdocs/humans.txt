@@ -9,7 +9,7 @@ Twitter: @Stolz
 Location: Valencia, Spain.
 
 /* SITE */
-Last update: YYYY/MM/DD
+Last update: 2013/02/06
 Standards: HTML5, CSS3,
 Components: Modernizr, jQuery, Zurb Foundation.
 Software: Git, Datamapper ORM, Kate KDE Editor, Gentoo Linux, PHP, Apache.
