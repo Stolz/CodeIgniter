@@ -45,7 +45,7 @@ $doc.ready(function() { // This event is specific to jQuery. Occurs first, after
 		$.fn.foundationTooltips			? $doc.foundationTooltips() : null;
 		$.fn.foundationMagellan			? $doc.foundationMagellan() : null;
 		$.fn.foundationClearing			? $doc.foundationClearing() : null;
-		$('input, textarea').placeholder();
+		$.fn.placeholder				? $('input, textarea').placeholder() : null;
 
 		// UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE8 SUPPORT AND ARE USING .block-grids
 		// $('.block-grid.two-up>li:nth-child(2n+1)').css({clear: 'both'});
