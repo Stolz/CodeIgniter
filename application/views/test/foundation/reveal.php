@@ -7,7 +7,7 @@
 	<ul class="button-group radius">
 		<?php
 			$modal_sizes = array('small', 'medium', 'large', 'xlarge', 'expand'); foreach($modal_sizes as $size) : ?>
-			<li><a class="button" data-reveal-id="reveal_<?=$size?>"><?=$size?></a></li>
+			<li><a class="button" data-reveal-id="reveal_<?=$size?>" data-dismiss-modal-class="close-this"><?=$size?></a></li>
 			<?php endforeach ?>
 	</ul>
 </div>
@@ -17,9 +17,9 @@
 	<h2><?=ucfirst($size)?></h2>
 	<p class="lead">This modal has <?=$size?> size</p>
 	<p>Clicking the background will close it</p>
-	<div class="left"><a onclick="$('.reveal-modal.open').trigger('reveal:close')" class="secondary radius button">Cancel</a></div>
+	<div class="left"><a class="secondary radius button close-this">Cancel</a></div>
 	&nbsp;<!--Mobile separator-->
 	<div class="right"><a class="button radius">Accept</a></div>
-	<a class="close-reveal-modal">&#215;</a>
+	<a class="close-reveal-modal close-this">&#215;</a>
 </div>
 <?php endforeach ?>
