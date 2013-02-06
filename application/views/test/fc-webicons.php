@@ -12,6 +12,10 @@
     
     <a class="fc-webicon bitbucket small" href="#">Bitbucket</a>
     
+    <a class="fc-webicon blogger small" href="#">Blogger</a>
+    
+    <a class="fc-webicon coderwall small" href="#">Coderwall</a>
+    
     <a class="fc-webicon creativecloud small" href="#">Creative Cloud</a>
     
     <a class="fc-webicon dribbble small" href="#">Dribbble</a>
@@ -119,6 +123,10 @@
     <a class="fc-webicon behance" href="#">Behance</a>
     
     <a class="fc-webicon bitbucket" href="#">Bitbucket</a>
+
+    <a class="fc-webicon coderwall" href="#">Coderwall</a>
+    
+    <a class="fc-webicon blogger" href="#">Blogger</a>
     
     <a class="fc-webicon creativecloud" href="#">Creative Cloud</a>
     
@@ -227,6 +235,10 @@
     <a class="fc-webicon behance large" href="#">Behance</a>
     
     <a class="fc-webicon bitbucket large" href="#">Bitbucket</a>
+
+    <a class="fc-webicon coderwall large" href="#">Coderwall</a>
+    
+    <a class="fc-webicon blogger large" href="#">Blogger</a>
     
     <a class="fc-webicon creativecloud large" href="#">Creative Cloud</a>
     
