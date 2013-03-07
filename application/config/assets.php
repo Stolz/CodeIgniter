@@ -47,6 +47,9 @@ $config['rickshaw'] = array(
 	'js'		=> 'rickshaw.min',
 );
 
+$config['spin'] = array(
+	'js'		=> 'spin.min',
+);
 
 /* End of file assets.php */
 /* Location: ./application/config/assets.php */

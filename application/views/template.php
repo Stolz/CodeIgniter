@@ -39,9 +39,15 @@
 		<?php if(isset($views) AND is_array($views))
 			foreach($views as $key => $view)
 				if($key < 0)
-					echo $view;
+				{
+					echo "\n<!--BEGIN raw section-->\n",$view,"\n<!--END raw section-->\n";
+				}
 				else
+				{
+					echo "<!--BEGIN $view section-->\n";
 					$this->load->view($view);
+					echo "<!--END $view section-->\n";
+				}
 
 		if(ENVIRONMENT != 'production')
 			$this->output->enable_profiler(TRUE); ?>
