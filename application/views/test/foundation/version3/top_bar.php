@@ -1,55 +1,32 @@
-<div class="fixed contain-to-grid"><!--Remove contain-to-grid to use full page witdh-->
+<div class="fixed contain-to-grid">
 	<nav class="top-bar">
-		<!-- Title and menu icon -->
-		<ul class="title-area">
-			<li class="name"><h1><a href="/">Foundation</a></h1></li>
-			<li class="toggle-topbar menu-icon"><a href="#"><span><!--<?= _('menu') ?> --></span></a></li><!-- Remove the class "menu-icon" to get rid of menu icon. Take out "<?= _('menu') ?>" to just have icon alone -->
+		<ul>
+			<li class="name"><h1><a href="<?=$current_url?>#">Zurb Foundation</a></h1></li>
+			<li class="toggle-topbar"><a></a></li>
 		</ul>
 
-		<section class="top-bar-section">
-
+		<section>
 			<ul class="left">
-				<li class="divider"></li>
+				<li class="divider show-for-medium-and-up"></li>
 				<li class="has-dropdown active">
-					<a  href="<?=$current_url?>#grid"><?= _('The Grid') ?></a>
+					<a  href="<?=$current_url?>#grid"><?= _('Grid') ?></a>
 					<ul class="dropdown">
-						<li><a href="<?=$current_url?>#grid_basics"><?= _('Basics') ?></a></li>
-						<li><a href="<?=$current_url?>#grid_float_collapse"><?= _('Float and collapse') ?></a></li>
+						<li><label>Basics</label></li>
+						<li><a href="<?=$current_url?>#grid"><?= _('Two per row') ?></a></li>
+						<li><a href="<?=$current_url?>#grid_nperrow"><?= _('N per row') ?></a></li>
+						<li><a href="<?=$current_url?>#grid_don_float_last"><?= _("Don't float last") ?></a></li>
+						<li class="divider"></li>
+						<li><label>Advanced</label></li>
 						<li><a href="<?=$current_url?>#grid_offset"><?= _('Offset') ?></a></li>
 						<li><a href="<?=$current_url?>#grid_centered"><?= _('Centered') ?></a></li>
 						<li><a href="<?=$current_url?>#grid_ordering"><?= _('Ordering') ?></a></li>
-						<li><a href="<?=$current_url?>#block_grid"><?= _('Block grid') ?></a></li>
+						<li><a href="<?=$current_url?>#grid_mobile"><?= _('Mobile') ?></a></li>
 					</ul>
 				</li>
 			</ul>
 
 			<ul class="left">
-				<li class="divider"></li>
-				<li class="has-dropdown">
-					<a  href="<?=$current_url?>#grid"><?= _('Buttons') ?></a>
-					<ul class="dropdown">
-						<li><a href="<?=$current_url?>#button"><?= _('Buttons') ?></a></li>
-						<li><a href="<?=$current_url?>#button_group"><?= _('Button Groups') ?></a></li>
-						<li><a href="<?=$current_url?>#even_button_group"><?= _('Even button Groups') ?></a></li>
-						<li><a href="<?=$current_url?>#button_bar"><?= _('Button Bar') ?></a></li>
-						<li><a href="<?=$current_url?>#button_dropdown"><?= _('Dropdown Buttons') ?></a></li>
-						<li><a href="<?=$current_url?>#button_split"><?= _('Split Buttons') ?></a></li>
-					</ul>
-				</li>
-			</ul>
-
-
-
-
-
-
-
-
-
-		<!--
-
-			<ul class="left">
-				<li class="divider"></li>
+				<li class="divider show-for-medium-and-up"></li>
 				<li class="has-dropdown ">
 					<a  href="<?=$current_url?>#typography"><?= _('Typo') ?></a>
 					<ul class="dropdown">
@@ -59,14 +36,13 @@
 						<li class="divider"></li>
 						<li><label>More</label></li>
 						<li><a href="<?=$current_url?>#lists"><?= _('Lists') ?></a></li>
-						<li><a href="<?=$current_url?>#vcard"><?= _('V-cards') ?></a></li>
 						<li><a href="<?=$current_url?>#align"><?= _('Align/Float/Print') ?></a></li>
 					</ul>
 				</li>
 			</ul>
 
 			<ul class="left">
-				<li class="divider"></li>
+				<li class="divider show-for-medium-and-up"></li>
 				<li class="has-dropdown ">
 					<a  href="<?=$current_url?>#buttons"><?= _('Elements') ?></a>
 					<ul class="dropdown">
@@ -75,11 +51,9 @@
 							<ul class="dropdown">
 								<li><a href="<?=$current_url?>#buttons"><?= _('Basics') ?></a></li>
 								<li><a href="<?=$current_url?>#buttons_groups"><?= _('Group') ?></a></li>
-								<li><a href="<?=$current_url?>#buttons_even"><?= _('Evenly sized') ?></a></li>
 								<li><a href="<?=$current_url?>#buttons_bar"><?= _('Bar') ?></a></li>
-								<li><a href="<?=$current_url?>#dropdown"><?= _('Genericropdown') ?></a></li>
-								<li><a href="<?=$current_url?>#buttons_drop"><?= _('Dropdown') ?></a></li>
-								<li><a href="<?=$current_url?>#buttons_split"><?= _('Split') ?></a></li>
+								<li><a href="<?=$current_url?>#buttons_even"><?= _('Evenly sized') ?></a></li>
+								<li><a href="<?=$current_url?>#buttons_drop"><?= _('Dropdown/split') ?></a></li>
 							</ul>
 						</li>
 						<li class="divider"></li>
@@ -120,21 +94,20 @@
 			</ul>
 
 			<ul class="left">
-				<li class="divider"></li>
+				<li class="divider show-for-medium-and-up"></li>
 				<li class="has-dropdown ">
 					<a  href="<?=$current_url?>#forms"><?= _('Forms') ?></a>
 					<ul class="dropdown">
 						<li><a href="<?=$current_url?>#forms"><?= _('Row layout') ?></a></li>
 						<li><a href="<?=$current_url?>#forms_float"><?= _('Floating labels') ?></a></li>
 						<li><a href="<?=$current_url?>#prefix"><?= _('Pre/Post-fix') ?></a></li>
-						<li><a href="<?=$current_url?>#switch_radio"><?= _('Switch radio button') ?></a></li>
 					</ul>
 				</li>
 			</ul>
 
 
 			<ul class="left">
-				<li class="divider"></li>
+				<li class="divider show-for-medium-and-up"></li>
 				<li class="has-dropdown ">
 					<a  href="<?=$current_url?>#reveal"><?= _('Plugins') ?></a>
 					<ul class="dropdown">
@@ -163,9 +136,9 @@
 					</ul>
 				</li>
 			</ul>
--->
+
 			<ul class="right">
-				<li class="divider"></li>
+				<li class="divider show-for-medium-and-up"></li>
 				<li class="has-dropdown">
 					<a class="active" href="javascript:void(0)">Nesting</a>
 					<ul class="dropdown">
@@ -200,12 +173,11 @@
 						<li><a href="javascript:void(0)">See all &rarr;</a></li>
 					</ul>
 				</li>
-				<li class="divider"></li>
-				<li class="has-form"><a class="small radius button" href="http://foundation.zurb.com/docs/"><?= _('Button') ?></a></li>
+				<li class="divider hide-for-small"></li>
+				<li class="has-button"><a class="small radius button" href="http://foundation.zurb.com/docs/"><?= _('Button') ?></a></li>
 			</ul>
-
-
-
 		</section>
 	</nav>
 </div>
+
+<br/><br/><br/>

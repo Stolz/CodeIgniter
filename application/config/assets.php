@@ -34,8 +34,13 @@ $config['app'] = array(
 );
 
 $config['foundation'] = array(
-	'css'		=> 'foundation.min',
-	'js'		=> array('foundation.min', 'app'),
+	'css'		=> array('normalize', 'foundation.min'),
+	'js'		=> array('custom.modernizr', 'foundation.min', 'app'),
+);
+
+$config['foundation3'] = array(
+	'css'		=> 'foundation3.min',
+	'js'		=> array('foundation3.min', 'app3'),
 );
 
 $config['foundation-icons'] = array(

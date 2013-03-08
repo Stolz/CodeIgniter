@@ -149,29 +149,55 @@ class Welcome extends CI_Controller {
 		$this->load->view('template', $data);
 	}
 
-
 	// Tests Zurb Foundation Framework http://foundation.zurb.com
 	public function foundation()
 	{
 		$this->config->set_item('tidy_enabled', FALSE);
 
-		$this->load->library('assets', array('foundation'));
+		$this->load->library('assets', array('jquery', 'foundation'));
 		$data = array(
 			'title'	=> 'Foundation CSS test page',
 			'current_url'=> current_url(),
 			'views'	=> array(
 				'test/foundation/top_bar',
-				'test/foundation/grid',
-				'test/foundation/typography',
+				'test/foundation/grid_basics',
+				'test/foundation/grid_float_collapse',
+				'test/foundation/grid_offset',
+				'test/foundation/grid_centered',
+				'test/foundation/grid_ordering',
+				'test/foundation/block_grid',
 				'test/foundation/buttons',
-				'test/foundation/elements',
-				'test/foundation/nav',
-				'test/foundation/tabs',
-				'test/foundation/forms',
-				'test/foundation/reveal',
-				'test/foundation/orbit',
-				'test/foundation/clearing',
-				'test/foundation/magellan',
+				'test/foundation/button_group',
+				'test/foundation/button_bar',
+// 				to-do migrar los restantes
+			)
+		);
+
+		$this->load->view('template', $data);
+	}
+
+	// Tests Zurb Foundation Framework (version 3) http://foundation.zurb.com
+	public function foundation3()
+	{
+		$this->config->set_item('tidy_enabled', FALSE);
+
+		$this->load->library('assets', array('foundation3'));
+		$data = array(
+			'title'	=> 'Foundation (v3) CSS test page',
+			'current_url'=> current_url(),
+			'views'	=> array(
+				'test/foundation/version3/top_bar',
+				'test/foundation/version3/grid',
+				'test/foundation/version3/typography',
+				'test/foundation/version3/buttons',
+				'test/foundation/version3/elements',
+				'test/foundation/version3/nav',
+				'test/foundation/version3/tabs',
+				'test/foundation/version3/forms',
+				'test/foundation/version3/reveal',
+				'test/foundation/version3/orbit',
+				'test/foundation/version3/clearing',
+				'test/foundation/version3/magellan',
 			)
 		);
 		$this->load->view('template', $data);
