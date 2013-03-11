@@ -30,8 +30,8 @@ class MY_Pagination extends CI_Pagination {
 	var $overwrite_with_post = FALSE;
 
 	//Zurb foundation tags
-	/*var $full_tag_open = '<ul class="pagination">';
-	var $full_tag_close = '</ul>';
+	/*var $full_tag_open = '<div class="pagination-centered"><ul class="pagination">';
+	var $full_tag_close = '</ul></div>';
 
 	var $first_link = '&laquo;';
 	var $first_tag_open = '<li class="arrow">';
