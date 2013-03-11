@@ -23,8 +23,8 @@ $config['jquery'] = array(
 );
 
 $config['jquery-ui'] = array(
-	'css'		=> 'smoothness/jquery-ui-1.10.0.custom.min',
-	'cdn'		=> array('//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/i18n/jquery.ui.datepicker-es.js'),
+	'css'		=> 'smoothness/jquery-ui-1.10.1.custom.min',
+	'cdn'		=> array('//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/i18n/jquery.ui.datepicker-es.js'),
 	'fallback'	=> '!window.jQuery.ui',
 	'js'		=> array('jquery-ui.min', 'jquery.ui.datepicker-es'),
 );
