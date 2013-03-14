@@ -10,13 +10,14 @@ class Ajax extends CI_Controller {
 
 		$this->config->set_item('tidy_enabled', FALSE);
 		$this->config->set_item('compress_output', FALSE);
-	}
 
+		$this->output->set_content_type('application/json');
+	}
 
 	function test()
 	{
 		$data = array(1,2,3,4,5);
-		echo json_encode($data);
+		$this->output->set_output(json_encode($data));
 	}
 }
 
