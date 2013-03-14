@@ -265,6 +265,17 @@ $config['rest_enable_logging'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------
+| REST API Param Log Format
+|--------------------------------------------------------------------------
+|
+| When set to true API log params will be stored in the database as JSON,
+| when false they will be php serialized.
+|
+*/
+$config['rest_logs_json_params'] = FALSE;
+
+/*
+|--------------------------------------------------------------------------
 | REST API Limits Table Name
 |--------------------------------------------------------------------------
 |
