@@ -1,4 +1,4 @@
-<div class="demo">
+<div id="foundation-icons-demo">
 	<span class="general foundicon-settings" title="general foundicon-settings">&nbsp;</span>
 	<span class="general foundicon-heart" title="general foundicon-heart">&nbsp;</span>
 	<span class="general foundicon-star" title="general foundicon-star">&nbsp;</span>

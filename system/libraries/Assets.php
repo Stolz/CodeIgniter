@@ -146,7 +146,7 @@ class CI_Assets {
 	//If the URL is local add the prefix and extension
 	private function build_url($extension, $url)
 	{
-		if('http' == substr($url, 0, 4))
+		if('http' == substr($url, 0, 4) OR '//' == substr($url, 0, 2))
 			return $url;
 
 		$postfix = (".$extension" == substr($url, -1 - strlen($extension))) ? NULL : ".$extension";
