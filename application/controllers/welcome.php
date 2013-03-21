@@ -242,7 +242,7 @@ class Welcome extends CI_Controller {
 			$output = '<h3>CI Oauth 2 login test</h3> <p>Remember to set first your API keys in <i>application/config/oauth2.php</i></p> <p>Please, select an Oauth 2 provider:</p><ul>';
 
 			foreach($providers as $provider => $not_used)
-				$output .= '<li>'.anchor("test/oauth2/$provider",'Login with '.ucfirst($provider));
+				$output .= '<li>'.anchor("{$this->router->class}/{$this->router->method}/$provider",'Login with '.ucfirst($provider));
 			$output .= '</ul>';
 
 			$data = array(
