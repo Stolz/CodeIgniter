@@ -21,12 +21,10 @@
 						<li><a href="<?=$current_url?>#block_grid"><?= _('Block grid') ?></a></li>
 					</ul>
 				</li>
-			</ul>
 
-			<ul class="left">
 				<li class="divider"></li>
 				<li class="has-dropdown">
-					<a  href="<?=$current_url?>#grid"><?= _('Buttons') ?></a>
+					<a  href="<?=$current_url?>#button"><?= _('Buttons') ?></a>
 					<ul class="dropdown">
 						<li><a href="<?=$current_url?>#button"><?= _('Buttons') ?></a></li>
 						<li><a href="<?=$current_url?>#button_group"><?= _('Button Groups') ?></a></li>
@@ -34,6 +32,18 @@
 						<li><a href="<?=$current_url?>#button_bar"><?= _('Button Bar') ?></a></li>
 						<li><a href="<?=$current_url?>#button_dropdown"><?= _('Dropdown Buttons') ?></a></li>
 						<li><a href="<?=$current_url?>#button_split"><?= _('Split Buttons') ?></a></li>
+					</ul>
+				</li>
+
+				<li class="divider"></li>
+				<li class="has-dropdown">
+					<a  href="<?=$current_url?>#sections"><?= _('Sections') ?></a>
+					<ul class="dropdown">
+						<li><a href="<?=$current_url?>#sections_auto"><?= _('Default') ?></a></li>
+						<li><a href="<?=$current_url?>#sections_tabs"><?= _('Tabs') ?></a></li>
+						<li><a href="<?=$current_url?>#sections_accordion"><?= _('Accordion') ?></a></li>
+						<li><a href="<?=$current_url?>#sections_vertical-nav"><?= _('Vertical-nav') ?></a></li>
+						<li><a href="<?=$current_url?>#sections_horizontal-nav"><?= _('Horizontal-nav') ?></a></li>
 					</ul>
 				</li>
 			</ul>
@@ -48,7 +58,7 @@
 
 		<!--
 
-			<ul class="left">
+
 				<li class="divider"></li>
 				<li class="has-dropdown ">
 					<a  href="<?=$current_url?>#typography"><?= _('Typo') ?></a>
@@ -63,9 +73,7 @@
 						<li><a href="<?=$current_url?>#align"><?= _('Align/Float/Print') ?></a></li>
 					</ul>
 				</li>
-			</ul>
 
-			<ul class="left">
 				<li class="divider"></li>
 				<li class="has-dropdown ">
 					<a  href="<?=$current_url?>#buttons"><?= _('Elements') ?></a>
@@ -73,13 +81,7 @@
 						<li class="has-dropdown">
 							<a href="javascript:void(0)" class="">Buttons</a>
 							<ul class="dropdown">
-								<li><a href="<?=$current_url?>#buttons"><?= _('Basics') ?></a></li>
-								<li><a href="<?=$current_url?>#buttons_groups"><?= _('Group') ?></a></li>
-								<li><a href="<?=$current_url?>#buttons_even"><?= _('Evenly sized') ?></a></li>
-								<li><a href="<?=$current_url?>#buttons_bar"><?= _('Bar') ?></a></li>
 								<li><a href="<?=$current_url?>#dropdown"><?= _('Genericropdown') ?></a></li>
-								<li><a href="<?=$current_url?>#buttons_drop"><?= _('Dropdown') ?></a></li>
-								<li><a href="<?=$current_url?>#buttons_split"><?= _('Split') ?></a></li>
 							</ul>
 						</li>
 						<li class="divider"></li>
@@ -101,7 +103,6 @@
 						<li class="has-dropdown">
 							<a href="javascript:void(0)" class="">Blocks</a>
 							<ul class="dropdown">
-								<li><a href="<?=$current_url?>#blockgrid"><?= _('Block grids') ?></a></li>
 								<li><a href="<?=$current_url?>#tabs"><?= _('Tabs') ?></a></li>
 								<li><a href="<?=$current_url?>#accordion"><?= _('Accordion') ?></a></li>
 								<li><a href="<?=$current_url?>#panels"><?= _('Panels') ?></a></li>
@@ -117,9 +118,7 @@
 						<li><a href="<?=$current_url?>#video"><?= _('Video') ?></a></li>
 					</ul>
 				</li>
-			</ul>
 
-			<ul class="left">
 				<li class="divider"></li>
 				<li class="has-dropdown ">
 					<a  href="<?=$current_url?>#forms"><?= _('Forms') ?></a>
@@ -130,10 +129,7 @@
 						<li><a href="<?=$current_url?>#switch_radio"><?= _('Switch radio button') ?></a></li>
 					</ul>
 				</li>
-			</ul>
 
-
-			<ul class="left">
 				<li class="divider"></li>
 				<li class="has-dropdown ">
 					<a  href="<?=$current_url?>#reveal"><?= _('Plugins') ?></a>
