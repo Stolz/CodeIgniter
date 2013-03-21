@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="six columns centered">
+	<div class="large-6 columns large-centered">
 
 		<h2><?= PROJECT_NAME ?></h2>
 		<h3 class="subheader"><?= $title ?></h3>
@@ -30,7 +30,7 @@
 			'name'		=> 'password',
 		)),$e ?><?=
 
-		form_submit(array('name'=>'submit','class' => 'radius button','value' => _('Log in'))),
+		form_submit(array('name'=>'submit','class' => 'radius small button','value' => _('Log in'))),
 
 		'<span class="right">',
 		form_checkbox(array('id' => 'rememberme', 'name' => 'rememberme', 'value'  => 1, 'checked' => $this->input->post('rememberme'))),
