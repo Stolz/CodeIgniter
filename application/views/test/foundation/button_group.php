@@ -30,21 +30,36 @@
 		<a name="even_button_group"></a>
 		<h4>Evenly sized buttons groups (from <code>even-2</code> to <code>even-8</code>)</h4>
 
+		Normal
 		<ul class="button-group even-3">
+			<li><a href="#" class="button">Button 1</a></li>
+			<li><a href="#" class="button">Button 2</a></li>
+			<li><a href="#" class="button ">Button 3</a></li>
+		</ul>
+
+		Radius
+		<ul class="button-group even-3 radius">
+			<li><a href="#" class="button secondary">Button 1</a></li>
+			<li><a href="#" class="button secondary">Button 2</a></li>
+			<li><a href="#" class="button secondary">Button 3</a></li>
+		</ul>
+
+		Round
+		<ul class="button-group even-3 round">
 			<li><a href="#" class="button alert">Button 1</a></li>
 			<li><a href="#" class="button alert">Button 2</a></li>
 			<li><a href="#" class="button alert">Button 3</a></li>
 		</ul>
 
 		Made with <code>input</code> instead of anchors
-		<ul class="button-group radius even-3">
+		<ul class="button-group even-3 radius">
 			<li><input type="submit" class="button success" value="Button 1" /></li>
 			<li><input type="submit" class="button success" value="Button 2" /></li>
 			<li><input type="submit" class="button success" value="Button 3" /></li>
 		</ul>
 
 		Made with <code>button</code> instead of anchors
-		<ul class="button-group round even-4">
+		<ul class="button-group even-4 round">
 			<li><button class="button secondary">Button 1</button></li>
 			<li><button class="button secondary">Button 2</button></li>
 			<li><button class="button secondary">Button 3</button></li>
