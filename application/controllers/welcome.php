@@ -169,6 +169,8 @@ class Welcome extends CI_Controller {
 				'test/foundation/buttons',
 				'test/foundation/button_group',
 				'test/foundation/button_bar',
+				'test/foundation/button_dropdown',
+				'test/foundation/button_split',
 // 				to-do migrar los restantes
 			)
 		);
