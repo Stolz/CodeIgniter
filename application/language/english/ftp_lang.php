@@ -1,4 +1,10 @@
 <?php
+/*
+ * This file is the same than the one with same filename located at system/language/english/
+ * but with all strings wrapped with a gettext function call _('...')
+ *
+ * If you don't plan to use GNU Gettext delete this file
+ */
 
 $lang['ftp_no_connection']			= _('Unable to locate a valid connection ID. Please make sure you are connected before peforming any file routines.');
 $lang['ftp_unable_to_connect']		= _('Unable to connect to your FTP server using the supplied hostname.');

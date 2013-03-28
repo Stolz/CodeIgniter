@@ -1,4 +1,10 @@
 <?php
+/*
+ * This file is the same than the one with same filename located at system/language/english/
+ * but with all strings wrapped with a gettext function call _('...')
+ *
+ * If you don't plan to use GNU Gettext delete this file
+ */
 
 $lang['db_invalid_connection_str'] = _('Unable to determine the database settings based on the connection string you submitted.');
 $lang['db_unable_to_connect'] = _('Unable to connect to your database server using the provided settings.');

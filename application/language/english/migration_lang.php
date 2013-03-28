@@ -1,4 +1,10 @@
 <?php
+/*
+ * This file is the same than the one with same filename located at system/language/english/
+ * but with all strings wrapped with a gettext function call _('...')
+ *
+ * If you don't plan to use GNU Gettext delete this file
+ */
 
 $lang['migration_none_found']			= _("No migrations were found.");
 $lang['migration_not_found']			= _("This migration could not be found.");

@@ -1,4 +1,10 @@
 <?php
+/*
+ * This file is the same than the one with same filename located at system/language/english/
+ * but with all strings wrapped with a gettext function call _('...')
+ *
+ * If you don't plan to use GNU Gettext delete this file
+ */
 
 $lang['cal_su']			= _('Su');
 $lang['cal_mo']			= _('Mo');

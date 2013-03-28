@@ -1,4 +1,10 @@
 <?php
+/*
+ * This file is the same than the one with same filename located at system/language/english/
+ * but with all strings wrapped with a gettext function call _('...')
+ *
+ * If you don't plan to use GNU Gettext delete this file
+ */
 
 $lang['email_must_be_array'] = _('The email validation method must be passed an array.');
 $lang['email_invalid_address'] = _('Invalid email address: %s');

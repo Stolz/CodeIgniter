@@ -406,7 +406,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->library('assets', array('jquery', 'jquery-ui', 'app'));
 		$data = array(
-			'title'			=> _('jQuery'),
+			'title'			=> 'jQuery',
 			'views'			=> array('test/jquery'),
 		);
 		$this->load->view('template', $data);

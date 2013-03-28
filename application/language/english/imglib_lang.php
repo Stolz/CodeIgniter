@@ -1,4 +1,10 @@
 <?php
+/*
+ * This file is the same than the one with same filename located at system/language/english/
+ * but with all strings wrapped with a gettext function call _('...')
+ *
+ * If you don't plan to use GNU Gettext delete this file
+ */
 
 $lang['imglib_source_image_required'] = _('You must specify a source image in your preferences.');
 $lang['imglib_gd_required'] = _('The GD image library is required for this feature.');
