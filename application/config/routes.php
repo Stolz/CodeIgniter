@@ -38,8 +38,8 @@
 |
 */
 
-$route['default_controller'] = "welcome";
-$route['404_override'] = '';
+$route['default_controller'] = 'welcome';
+$route['404_override'] = ''; //to-do : For a Zurb Foundation based 404 page set it to 'error_404/index';
 $route['login'] = 'auth/login';
 $route['logout'] = 'auth/logout';
 

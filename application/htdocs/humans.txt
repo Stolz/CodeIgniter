@@ -3,13 +3,14 @@
 /* to-do set your own details */
 
 /* TEAM */
+Company: Your Company
 Developer: Javi
-Email: your@email.com
+Email: you@example.com
 Twitter: @Stolz
 Location: Valencia, Spain.
 
 /* SITE */
-Last update: 2013/02/06
+Last update: 2013/04/04
 Standards: HTML5, CSS3,
 Components: Modernizr, jQuery, Zurb Foundation.
-Software: Git, Datamapper ORM, Kate KDE Editor, Gentoo Linux, PHP, Apache.
+Software: Git, Codeigniter, Datamapper ORM, Kate KDE Editor, Gentoo Linux, PHP, Apache, MySQL.
