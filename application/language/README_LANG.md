@@ -18,6 +18,7 @@ To dynamically set language
 	bindtextdomain('messages', APPPATH.'language/');
 	textdomain('messages');
 	setlocale(LC_ALL, "XXX.UTF-8", 'XXX');
+	//NOTE: LC_ALL may switch float decimal separator character deppending on locale which could have undesired issues specially when inserting float values to your DB. Consider using LC_MESSAGES instead
 
 
 Using Codeigniter native support

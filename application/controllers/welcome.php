@@ -52,7 +52,7 @@ class Welcome extends CI_Controller {
 		if( ! file_exists(APPPATH.'language/'.$locale))
 			show_error('Translation dir not found. You must first run the Gettext scripts in the language folder to translate your application');
 
-		setlocale(LC_ALL, $locale);
+		setlocale(LC_ALL, $locale);//NOTE: LC_ALL may switch float decimal separator character deppending on locale which could have undesired issues specially when inserting float values to your DB. Consider using LC_MESSAGES instead
 		bindtextdomain('messages', APPPATH.'language/');
 		textdomain('messages');
 
