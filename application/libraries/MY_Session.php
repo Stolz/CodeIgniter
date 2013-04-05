@@ -89,6 +89,16 @@ class MY_Session extends CI_Session {
 
 		return sha1(md5($hash));
 	}
+
+	/** Fix Codeigniter BUG
+	 * Do not update an existing session on Ajax calls
+	 * More info: http://ellislab.com/forums/viewthread/224000/
+	 */
+	function sess_update()
+	{
+		if ( ! $this->CI->input->is_ajax_request())
+			parent::sess_update();
+	}
 }
 
 /* End of file MY_Session.php */
