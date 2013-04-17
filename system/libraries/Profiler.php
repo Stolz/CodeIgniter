@@ -528,7 +528,7 @@ class CI_Profiler {
 	 */
 	public function run()
 	{
-		$output = "<div id='codeigniter_profiler' style='clear:both;background-color:#fff;padding:10px;'>";
+		$output = "<div id='codeigniter_profiler' class='row' style='clear:both;background-color:#fff;padding:10px;'>";
 		$fields_displayed = 0;
 
 		foreach ($this->_available_sections as $section)
