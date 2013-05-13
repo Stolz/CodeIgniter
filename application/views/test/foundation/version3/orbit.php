@@ -5,8 +5,8 @@
 	<h3 class="subheader">For fixed-size content</h3>
 
 	<div class="do-orbit text-center">
-		<?php for($i = 1 ; $i <= 15; $i++) : ?>
-		<img src="<?= ASSETS ?>images/liquids/large/<?=$i?>.jpg" alt="<?=$i?>.jpg"/>
+		<?php for($i = 1 ; $i <= 4; $i++) : ?>
+		<img src="http://placehold.it/900x300/<?=sprintf("%02X%02X%02X", mt_rand(0, 255), mt_rand(0, 255), mt_rand(0, 255));?>/&amp;text=<?=$i?>" alt="<?=$i?>.jpg"/>
 		<?php endfor ?>
 	</div>
 
