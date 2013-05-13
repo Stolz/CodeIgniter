@@ -1,4 +1,5 @@
-<div class="fixed contain-to-grid"><!--Remove contain-to-grid to use full page witdh-->
+<!--Remove .fixed to make teh bar go up when u scroll down. Remove .contain-to-grid to use full page witdh-->
+<div class="fixed contain-to-grid"><!--to-do BUG: In Zurb Foundation v.4.1.6 using both classes fixed & contain-to-grid together break teh layout-->
 	<nav class="top-bar">
 		<!-- Title and menu icon -->
 		<ul class="title-area">

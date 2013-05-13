@@ -1,4 +1,3 @@
-$doc.foundation();
 if(typeof $ != 'undefined') {
 
 	var $doc = $(document);
@@ -7,10 +6,8 @@ if(typeof $ != 'undefined') {
 	$doc.ready(function() {
 
 		// Zurb Foundation
-		if($.foundation)
+		if($.fn.foundation)
 			$doc.foundation();
-// 		else
-// 			console.log('ZF not loaded');
 
 		// Exec pending tasks pushed in view files
 		if(typeof whenready != 'undefined' && whenready instanceof Array)
@@ -19,11 +16,10 @@ if(typeof $ != 'undefined') {
 					(whenready[i])();
 	});
 
-
 	// This event is a standard event in the DOM. Occurs later, after all content (e.g. images, frames,...) are fully loaded.
-	$(window).load(function() {
-		//setTimeout(function () {window.scrollTo(0, 1);}, 0); // Hide address bar on mobile devices
-	});
+	/*$(window).load(function() {
+		setTimeout(function () {window.scrollTo(0, 1);}, 0); // Hide address bar on mobile devices
+	});*/
 }
 
 

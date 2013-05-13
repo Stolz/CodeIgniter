@@ -155,7 +155,7 @@ class Welcome extends CI_Controller {
 		$this->config->set_item('tidy_enabled', FALSE);
 
 		$this->load->library('assets', array('jquery', 'foundation'));
-		
+
 		$data = array(
 			'title'	=> 'Foundation CSS test page',
 			'current_url'=> current_url(),
