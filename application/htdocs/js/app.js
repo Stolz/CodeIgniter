@@ -1,4 +1,5 @@
-if(typeof jQuery != 'undefined') {
+$doc.foundation();
+if(typeof $ != 'undefined') {
 
 	var $doc = $(document);
 
@@ -8,6 +9,8 @@ if(typeof jQuery != 'undefined') {
 		// Zurb Foundation
 		if($.foundation)
 			$doc.foundation();
+// 		else
+// 			console.log('ZF not loaded');
 
 		// Exec pending tasks pushed in view files
 		if(typeof whenready != 'undefined' && whenready instanceof Array)

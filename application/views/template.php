@@ -18,7 +18,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><!--Webkit-->
 
 		<!-- Favicon -->
-		<!-- For third-generation iPad with high-resolution Retina display: -->
+		<?php /*<!-- For third-generation iPad with high-resolution Retina display: -->
 		<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= ASSETS ?>images/favicons/apple-touch-icon-144x144-precomposed.png"/> -->
 		<!-- For iPhone with high-resolution Retina display: -->
 		<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= ASSETS ?>images/favicons/apple-touch-icon-114x114-precomposed.png"/> -->
@@ -26,7 +26,7 @@
 		<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= ASSETS ?>images/favicons/apple-touch-icon-72x72-precomposed.png"/> -->
 		<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
 		<!-- <link rel="apple-touch-icon-precomposed" href="<?= ASSETS ?>images/favicons/apple-touch-icon-57x57-precomposed.png"/> -->
-		<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+		<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --> */?>
 		<link rel="icon" href="<?= ASSETS ?>images/favicons/favicon.ico" type="image/x-icon" />
 
 		<!-- RSS -->

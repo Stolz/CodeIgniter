@@ -18,8 +18,7 @@
 			&lt;p&gt;Content of section 1.&lt;/p&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+&lt;/div&gt;</pre>
 
 		Where <span style="color:red">TYPE</span> is one of:
 		<ul class="circle">
@@ -28,16 +27,19 @@
 			<li><code>tabs</code>: tabs on both small and large screens.</li>
 			<li><code>vertical-nav</code>: vertical navigation elements on large screens and show an accordion on small screens.</li>
 			<li><code>horizontal-nav</code>:horizontal navigation elements on large screens and show an accordion on small screens.</li>
+			<li><code>vertical-tabs</code>: no docs.</li>
 		</ul>
 
 		<p>If you want to force a particular format on small screens you will need to set <code>data-section="TYPE"</code>.</p>
 
-		If you want visitors to be able to visit a predefined URL with a hash that points to a particular section of the content (known as "Deep linking") then just add <code>data-options="deep_linking: true"</code> to the main container.
-		Deep linking also requires a matching <code>data-slug</code> on the content section that the hash should point to, without the pound (#) sign.
+		<p>If you want visitors to be able to visit a predefined URL with a hash that points to a particular section of the content (known as "Deep linking") then just add <code>data-options="deep_linking: true"</code> to the main container.
+		Deep linking also requires a matching <code>data-slug</code> on the content section that the hash should point to, without the pound (#) sign.</p>
+
+		<p><b>You can infinitely nest Section elements to create more complicated Section layouts.</b></p>
+
+		<?php $n=0; foreach(array('auto', 'accordion', 'tabs', 'vertical-tabs', 'vertical-nav', 'horizontal-nav') as $type) : ?>
 
 		<hr/>
-
-		<?php $n=0; foreach(array('auto', 'tabs', 'accordion', 'vertical-nav', 'horizontal-nav') as $type) : ?>
 
 		<a name="sections_<?=$type?>"></a>
 		<h4>Type <code><?=$type?></code> <small>Deep-linking enabled</small></h4>
