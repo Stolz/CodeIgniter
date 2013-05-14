@@ -1,8 +1,7 @@
-<a name="grid_centered"></a>
-
 <div class="row example">
 	<div class="large-12 columns">
-		<h3>Centered</h3>
+		<h2>The Grid</h2>
+		<h3 class="subheader">Centered columns</h3>
 
 		<p>Centered columns (only the column layout, not the text align) need <code>small-centered</code> or <code>large-centere</code>.</p>
 

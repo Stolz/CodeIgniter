@@ -1,8 +1,7 @@
-<a name="grid_float_collapse"></a>
-
 <div class="row example">
 	<div class="large-12 columns">
-		<h3>Float and collapse</h3>
+		<h2>The Grid</h2>
+		<h3 class="subheader">Float and collapse</h3>
 
 		<p>Last column always floats to the right. To avoid this behavior add the class <code>.end</code>.</p>
 

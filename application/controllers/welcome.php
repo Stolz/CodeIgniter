@@ -150,31 +150,40 @@ class Welcome extends CI_Controller {
 	}
 
 	// Tests Zurb Foundation Framework http://foundation.zurb.com
-	public function foundation()
+	public function foundation($view = NULL)
 	{
 		$this->config->set_item('tidy_enabled', FALSE);
-
 		$this->load->library('assets', array('jquery', 'foundation'));
+
+		$valid_views = array(
+			'grid_basics',
+			'grid_float_collapse',
+			'grid_offset',
+			'grid_centered',
+			'grid_ordering',
+			'block_grid',
+			'buttons',
+			'button_group',
+			'button_bar',
+			'button_dropdown',
+			'button_split',
+			'sections',
+			//to-do migrar los restantes
+		);
+
+		$views = array('test/foundation/top_bar');
+		$views[] = 'test/foundation/' . ((in_array($view, $valid_views)) ? $view : 'grid_basics');
+		$views[-1] = '<style>
+		.example .row, .example .row .column, .example .row .columns { background: #eee; height: 32px; line-height: 32px; }
+		.example .row .column, .example .row .columns { background: #ccc; border: 1px solid #bbb; }
+		.example .row { margin-bottom: 10px; }
+		</style>';
 
 		$data = array(
 			'title'	=> 'Foundation CSS test page',
+			'url'	=> "{$this->router->class}/{$this->router->method}/",
 			'current_url'=> current_url(),
-			'views'	=> array(
-				'test/foundation/top_bar',
-				'test/foundation/grid_basics',
-				'test/foundation/grid_float_collapse',
-				'test/foundation/grid_offset',
-				'test/foundation/grid_centered',
-				'test/foundation/grid_ordering',
-				'test/foundation/block_grid',
-				'test/foundation/buttons',
-				'test/foundation/button_group',
-				'test/foundation/button_bar',
-				'test/foundation/button_dropdown',
-				'test/foundation/button_split',
-				'test/foundation/sections',
-// 				to-do migrar los restantes
-			)
+			'views'	=> $views
 		);
 
 		$this->load->view('template', $data);

@@ -1,11 +1,8 @@
-<a name="sections"></a>
-
 <div class="row">
 	<div class="large-12 columns">
 
 		<h2>Sections</h2>
 
-		<a name="sections_default"></a>
 		<p>This is the markup</p>
 
 		<pre class="panel">

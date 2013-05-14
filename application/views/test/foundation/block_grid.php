@@ -1,5 +1,3 @@
-<a name="block_grid"></a>
-
 <div class="row">
 	<div class="large-12 columns">
 		<h3>Block grid</h3>

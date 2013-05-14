@@ -1,5 +1,3 @@
-<a name="button"></a>
-
 <div class="row">
 	<div class="large-12 columns">
 		<h3>Buttons</h3>

@@ -1,15 +1,7 @@
-<style>
-.example .row, .example .row .column, .example .row .columns { background: #eee; height: 32px; line-height: 32px; }
-.example .row .column, .example .row .columns { background: #ccc; border: 1px solid #bbb; }
-.example .row { margin-bottom: 10px; }
-</style>
-
-
-<a name="grid_basics"></a>
-
 <div class="row">
 	<div class="large-12 columns">
 		<h2>The Grid</h2>
+		<h3 class="subheader">Basics</h3>
 
 		<p>To create a grid (layout of rows and columns) you have to create a <code>&lt;div class=&quot;row&quot;&gt;&lt;/div&gt;</code> container. Each <code>.row</code> container can be divided in up to 12 columns using inside it a <code>&lt;div class=&quot;columns&quot;&gt;&lt;/div&gt;</code> container. The division may be different for devices with small or large screen. To set the with of the division for devices with small screen you have to use <code>small-#</code> and for large screen devices you use <code>large-#</code>. The breakpoint to swicth between both grids is set to 768px. The markup looks like this:</p>
 

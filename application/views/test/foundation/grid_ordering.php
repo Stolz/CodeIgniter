@@ -1,11 +1,9 @@
-<a name="grid_ordering"></a>
-
 <div class="row example">
 	<div class="large-12 columns">
-		<h3>Ordering</h3>
+		<h2>The Grid</h2>
+		<h3 class="subheader">Column ordering</h3>
 
 		<p> You can make columns to be shown in a different order than they appear in the code with <code>push-#</code>.</p>
-
 
 		<div class="row">
 			<div class="small-2 push-10 columns">2</div>

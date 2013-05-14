@@ -1,8 +1,7 @@
-<a name="grid_offset"></a>
-
 <div class="row example">
 	<div class="large-12 columns">
-		<h3>Offset</h3>
+		<h2>The Grid</h2>
+		<h3 class="subheader">Column offsets</h3>
 
 		<p>Use <code>small-offset-#</code> and <code>large-offset-#</code></p>
 

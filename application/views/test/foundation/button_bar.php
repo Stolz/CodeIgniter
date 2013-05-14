@@ -1,5 +1,3 @@
-<a name="button_bar"></a>
-
 <div class="row">
 	<div class="large-12 columns">
 		<h3>Buttons bars</h3>
