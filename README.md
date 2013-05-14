@@ -22,9 +22,9 @@ Specifically, it includes:
  - Controller to handle AJAX requests.
  - Controller to test your CSS styles with almost all the existing HTML tags.
  - Controller to create an RSS feed.
- 
+
 
 ## All of it with a working sample code following CodeIgniter standars!
 
- **All the included external libraries are kept up to date as far as possible**.
+ **All the included external libraries are kept up to date as much as possible**.
 
