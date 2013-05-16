@@ -422,6 +422,17 @@ class Welcome extends CI_Controller {
 		$this->load->view('template', $data);
 	}
 
+	//Test Zepto (a lighter replacement for and jQuery)
+	public function zepto()
+	{
+		$this->load->library('assets', array('zepto', 'app'));
+		$data = array(
+			'title'			=> 'Zepto',
+			'views'			=> array('test/zepto'),
+		);
+		$this->load->view('template', $data);
+	}
+
 	//SOAP client usin native PHP SOAP extension
 	public function soapclient()
 	{

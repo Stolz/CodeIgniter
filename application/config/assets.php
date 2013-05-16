@@ -47,6 +47,14 @@ $config['app'] = array(
 
 /******************************************************************************/
 
+$config['zepto'] = array(
+	'cdn'		=> '//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js',
+	'fallback'	=> 'typeof Zepto == "undefined"',
+	'js'		=> 'zepto.min',
+);
+
+/******************************************************************************/
+
 //Zurb Foundation
 $config['foundation'] = array(
 	'css'		=> array('normalize', 'foundation.min'),

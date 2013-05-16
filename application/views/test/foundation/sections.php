@@ -9,9 +9,9 @@
 &lt;div class="section-container <span style="color:red">TYPE</span>" data-section&gt;
 	&lt;div class="section"&gt;
 
-		&lt;p class="title"&gt;&lt;a href="#panel1"&gt;Section 1&lt;/a&gt;&lt;/p&gt;
+		&lt;p class="title" data-section-title&gt;&lt;a href="#panel1"&gt;Section 1&lt;/a&gt;&lt;/p&gt;
 
-		&lt;div class="content"&gt;
+		&lt;div class="content" data-section-content&gt;
 			&lt;p&gt;Content of section 1.&lt;/p&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
@@ -43,8 +43,8 @@
 		<div class="section-container <?=$type?>" data-section data-options="deep_linking: true">
 			<?php for($i = 1; $i <= 5; $i++) : $n++; ?>
 			<div class="section">
-				<p class="title"><a href="<?=$current_url?>#panel<?=$n?>">Section <?=$n?></a> </p>
-				<div class="content" data-slug="panel<?=$n?>">
+				<p class="title" data-section-title><a href="<?=$current_url?>#panel<?=$n?>">Section <?=$n?></a> </p>
+				<div class="content" data-slug="panel<?=$n?>" data-section-content>
 					<p>Content of section <?=$n?>.</p>
 					Lorem ipsum dolor sit amet, <?=$n?> consectetur adipisicing elit, <?=$n?> sed do eiusmod tempor <?=$n?> incididunt ut <?=$n?> labore et dolore magna aliqua. <?=$n?> Ut enim ad minim veniam, quis nostrud  <?=$n?> exercitation ullamco laboris nisi ut aliquip ex  <?=$n?> ea commodo consequat.
 				</div>
@@ -56,8 +56,8 @@
 		<div class="section-container <?=$type?>" data-section="<?=$type?>" data-options="deep_linking: true">
 			<?php for($i = 1; $i <= 5; $i++) : $n++; ?>
 			<div class="section">
-				<p class="title"><a href="<?=$current_url?>#panel<?=$n?>">Section <?=$n?></a> </p>
-				<div class="content" data-slug="panel<?=$n?>">
+				<p class="title" data-section-title><a href="<?=$current_url?>#panel<?=$n?>">Section <?=$n?></a> </p>
+				<div class="content" data-slug="panel<?=$n?>" data-section-content>
 					<p>Content of section <?=$n?>.</p>
 					Lorem ipsum dolor sit amet, <?=$n?> consectetur adipisicing elit, <?=$n?> sed do eiusmod tempor <?=$n?> incididunt ut <?=$n?> labore et dolore magna aliqua. <?=$n?> Ut enim ad minim veniam, quis nostrud  <?=$n?> exercitation ullamco laboris nisi ut aliquip ex  <?=$n?> ea commodo consequat.
 				</div>

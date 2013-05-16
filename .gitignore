@@ -12,3 +12,7 @@ application/logs/*
 *~
 .*~
 .nfs00*
+
+#Ignore KDE stuff
+.directory
+.inotify

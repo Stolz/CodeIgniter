@@ -23,6 +23,7 @@
 			<li>Improved CI default error messages looking like the ones from <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.</li>
 			<li><a href="welcome/assets">Assets library</a> including out of the box:<ul>
 				<li><a href="welcome/jquery"><i>jQuery</i> and <i>jQuery UI</i></a>.</li>
+				<li><a href="welcome/zepto"><i>Zepto.js</i></a> (minimalist jQuery replacement).</li>
 				<li><a href="welcome/foundation"><i>Zurb Foundation</i></a> framework.</li>
 				<li><a href="welcome/foundation_icons"><i>Zurb Foundation SVG icons</i></a>.</li>
 				<li><a href="welcome/fc_webicons"><i>FC SVG icons</i></a>.</li>

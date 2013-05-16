@@ -8,6 +8,7 @@ Specifically, it includes:
  - Improved pagination library.
  - Assets library including out of the box:
    - [jQuery](http://jquery.com) and [jQuery UI](http://jqueryui.com).
+   - [Zepto](http://zeptojs.com/) (minimalist jQuery replacement).
    - [Zurb Foundation](http://foundation.zurb.com) framework.
    - [Zurb Foundation](http://www.zurb.com/playground/foundation-icons) icons.
    - [Rickshaw](http://code.shutterstock.com/rickshaw) JavaScript toolkit for time series graphs.
