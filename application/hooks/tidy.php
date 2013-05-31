@@ -16,6 +16,7 @@ function clean()
 		{
 			/*workaround: hide errors related to HTML5*/
 			$errors = preg_replace("/line.*proprietary attribute \"data-.*\n?/", '', $tidy->errorBuffer);
+			$errors = preg_replace("/line.*proprietary attribute \"placeholder.*\n?/", '', $errors);
 			$errors = preg_replace("/line.*is not approved by W3C\n?/", '', $errors);
 			$errors = preg_replace("/line.*trimming empty <li>\n?/", '', $errors);
 			$errors = preg_replace("/line.*trimming empty <span>\n?/", '', $errors);
