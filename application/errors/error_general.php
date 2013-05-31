@@ -51,7 +51,7 @@
 				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 			}
 
-			body {
+			.container {
 				max-width: 600px;
 				_width: 600px;
 				padding: 30px 20px 50px;
@@ -76,21 +76,31 @@
 				margin: 1.5em 0 0.5em;text-align: center;
 			}
 
-			.container {
+			.msg {
 				max-width: 500px;
 				_width: 500px;
 				margin: 0 auto;
+			}
+
+			pre{
+				font-size:10px;
+				margin:auto 5em;
+				margin-top:2em;
 			}
 
 		</style>
 	</head>
 	<body>
 		<div class="container">
-			<h1><?=  $heading; ?> <span>:(</span></h1>
-			<h3><?=  $message; ?></h3>
+			<div class="msg">
+				<h1><?=  $heading; ?> <span>:(</span></h1>
+				<h3><?=  $message; ?></h3>
 
-			<h1><a href="<?= site_url() ?>">Go to main page</a></h1>
-		 
+				<h1><a href="<?= site_url() ?>">Go to main page</a></h1>
+			</div>
 		</div>
+		<?php if(ENVIRONMENT == 'development') : ?>
+		<pre>BACKTRACE (limited to 25 hops):<br/><?php debug_print_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 25); ?></pre>
+		<?php endif ?>
 	</body>
 </html>
