@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 	<head>
-		<title><?= $title ?> | <?= PROJECT_NAME ?></title>
+		<title><?= strip_tags($title) ?> | <?= strip_tags(PROJECT_NAME) ?></title>
 		<base href="<?= config_item('base_url') ?>" />
 
 		<!-- Meta -->
