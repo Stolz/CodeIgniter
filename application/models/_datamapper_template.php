@@ -89,7 +89,8 @@ class Template extends DataMapper {
 	alpha			No		Returns FALSE if the form element contains anything other than alphabetical characters.
 	alpha_numeric	No		Returns FALSE if the form element contains anything other than alpha-numeric characters.
 	alpha_dash		No		Returns FALSE if the form element contains anything other than alpha-numeric characters, underscores or dashes.
-	numeric			No		Returns FALSE if the form element contains anything other than numeric characters.
+	numeric			No		Returns FALSE if the form element contains anything other than numeric characters: Only numers in format 1 or +1 or -1 or 1.2 or +1.2 or -1.2
+	is_numeric		No		Returns FALSE if the form element contains anything other than numeric stings: Anything that evals to TRUE in native PHP is_numeric() function such 1234 or 0x539 or 0b10100111001 or 1337e0
 	integer			No		Returns FALSE if the form element contains anything other than an integer.
 	decimal			Yes		Returns FALSE if the form element is not exactly the parameter value.
 	is_natural		No		Returns FALSE if the form element contains anything other than a natural number: 0, 1, 2, 3, etc.
