@@ -198,13 +198,23 @@ if (defined('ENVIRONMENT'))
 if(ENVIRONMENT === 'development')
 {
 	require_once FCPATH.'vendor/autoload.php'; //to-do comment out if you want to use Composer autoload
-	
+
+	//Pretty errors with http://filp.github.io/whoops/
+
+	// We want the error page to be shown by default, if this is a regular request, so that's the first thing to go into the stack:
 	$whoops_handler = new Whoops\Handler\PrettyPageHandler();
-	$whoops_handler->setPageTitle('ERROR | '.PROJECT_NAME);
+	$whoops_handler->setPageTitle('ERROR');
 	$whoops_handler->setEditor(function($file, $line) {return "kde://$file --line $line";});
+
+	// Now, we want a second handler that will run before the error page, and immediately return an error message in JSON format, if something goes awry.
+	$whoops_json_handler = new Whoops\Handler\JsonResponseHandler();
+	$whoops_json_handler->onlyForAjaxRequests(TRUE);// Make sure it only triggers for AJAX requests:
+	//$whoops_json_handler->addTraceToOutput(true);// You can also tell JsonResponseHandler to give you a full stack trace:
+
+	// That's it! Register Whoops
 	$whoops = new Whoops\Run();
-	//$whoops->pushHandler(new Whoops\Handler\JsonResponseHandler());
 	$whoops->pushHandler($whoops_handler);
+	$whoops->pushHandler($whoops_json_handler);
 	$whoops->register();
 }
 
