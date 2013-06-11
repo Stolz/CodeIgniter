@@ -35,7 +35,7 @@ if (defined('ENVIRONMENT'))
 		case 'development':
 			error_reporting(E_ALL | E_STRICT);
 		break;
-	
+
 		case 'testing':
 		case 'production':
 			error_reporting(0);
@@ -192,14 +192,31 @@ if (defined('ENVIRONMENT'))
 	}
 
 /* --------------------------------------------------------------------
- * LOAD THE DATAMAPPER BOOTSTRAP FILE http://datamapper.wanwizard.eu/
+ * Load the Composer Autoloader http://getcomposer.org
  * --------------------------------------------------------------------
  */
-// require_once APPPATH.'third_party/datamapper/bootstrap.php'; //to-do uncomment out if you want to use DATAMAPPER ORM
+if(ENVIRONMENT === 'development')
+{
+	require_once FCPATH.'vendor/autoload.php'; //to-do comment out if you want to use Composer autoload
+	
+	$whoops_handler = new Whoops\Handler\PrettyPageHandler();
+	$whoops_handler->setPageTitle('ERROR | '.PROJECT_NAME);
+	$whoops_handler->setEditor(function($file, $line) {return "kde://$file --line $line";});
+	$whoops = new Whoops\Run();
+	//$whoops->pushHandler(new Whoops\Handler\JsonResponseHandler());
+	$whoops->pushHandler($whoops_handler);
+	$whoops->register();
+}
+
+/* --------------------------------------------------------------------
+ * Load the Datamapper ORM bootstrap file http://datamapper.wanwizard.eu/
+ * --------------------------------------------------------------------
+ */
+// require_once APPPATH.'third_party/datamapper/bootstrap.php'; //to-do comment out if you want to use DATAMAPPER ORM
 
 /*
  * --------------------------------------------------------------------
- * LOAD THE BOOTSTRAP FILE
+ * LOAD THE CODEIGNITER BOOTSTRAP FILE
  * --------------------------------------------------------------------
  *
  * And away we go...
