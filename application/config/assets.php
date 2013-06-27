@@ -17,7 +17,7 @@ For 'css' and 'js', if the filename starts with 'http' or '//' then it's assumed
 /******************************************************************************/
 
 $config['jquery'] = array(
-	'cdn'		=> '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+	'cdn'		=> '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js',
 	'fallback'	=> 'typeof jQuery == "undefined"',
 	'js'		=> 'jquery.min',
 );
@@ -25,17 +25,17 @@ $config['jquery'] = array(
 /******************************************************************************/
 
 $config['jquery-ui'] = array(
-	'css'		=> 'smoothness/jquery-ui-1.10.1.custom.min', /* CDN version: '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/smoothness/jquery-ui.min.css',*/
+	'css'		=> 'smoothness/jquery-ui-1.10.3.custom.min', /* CDN version: '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css',*/
 	'cdn'		=> array(
-					'//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js',
-					//Uncomment to load i18n for all languages other than English '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/i18n/jquery-ui-i18n.min.js',
-					//Uncomment to load i18n for only one language (i.e: Spanish)'//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/i18n/jquery.ui.datepicker-es.js',
+					'//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js',
+					//Uncomment to load i18n for all languages other than English '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/i18n/jquery-ui-i18n.min.js',
+					//Uncomment to load i18n for only one language (i.e: Spanish)'//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/i18n/jquery.ui.datepicker-es.min.js',
 					),
 	'fallback'	=> '!window.jQuery.ui',
 	'js'		=> array(
 					'jquery-ui.min',
 					//Uncomment to load i18n for all languages other than English 'jquery-ui-i18n.min.js',
-					//Uncomment to load i18n for only one language (i.e: Spanish) 'jquery.ui.datepicker-es',
+					//Uncomment to load i18n for only one language (i.e: Spanish) 'jquery.ui.datepicker-es.min',
 					),
 );
 
