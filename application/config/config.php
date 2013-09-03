@@ -265,7 +265,7 @@ $config['sess_time_to_update']	= 300;
 | 'cookie_secure' =  Cookies will only be set if a secure HTTPS connection exists.
 |
 */
-$config['cookie_prefix']	= "to-do"; //set your own prefix
+$config['cookie_prefix']	= "to-do"; //to-do if you reuse your webapp set to a unique value for each of them to avoid cookie stealing atacks. Also make sure to NOT USE underscores!
 $config['cookie_domain']	= parse_url($config['base_url'],PHP_URL_HOST);
 $config['cookie_path']		= "/";
 $config['cookie_secure']	= FALSE;
