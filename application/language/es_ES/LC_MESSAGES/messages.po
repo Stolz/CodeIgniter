@@ -1,12 +1,17 @@
-# NOTA: Es imporante que el archivo de cabecera este en ISO 8859-1
-#, fuzzy
 msgid ""
 msgstr ""
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-11 15:00+0200\n"
+"Project-Id-Version: Codeigniter\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Stolz <stolz_at_gsmlandia_com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"Language: English\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
 
-# A partir de aquí ya empieza el contendio traducido, proveniente de un archivo en UTF-8
 #: language/english/calendar_lang.php:3
 msgid "Su"
 msgstr "Do"
@@ -612,8 +617,12 @@ msgid "PNG images are not supported."
 msgstr "El formato de imagen PNG no está soportado."
 
 #: language/english/imglib_lang.php:10
-msgid "The image resize protocol specified in your preferences only works with JPEG or PNG image types."
-msgstr "El protocolo de redimensionamiento de imágenes especificado en las preferencias sólo funciona con tipos PNG o JPG."
+msgid ""
+"The image resize protocol specified in your preferences only works with JPEG "
+"or PNG image types."
+msgstr ""
+"El protocolo de redimensionamiento de imágenes especificado en las "
+"preferencias sólo funciona con tipos PNG o JPG."
 
 #: language/english/imglib_lang.php:11
 msgid "An error was encountered while attempting to replace the file.  Please make sure your file directory is writable."
@@ -666,27 +675,27 @@ msgstr "Esta migracion no se ha podido encontrar"
 #: language/english/migration_lang.php:5
 #, php-format
 msgid "This are multiple migrations with the same version number: %d."
-msgstr ""
+msgstr "Existen múltiples migraciones con el mismo número: %d."
 
 #: language/english/migration_lang.php:6
 #, php-format
 msgid "The migration class \"%s\" could not be found."
-msgstr ""
+msgstr "No se ha podido encontrar la migración con clase \"%s\"."
 
 #: language/english/migration_lang.php:7
 #, php-format
 msgid "The migration class \"%s\" is missing an 'up' method."
-msgstr ""
+msgstr "La migración con clase \"%s\" no contiene un método 'up'."
 
 #: language/english/migration_lang.php:8
 #, php-format
 msgid "The migration class \"%s\" is missing an 'down' method."
-msgstr ""
+msgstr "La migración con clase \"%s\" no contiene un método 'down'."
 
 #: language/english/migration_lang.php:9
 #, php-format
 msgid "Migration \"%s\" has an invalid filename."
-msgstr ""
+msgstr "La migración \"%s\" tiene un nombre de archivo incorrecto."
 
 #: language/english/profiler_lang.php:3
 msgid "DATABASE"
@@ -762,11 +771,11 @@ msgstr "Sin datos de Perfil - todas las secciones del Perfilador han sido deshab
 
 #: language/english/profiler_lang.php:21
 msgid "Hide"
-msgstr ""
+msgstr "Ocultar"
 
 #: language/english/profiler_lang.php:22
 msgid "Show"
-msgstr ""
+msgstr "Mostrar"
 
 #: language/english/unit_test_lang.php:3
 msgid "Test Name"
@@ -819,7 +828,7 @@ msgstr "Flotante"
 
 #: language/english/unit_test_lang.php:16
 msgid "String"
-msgstr ""
+msgstr "Cadena"
 
 #: language/english/unit_test_lang.php:17
 msgid "Array"
@@ -903,4 +912,4 @@ msgstr "El archivo enviado ya existe en el servidor."
 
 #: language/english/upload_lang.php:18
 msgid "The upload destination folder does not appear to be writable."
-msgstr "Parece que no se puede escribir en el directorio de destino."
+msgstr "El directorio de destino parace no tener permisos de escritura"
