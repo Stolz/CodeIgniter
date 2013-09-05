@@ -1,906 +1,1050 @@
-# NOTA: Es imporante que el archivo de cabecera este en ISO 8859-1
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 #, fuzzy
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-11 15:00+0200\n"
+"POT-Creation-Date: 2013-09-05 14:48+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
-# A partir de aquí ya empieza el contendio traducido, proveniente de un archivo en UTF-8
-#: language/english/calendar_lang.php:3
+#: controllers/auth.php:31 views/test/login.php:17
+msgid "User"
+msgstr "Usuario"
+
+#: controllers/auth.php:32 views/test/login.php:26
+msgid "Password"
+msgstr "Contraseña"
+
+#: controllers/auth.php:42
+msgid "Wrong credentials"
+msgstr ""
+
+#: controllers/auth.php:63
+msgid "Login"
+msgstr "Acceso"
+
+#: controllers/error_404.php:17 views/error_404.php:6
+msgid "Page Not Found"
+msgstr "Página no entrada"
+
+#: language/english/calendar_lang.php:9
 msgid "Su"
 msgstr "Do"
 
-#: language/english/calendar_lang.php:4
+#: language/english/calendar_lang.php:10
 msgid "Mo"
 msgstr "Lu"
 
-#: language/english/calendar_lang.php:5
+#: language/english/calendar_lang.php:11
 msgid "Tu"
 msgstr "Ma"
 
-#: language/english/calendar_lang.php:6
+#: language/english/calendar_lang.php:12
 msgid "We"
 msgstr "Mi"
 
-#: language/english/calendar_lang.php:7
+#: language/english/calendar_lang.php:13
 msgid "Th"
 msgstr "Ju"
 
-#: language/english/calendar_lang.php:8
+#: language/english/calendar_lang.php:14
 msgid "Fr"
 msgstr "Vi"
 
-#: language/english/calendar_lang.php:9
+#: language/english/calendar_lang.php:15
 msgid "Sa"
 msgstr "Sa"
 
-#: language/english/calendar_lang.php:10
+#: language/english/calendar_lang.php:16
 msgid "Sun"
 msgstr "Dom"
 
-#: language/english/calendar_lang.php:11
+#: language/english/calendar_lang.php:17
 msgid "Mon"
 msgstr "Lun"
 
-#: language/english/calendar_lang.php:12
+#: language/english/calendar_lang.php:18
 msgid "Tue"
 msgstr "Mar"
 
-#: language/english/calendar_lang.php:13
+#: language/english/calendar_lang.php:19
 msgid "Wed"
 msgstr "Mie"
 
-#: language/english/calendar_lang.php:14
+#: language/english/calendar_lang.php:20
 msgid "Thu"
 msgstr "Jue"
 
-#: language/english/calendar_lang.php:15
+#: language/english/calendar_lang.php:21
 msgid "Fri"
 msgstr "Vie"
 
-#: language/english/calendar_lang.php:16
+#: language/english/calendar_lang.php:22
 msgid "Sat"
 msgstr "Sab"
 
-#: language/english/calendar_lang.php:17
+#: language/english/calendar_lang.php:23
 msgid "Sunday"
 msgstr "Domingo"
 
-#: language/english/calendar_lang.php:18
+#: language/english/calendar_lang.php:24
 msgid "Monday"
 msgstr "Lunes"
 
-#: language/english/calendar_lang.php:19
+#: language/english/calendar_lang.php:25
 msgid "Tuesday"
 msgstr "Martes"
 
-#: language/english/calendar_lang.php:20
+#: language/english/calendar_lang.php:26
 msgid "Wednesday"
 msgstr "Miércoles"
 
-#: language/english/calendar_lang.php:21
+#: language/english/calendar_lang.php:27
 msgid "Thursday"
 msgstr "Jueves"
 
-#: language/english/calendar_lang.php:22
+#: language/english/calendar_lang.php:28
 msgid "Friday"
 msgstr "Viernes"
 
-#: language/english/calendar_lang.php:23
+#: language/english/calendar_lang.php:29
 msgid "Saturday"
 msgstr "Sábado"
 
-#: language/english/calendar_lang.php:24
+#: language/english/calendar_lang.php:30
 msgid "Jan"
 msgstr "Ene"
 
-#: language/english/calendar_lang.php:25
+#: language/english/calendar_lang.php:31
 msgid "Feb"
 msgstr "Feb"
 
-#: language/english/calendar_lang.php:26
+#: language/english/calendar_lang.php:32
 msgid "Mar"
 msgstr "Mar"
 
-#: language/english/calendar_lang.php:27
+#: language/english/calendar_lang.php:33
 msgid "Apr"
 msgstr "Abr"
 
-#: language/english/calendar_lang.php:28 language/english/calendar_lang.php:40
+#: language/english/calendar_lang.php:34 language/english/calendar_lang.php:46
 msgid "May"
 msgstr "May"
 
-#: language/english/calendar_lang.php:29
+#: language/english/calendar_lang.php:35
 msgid "Jun"
 msgstr "Jun"
 
-#: language/english/calendar_lang.php:30
+#: language/english/calendar_lang.php:36
 msgid "Jul"
 msgstr "Jul"
 
-#: language/english/calendar_lang.php:31
+#: language/english/calendar_lang.php:37
 msgid "Aug"
 msgstr "Ago"
 
-#: language/english/calendar_lang.php:32
+#: language/english/calendar_lang.php:38
 msgid "Sep"
 msgstr "Sep"
 
-#: language/english/calendar_lang.php:33
+#: language/english/calendar_lang.php:39
 msgid "Oct"
 msgstr "Oct"
 
-#: language/english/calendar_lang.php:34
+#: language/english/calendar_lang.php:40
 msgid "Nov"
 msgstr "Nov"
 
-#: language/english/calendar_lang.php:35
+#: language/english/calendar_lang.php:41
 msgid "Dec"
 msgstr "Dic"
 
-#: language/english/calendar_lang.php:36
+#: language/english/calendar_lang.php:42
 msgid "January"
 msgstr "Enero"
 
-#: language/english/calendar_lang.php:37
+#: language/english/calendar_lang.php:43
 msgid "February"
 msgstr "Febrero"
 
-#: language/english/calendar_lang.php:38
+#: language/english/calendar_lang.php:44
 msgid "March"
 msgstr "Marzo"
 
-#: language/english/calendar_lang.php:39
+#: language/english/calendar_lang.php:45
 msgid "April"
 msgstr "Abril"
 
-#: language/english/calendar_lang.php:41
+#: language/english/calendar_lang.php:47
 msgid "June"
 msgstr "Junio"
 
-#: language/english/calendar_lang.php:42
+#: language/english/calendar_lang.php:48
 msgid "July"
 msgstr "Julio"
 
-#: language/english/calendar_lang.php:43
+#: language/english/calendar_lang.php:49
 msgid "August"
 msgstr "Agosto"
 
-#: language/english/calendar_lang.php:44
+#: language/english/calendar_lang.php:50
 msgid "September"
 msgstr "Septiembre"
 
-#: language/english/calendar_lang.php:45
+#: language/english/calendar_lang.php:51
 msgid "October"
 msgstr "Octubre"
 
-#: language/english/calendar_lang.php:46
+#: language/english/calendar_lang.php:52
 msgid "November"
 msgstr "Noviembre"
 
-#: language/english/calendar_lang.php:47
+#: language/english/calendar_lang.php:53
 msgid "December"
 msgstr "Diciembre"
 
-#: language/english/date_lang.php:3
+#: language/english/datamapper_lang.php:9
+#, php-format
+msgid "The %s field may only contain alpha-numeric characters, underscores, dashes, and full stops."
+msgstr "El campo %s debe contener solo caracteres alfanuméricos, guiones, guiones bajos y puntos"
+
+#: language/english/datamapper_lang.php:10
+#, php-format
+msgid "The %s field may only contain alpha-numeric characters, underscores, dashes, slashes, and full stops."
+msgstr "El campo %s debe contener solo caracteres alfanuméricos, guiones, guiones bajos, barras y puntos"
+
+#: language/english/datamapper_lang.php:11
+#: language/english/datamapper_lang.php:13
+#, php-format
+msgid "The %s field must be at least %s."
+msgstr "El campo %s debe ser al menos %s."
+
+#: language/english/datamapper_lang.php:12
+#: language/english/datamapper_lang.php:14
+#, php-format
+msgid "The %s field can not exceed %s."
+msgstr "El campo %s no puede exceder %s."
+
+#: language/english/datamapper_lang.php:15
+#, php-format
+msgid "The %s failed to %s."
+msgstr "El campo %s ha fallado al %s."
+
+#: language/english/datamapper_lang.php:16
+#, php-format
+msgid "The %s you supplied is already taken."
+msgstr "El %s indicado ya existe."
+
+#: language/english/datamapper_lang.php:17
+#, php-format
+msgid "The combination of %s and %s you supplied is already taken."
+msgstr "La combinación de %s y %s indicada ya existe."
+
+#: language/english/datamapper_lang.php:18
+#, php-format
+msgid "The %s field must contain a valid date."
+msgstr "El campo %s debe contener una fecha válida"
+
+#: language/english/datamapper_lang.php:19
+#, php-format
+msgid "The %2$s fields must contain a valid date."
+msgstr "El campo %s debe contener una fecha válida"
+
+#: language/english/datamapper_lang.php:20
+#, php-format
+msgid "The %s field may only be %s."
+msgstr "El campo %s solo puede ser %s."
+
+#: language/english/datamapper_lang.php:22
+#, php-format
+msgid "The %s relationship is required."
+msgstr "La relación %s es obligatoria."
+
+#: language/english/datamapper_lang.php:23
+#, php-format
+msgid "The %s relationship must be at least %s."
+msgstr "La relación %s debe ser de al menos %s."
+
+#: language/english/datamapper_lang.php:24
+#, php-format
+msgid "The %s relationship can not exceed %s."
+msgstr "La relación %s no debe exceder %s."
+
+#: language/english/datamapper_lang.php:26
+#, php-format
+msgid "The %s relationship is not properly defined."
+msgstr "La relación %s no está bien definida."
+
+#: language/english/datamapper_lang.php:27
+#, php-format
+msgid "Unable to save the %s relationship: This object is not saved."
+msgstr "No se ha podido guardar la relación %s: Este objeto no ha sido guardado."
+
+#: language/english/datamapper_lang.php:28
+#, php-format
+msgid "Unable to save the %s relationship: The related object was not saved."
+msgstr "No se ha podido guardar la relación %s: El objeto relacionado no ha sido guardado."
+
+#: language/english/date_lang.php:9
 msgid "Year"
 msgstr "Año"
 
-#: language/english/date_lang.php:4
+#: language/english/date_lang.php:10
 msgid "Years"
 msgstr "Años"
 
-#: language/english/date_lang.php:5
+#: language/english/date_lang.php:11
 msgid "Month"
 msgstr "Mes"
 
-#: language/english/date_lang.php:6
+#: language/english/date_lang.php:12
 msgid "Months"
 msgstr "Meses"
 
-#: language/english/date_lang.php:7
+#: language/english/date_lang.php:13
 msgid "Week"
 msgstr "Semana"
 
-#: language/english/date_lang.php:8
+#: language/english/date_lang.php:14
 msgid "Weeks"
 msgstr "Semanas"
 
-#: language/english/date_lang.php:9
+#: language/english/date_lang.php:15
 msgid "Day"
 msgstr "Día"
 
-#: language/english/date_lang.php:10
+#: language/english/date_lang.php:16
 msgid "Days"
 msgstr "Días"
 
-#: language/english/date_lang.php:11
+#: language/english/date_lang.php:17
 msgid "Hour"
 msgstr "Hora"
 
-#: language/english/date_lang.php:12
+#: language/english/date_lang.php:18
 msgid "Hours"
 msgstr "Horas"
 
-#: language/english/date_lang.php:13
+#: language/english/date_lang.php:19
 msgid "Minute"
 msgstr "Minuto"
 
-#: language/english/date_lang.php:14
+#: language/english/date_lang.php:20
 msgid "Minutes"
 msgstr "Minutos"
 
-#: language/english/date_lang.php:15
+#: language/english/date_lang.php:21
 msgid "Second"
 msgstr "Segundo"
 
-#: language/english/date_lang.php:16
+#: language/english/date_lang.php:22
 msgid "Seconds"
 msgstr "Segundos"
 
-#: language/english/db_lang.php:3
+#: language/english/db_lang.php:9
 msgid "Unable to determine the database settings based on the connection string you submitted."
 msgstr "No se ha podido determinar la configuración de la base de datos basándose en la cadena proporcionada."
 
-#: language/english/db_lang.php:4
+#: language/english/db_lang.php:10
 msgid "Unable to connect to your database server using the provided settings."
 msgstr "No se ha podido conectar al servidor de base de datos usando la configuración suministrada."
 
-#: language/english/db_lang.php:5
+#: language/english/db_lang.php:11
 #, php-format
 msgid "Unable to select the specified database: %s"
 msgstr "No se ha podido seleccionar la base de datos especificada: %s"
 
-#: language/english/db_lang.php:6
+#: language/english/db_lang.php:12
 #, php-format
 msgid "Unable to create the specified database: %s"
 msgstr "No se ha podido crear la base de datos especificada: %s"
 
-#: language/english/db_lang.php:7
+#: language/english/db_lang.php:13
 msgid "The query you submitted is not valid."
 msgstr "La consulta enviada no es válida."
 
-#: language/english/db_lang.php:8
+#: language/english/db_lang.php:14
 msgid "You must set the database table to be used with your query."
 msgstr "Debe especificar la tabla que será usada en su consulta."
 
-#: language/english/db_lang.php:9
+#: language/english/db_lang.php:15
 msgid "You must use the \"set\" method to update an entry."
 msgstr "Debe usar el método \"SET\" para actualizar una entrada."
 
-#: language/english/db_lang.php:10
+#: language/english/db_lang.php:16
 msgid "You must specify an index to match on for batch updates."
 msgstr "Debe especificar un índice que coincida para las actualizaciones por lotes."
 
-#: language/english/db_lang.php:11
+#: language/english/db_lang.php:17
 msgid "One or more rows submitted for batch updating is missing the specified index."
 msgstr "Una o más columnas sometidas al proceso de actualización por lote no se encuentra en el índice especificado."
 
-#: language/english/db_lang.php:12
+#: language/english/db_lang.php:18
 msgid "Updates are not allowed unless they contain a \"where\" clause."
 msgstr "Las actualizaciones no están permitidas a menos que contengan una cláusula \"WHERE\"."
 
-#: language/english/db_lang.php:13
+#: language/english/db_lang.php:19
 msgid "Deletes are not allowed unless they contain a \"where\" or \"like\" clause."
 msgstr "Las eliminaciones no están permitidas a menos que contengan una cláusula \"WHERE\" o \"LIKE\"."
 
-#: language/english/db_lang.php:14
+#: language/english/db_lang.php:20
 msgid "To fetch fields requires the name of the table as a parameter."
 msgstr "Para retornar campos se requiere el nombre de la tabla como parámetro."
 
-#: language/english/db_lang.php:15
+#: language/english/db_lang.php:21
 msgid "This feature is not available for the database you are using."
 msgstr "Está característica no está disponible para la base de datos que está usando."
 
-#: language/english/db_lang.php:16
+#: language/english/db_lang.php:22
 msgid "Transaction failure: Rollback performed."
 msgstr "Fallo en la transacción: Rollback ejecutado"
 
-#: language/english/db_lang.php:17
+#: language/english/db_lang.php:23
 msgid "Unable to drop the specified database."
 msgstr "No se ha podido eliminar la base de datos especificada."
 
-#: language/english/db_lang.php:18
+#: language/english/db_lang.php:24
 msgid "Unsupported feature of the database platform you are using."
 msgstr "Característica no soportada por la plataforma de base de datos que está usando."
 
-#: language/english/db_lang.php:19
+#: language/english/db_lang.php:25
 msgid "The file compression format you chose is not supported by your server."
 msgstr "El formato de compresión de ficheros que ha seleccionado no está soportado por su servidor."
 
-#: language/english/db_lang.php:20
+#: language/english/db_lang.php:26
 msgid "Unable to write data to the file path you have submitted."
 msgstr "No se pueden escribir los datos en la ruta de fichero que ha proporcionado."
 
-#: language/english/db_lang.php:21
+#: language/english/db_lang.php:27
 msgid "The cache path you submitted is not valid or writable."
 msgstr "La ruta de la caché que ha proporcionado no es válida o no se puede escribir en la misma."
 
-#: language/english/db_lang.php:22
+#: language/english/db_lang.php:28
 msgid "A table name is required for that operation."
 msgstr "Es necesario el nombre de una tabla para esa operación."
 
-#: language/english/db_lang.php:23
+#: language/english/db_lang.php:29
 msgid "A column name is required for that operation."
 msgstr "Es necesario el nombre de una columna para esa operación."
 
-#: language/english/db_lang.php:24
+#: language/english/db_lang.php:30
 msgid "A column definition is required for that operation."
 msgstr "Es necesaria una definición de columna para esa operación."
 
-#: language/english/db_lang.php:25
+#: language/english/db_lang.php:31
 #, php-format
 msgid "Unable to set client connection character set: %s"
 msgstr "Imposible establecer el juego de caracteres de conexión del cliente: %s"
 
-#: language/english/db_lang.php:26
+#: language/english/db_lang.php:32
 msgid "A Database Error Occurred"
 msgstr "Ocurrió un error con la base de datos"
 
-#: language/english/email_lang.php:3
+#: language/english/email_lang.php:9
 msgid "The email validation method must be passed an array."
 msgstr "El método de validación de correo debe ser pasado como un array."
 
-#: language/english/email_lang.php:4
+#: language/english/email_lang.php:10
 #, php-format
 msgid "Invalid email address: %s"
 msgstr "Dirección de correo no válida: %s"
 
-#: language/english/email_lang.php:5
+#: language/english/email_lang.php:11
 #, php-format
 msgid "Unable to locate the following email attachment: %s"
 msgstr "No se pudo localizar el siguiente fichero adjunto: %s"
 
-#: language/english/email_lang.php:6
+#: language/english/email_lang.php:12
 #, php-format
 msgid "Unable to open this attachment: %s"
 msgstr "No se pudo abrir este adjunto: %s"
 
-#: language/english/email_lang.php:7
+#: language/english/email_lang.php:13
 msgid "You must include recipients: To, Cc, or Bcc"
 msgstr "Debe incluir receptores: Para, CC, o BCC"
 
-#: language/english/email_lang.php:8
+#: language/english/email_lang.php:14
 msgid "Unable to send email using PHP mail().  Your server might not be configured to send mail using this method."
 msgstr "No se puede enviar el correo usando la función mail() de PHP.  Su servidor puede no estar configurado para usar este método de envio."
 
-#: language/english/email_lang.php:9
+#: language/english/email_lang.php:15
 msgid "Unable to send email using PHP Sendmail.  Your server might not be configured to send mail using this method."
 msgstr "No se puede enviar el correo usando SendMail. Su servidor puede no estar configurado para usar este método de envio."
 
-#: language/english/email_lang.php:10
+#: language/english/email_lang.php:16
 msgid "Unable to send email using PHP SMTP.  Your server might not be configured to send mail using this method."
 msgstr "No se puede enviar el correo usando SMTP PHP. Su servidor puede no estar configurado para usar este método de envio."
 
-#: language/english/email_lang.php:11
+#: language/english/email_lang.php:17
 #, php-format
 msgid "Your message has been successfully sent using the following protocol: %s"
 msgstr "Su mensaje ha sido enviado satisfactoriamente usando el siguiente protocolo: %s"
 
-#: language/english/email_lang.php:12
+#: language/english/email_lang.php:18
 msgid "Unable to open a socket to Sendmail. Please check settings."
 msgstr "No se puede abrir un socket para Sendmail. Por favor revise la configuración."
 
-#: language/english/email_lang.php:13
+#: language/english/email_lang.php:19
 msgid "You did not specify a SMTP hostname."
 msgstr "No ha especificado un servidor SMTP"
 
-#: language/english/email_lang.php:14
+#: language/english/email_lang.php:20
 #, php-format
 msgid "The following SMTP error was encountered: %s"
 msgstr "Los siguientes errores SMTP han sido encontrados: %s"
 
-#: language/english/email_lang.php:15
+#: language/english/email_lang.php:21
 msgid "Error: You must assign a SMTP username and password."
 msgstr "Error: Debe asignar un usuario y contraseña para el servidor SMTP."
 
-#: language/english/email_lang.php:16
+#: language/english/email_lang.php:22
 #, php-format
 msgid "Failed to send AUTH LOGIN command. Error: %s"
 msgstr "Fallo enviando el comando AUTH LOGIN. Error: %s"
 
-#: language/english/email_lang.php:17
+#: language/english/email_lang.php:23
 #, php-format
 msgid "Failed to authenticate username. Error: %s"
 msgstr "Fallo autentificando el usuario. Error: %s"
 
-#: language/english/email_lang.php:18
+#: language/english/email_lang.php:24
 #, php-format
 msgid "Failed to authenticate password. Error: %s"
 msgstr "Fallo usando la contraseña. Error: %s"
 
-#: language/english/email_lang.php:19
+#: language/english/email_lang.php:25
 #, php-format
 msgid "Unable to send data: %s"
 msgstr "No se han podido enviar los datos: %s"
 
-#: language/english/email_lang.php:20
+#: language/english/email_lang.php:26
 #, php-format
 msgid "Exit status code: %s"
 msgstr "Código de estado de salida: %s"
 
-#: language/english/form_validation_lang.php:3
+#: language/english/form_validation_lang.php:9
 #, php-format
 msgid "The %s field is required."
 msgstr "El campo %s es obligatorio."
 
-#: language/english/form_validation_lang.php:4
+#: language/english/form_validation_lang.php:10
 #, php-format
 msgid "The %s field must have a value."
 msgstr "El campo %s debe contener un valor."
 
-#: language/english/form_validation_lang.php:5
+#: language/english/form_validation_lang.php:11
 #, php-format
 msgid "The %s field must contain a valid email address."
 msgstr "El campo %s debe contener una direcci"
 
-#: language/english/form_validation_lang.php:6
+#: language/english/form_validation_lang.php:12
 #, php-format
 msgid "The %s field must contain all valid email addresses."
-msgstr "El campo %s debe contener todas las direcciones de email v"
+msgstr "El campo %s debe contener direcciones de email válidas"
 
-#: language/english/form_validation_lang.php:7
+#: language/english/form_validation_lang.php:13
+#: language/english/form_validation_lang.php:38
 #, php-format
 msgid "The %s field must contain a valid URL."
-msgstr "El campo %s debe contener una URL v"
+msgstr "El campo %s debe contener una URL válida"
 
-#: language/english/form_validation_lang.php:8
+#: language/english/form_validation_lang.php:14
 #, php-format
 msgid "The %s field must contain a valid IP."
-msgstr "El campo %s debe contener una IP v"
+msgstr "El campo %s debe contener una IP válida"
 
-#: language/english/form_validation_lang.php:9
+#: language/english/form_validation_lang.php:15
 #, php-format
 msgid "The %s field must be at least %s characters in length."
 msgstr "El campo %s debe tener al menos %s caracteres de longitud."
 
-#: language/english/form_validation_lang.php:10
+#: language/english/form_validation_lang.php:16
 #, php-format
 msgid "The %s field can not exceed %s characters in length."
 msgstr "El campo %s no puede exceder los %s caracteres de longitud."
 
-#: language/english/form_validation_lang.php:11
+#: language/english/form_validation_lang.php:17
 #, php-format
 msgid "The %s field must be exactly %s characters in length."
 msgstr "El campo %s debe tener exactamente %s caracteres de longitud."
 
-#: language/english/form_validation_lang.php:12
+#: language/english/form_validation_lang.php:18
 #, php-format
 msgid "The %s field may only contain alphabetical characters."
 msgstr "El campo %s debe contener s"
 
-#: language/english/form_validation_lang.php:13
+#: language/english/form_validation_lang.php:19
 #, php-format
 msgid "The %s field may only contain alpha-numeric characters."
 msgstr "El campo %s debe contener s"
 
-#: language/english/form_validation_lang.php:14
+#: language/english/form_validation_lang.php:20
 #, php-format
 msgid "The %s field may only contain alpha-numeric characters, underscores, and dashes."
 msgstr "El campo %s debe contener s"
 
-#: language/english/form_validation_lang.php:15
+#: language/english/form_validation_lang.php:21
 #, php-format
 msgid "The %s field must contain only numbers."
 msgstr "El campo %s debe contener s"
 
-#: language/english/form_validation_lang.php:16
+#: language/english/form_validation_lang.php:22
 #, php-format
 msgid "The %s field must contain only numeric characters."
 msgstr "El campo %s debe contener s"
 
-#: language/english/form_validation_lang.php:17
+#: language/english/form_validation_lang.php:23
 #, php-format
 msgid "The %s field must contain an integer."
 msgstr "El campo %s debe contener un n"
 
-#: language/english/form_validation_lang.php:18
+#: language/english/form_validation_lang.php:24
 #, php-format
 msgid "The %s field is not in the correct format."
 msgstr "El campo %s no está en el formato correcto"
 
-#: language/english/form_validation_lang.php:19
+#: language/english/form_validation_lang.php:25
 #, php-format
 msgid "The %s field does not match the %s field."
 msgstr "El campo %s no coincide con el campo %s."
 
-#: language/english/form_validation_lang.php:20
+#: language/english/form_validation_lang.php:26
 #, php-format
 msgid "The %s field must contain a unique value."
 msgstr "El campo %s debe contener un valor único"
 
-#: language/english/form_validation_lang.php:21
+#: language/english/form_validation_lang.php:27
 #, php-format
 msgid "The %s field must contain only positive numbers."
 msgstr "El campo %s debe contener s"
 
-#: language/english/form_validation_lang.php:22
+#: language/english/form_validation_lang.php:28
 #, php-format
 msgid "The %s field must contain a number greater than zero."
 msgstr "El campo %s debe contener un n"
 
-#: language/english/form_validation_lang.php:23
+#: language/english/form_validation_lang.php:29
 #, php-format
 msgid "The %s field must contain a decimal number."
 msgstr "El campo %s debe contener un número decimal"
 
-#: language/english/form_validation_lang.php:24
+#: language/english/form_validation_lang.php:30
 #, php-format
 msgid "The %s field must contain a number less than %s."
 msgstr "El campo %s debe contener un número menor que %s."
 
-#: language/english/form_validation_lang.php:25
+#: language/english/form_validation_lang.php:31
 #, php-format
 msgid "The %s field must contain a number greater than %s."
 msgstr "El campo %s debe contener un número mayor que %s."
 
-#: language/english/ftp_lang.php:3
+#: language/english/form_validation_lang.php:34
+msgid "Invalid date"
+msgstr "Fecha no válida"
+
+#: language/english/form_validation_lang.php:36
+#, php-format
+msgid "The %s field must differ from the %s field."
+msgstr "El campo %s debe ser distinto que el campo %s."
+
+#: language/english/form_validation_lang.php:37
+#, php-format
+msgid "The %s field must contain a number less than or equal to %s."
+msgstr "El campo %s debe contener un número menor o igual que %s."
+
+#: language/english/form_validation_lang.php:39
+#, php-format
+msgid "The %s field must contain a number greater than or equal to %s."
+msgstr "El campo %s debe contener un número mayor o igual que %s."
+
+#: language/english/ftp_lang.php:9
 msgid "Unable to locate a valid connection ID. Please make sure you are connected before peforming any file routines."
 msgstr "No se pudo localizar una identificación de conexión válida. Por favor, asegúrese de que está conectado antes de realizar cualquier rutina con archivos."
 
-#: language/english/ftp_lang.php:4
+#: language/english/ftp_lang.php:10
 msgid "Unable to connect to your FTP server using the supplied hostname."
 msgstr "No se pudo conectar a su servidor FTP con el nombre de host suministrado."
 
-#: language/english/ftp_lang.php:5
+#: language/english/ftp_lang.php:11
 msgid "Unable to login to your FTP server. Please check your username and password."
 msgstr "No se pudo acceder a su servidor FTP. Por favor, compruebe su nombre de usuario y contraseña."
 
-#: language/english/ftp_lang.php:6
+#: language/english/ftp_lang.php:12
 msgid "Unable to create the directory you have specified."
 msgstr "No se pudo crear el directorio que ha especificado."
 
-#: language/english/ftp_lang.php:7
+#: language/english/ftp_lang.php:13
 msgid "Unable to change directories."
 msgstr "No se pudo cambiar de directorio."
 
-#: language/english/ftp_lang.php:8
+#: language/english/ftp_lang.php:14
 msgid "Unable to set file permissions. Please check your path. Note: This feature is only available in PHP 5 or higher."
 msgstr "No es posible establecer permisos de archivos. Por favor, compruebe la ruta. Nota: Esta función sólo está disponible en PHP 5 o superior."
 
-#: language/english/ftp_lang.php:9
+#: language/english/ftp_lang.php:15
 msgid "Unable to upload the specified file. Please check your path."
 msgstr "No se pudo cargar el archivo especificado. Por favor, compruebe la ruta."
 
-#: language/english/ftp_lang.php:10
+#: language/english/ftp_lang.php:16
 msgid "Unable to download the specified file. Please check your path."
 msgstr "No se pudo descargar el archivo especificado. Por favor, compruebe la ruta."
 
-#: language/english/ftp_lang.php:11
+#: language/english/ftp_lang.php:17
 msgid "Unable to locate the source file. Please check your path."
 msgstr "No se encuentra el archivo de origen. Por favor, compruebe la ruta."
 
-#: language/english/ftp_lang.php:12
+#: language/english/ftp_lang.php:18
 msgid "Unable to rename the file."
 msgstr "No se pudo renombrar el archivo."
 
-#: language/english/ftp_lang.php:13
+#: language/english/ftp_lang.php:19
 msgid "Unable to delete the file."
 msgstr "No se pudo borrar el archivo."
 
-#: language/english/ftp_lang.php:14
+#: language/english/ftp_lang.php:20
 msgid "Unable to move the file. Please make sure the destination directory exists."
 msgstr "No es posible mover el archivo. Por favor, asegúrese de que el directorio de destino existe."
 
-#: language/english/imglib_lang.php:3
+#: language/english/imglib_lang.php:9
 msgid "You must specify a source image in your preferences."
 msgstr "Debe especificar una imagen de origen en las preferencias."
 
-#: language/english/imglib_lang.php:4
+#: language/english/imglib_lang.php:10
 msgid "The GD image library is required for this feature."
 msgstr "Es necesaria la librería GD para esta característica."
 
-#: language/english/imglib_lang.php:5
+#: language/english/imglib_lang.php:11
 msgid "Your server must support the GD image library in order to determine the image properties."
 msgstr "Su servidor debe soportar la librería GD para poder determinar las propiedades de la imagen."
 
-#: language/english/imglib_lang.php:6
+#: language/english/imglib_lang.php:12
 msgid "Your server does not support the GD function required to process this type of image."
 msgstr "Su servidor no soporta la función GD necesaria para este tipo de imagen."
 
-#: language/english/imglib_lang.php:7
+#: language/english/imglib_lang.php:13
 msgid "GIF images are often not supported due to licensing restrictions.  You may have to use JPG or PNG images instead."
 msgstr "Las imágenes de tipo GIF a menudo no son soportadas por las restricciones de la licencia. Puede usar en vez de estas PNG o JPG."
 
-#: language/english/imglib_lang.php:8
+#: language/english/imglib_lang.php:14
 msgid "JPG images are not supported."
 msgstr "El formato de imagen JPG no está soportado."
 
-#: language/english/imglib_lang.php:9
+#: language/english/imglib_lang.php:15
 msgid "PNG images are not supported."
 msgstr "El formato de imagen PNG no está soportado."
 
-#: language/english/imglib_lang.php:10
+#: language/english/imglib_lang.php:16
 msgid "The image resize protocol specified in your preferences only works with JPEG or PNG image types."
 msgstr "El protocolo de redimensionamiento de imágenes especificado en las preferencias sólo funciona con tipos PNG o JPG."
 
-#: language/english/imglib_lang.php:11
+#: language/english/imglib_lang.php:17
 msgid "An error was encountered while attempting to replace the file.  Please make sure your file directory is writable."
 msgstr "Se han encontrado errores mientras se trataba de reemplazar el archivo. Asegúrese de que el directorio donde se encuentra el fichero posee permisos de escritura."
 
-#: language/english/imglib_lang.php:12
+#: language/english/imglib_lang.php:18
 msgid "Image rotation does not appear to be supported by your server."
 msgstr "La rotación de imágenes parece no estar soportada por su servidor."
 
-#: language/english/imglib_lang.php:13
+#: language/english/imglib_lang.php:19
 msgid "The path to your image library is not correct.  Please set the correct path in your image preferences."
 msgstr "La dirección para la librería de imágenes no es correcta.  Por favor, configure correctamente la dirección en las preferencias de imágenes."
 
-#: language/english/imglib_lang.php:14
+#: language/english/imglib_lang.php:20
 msgid "Image processing failed.  Please verify that your server supports the chosen protocol and that the path to your image library is correct."
 msgstr "Procesado de imagen fallido.  Verifique que su servidor soporta la función escogida y que la dirección de la librería de imágenes es correcta."
 
-#: language/english/imglib_lang.php:15
+#: language/english/imglib_lang.php:21
 msgid "An angle of rotation is required to rotate the image."
 msgstr "Se requiere un ángulo de rotación para que la imagen pueda ser rotada."
 
-#: language/english/imglib_lang.php:16
+#: language/english/imglib_lang.php:22
 msgid "GIF image."
 msgstr "Imagen GIF "
 
-#: language/english/imglib_lang.php:17
+#: language/english/imglib_lang.php:23
 msgid "The path to the image is not correct."
 msgstr "La dirección de la imagen no es correcta."
 
-#: language/english/imglib_lang.php:18
+#: language/english/imglib_lang.php:24
 msgid "The image copy routine failed."
 msgstr "Falló la rutina de copia de la imagen."
 
-#: language/english/imglib_lang.php:19
+#: language/english/imglib_lang.php:25
 msgid "Unable to find a font to use."
 msgstr "No se ha podido encontrar la fuente que desea usar."
 
-#: language/english/imglib_lang.php:20
+#: language/english/imglib_lang.php:26
 msgid "Unable to save the image.  Please make sure the image and file directory are writable."
 msgstr "No se ha podido guardar la imagen. Por favor, compruebe que los directorios donde se encuentran la imagen y el archivo tienen permisos de escritura."
 
-#: language/english/migration_lang.php:3
+#: language/english/migration_lang.php:9
 msgid "No migrations were found."
 msgstr "No se han encontrado migraciones"
 
-#: language/english/migration_lang.php:4
+#: language/english/migration_lang.php:10
 msgid "This migration could not be found."
 msgstr "Esta migracion no se ha podido encontrar"
 
-#: language/english/migration_lang.php:5
+#: language/english/migration_lang.php:11
 #, php-format
 msgid "This are multiple migrations with the same version number: %d."
-msgstr ""
+msgstr "Existen múltiples migraciones con el mismo número: %d."
 
-#: language/english/migration_lang.php:6
+#: language/english/migration_lang.php:12
 #, php-format
 msgid "The migration class \"%s\" could not be found."
-msgstr ""
+msgstr "No se ha podido encontrar la migración con clase \"%s\"."
 
-#: language/english/migration_lang.php:7
+#: language/english/migration_lang.php:13
 #, php-format
 msgid "The migration class \"%s\" is missing an 'up' method."
-msgstr ""
+msgstr "La migración con clase \"%s\" no contiene un método 'up'."
 
-#: language/english/migration_lang.php:8
+#: language/english/migration_lang.php:14
 #, php-format
 msgid "The migration class \"%s\" is missing an 'down' method."
-msgstr ""
+msgstr "La migración con clase \"%s\" no contiene un método 'down'."
 
-#: language/english/migration_lang.php:9
+#: language/english/migration_lang.php:15
 #, php-format
 msgid "Migration \"%s\" has an invalid filename."
-msgstr ""
+msgstr "La migración \"%s\" tiene un nombre de archivo incorrecto."
 
-#: language/english/profiler_lang.php:3
+#: language/english/profiler_lang.php:9
 msgid "DATABASE"
 msgstr "BASE DE DATOS"
 
-#: language/english/profiler_lang.php:4
+#: language/english/profiler_lang.php:10
 msgid "CLASS/METHOD"
 msgstr "CLASE/M"
 
-#: language/english/profiler_lang.php:5
+#: language/english/profiler_lang.php:11
 msgid "BENCHMARKS"
 msgstr "BENCHMARKS"
 
-#: language/english/profiler_lang.php:6
+#: language/english/profiler_lang.php:12
 msgid "QUERIES"
 msgstr "CONSULTAS"
 
-#: language/english/profiler_lang.php:7
+#: language/english/profiler_lang.php:13
 msgid "GET DATA"
 msgstr "DATOS GET"
 
-#: language/english/profiler_lang.php:8
+#: language/english/profiler_lang.php:14
 msgid "POST DATA"
 msgstr "DATOS POST"
 
-#: language/english/profiler_lang.php:9
+#: language/english/profiler_lang.php:15
 msgid "URI STRING"
 msgstr "CADENA URI"
 
-#: language/english/profiler_lang.php:10
+#: language/english/profiler_lang.php:16
 msgid "MEMORY USAGE"
 msgstr "USO DE MEMORIA"
 
-#: language/english/profiler_lang.php:11
+#: language/english/profiler_lang.php:17
 msgid "CONFIG VARIABLES"
 msgstr "VARIABLES DE CONFIGURACIÓN"
 
-#: language/english/profiler_lang.php:12
+#: language/english/profiler_lang.php:18
 msgid "SESSION DATA"
 msgstr "DATOS SESIÓN"
 
-#: language/english/profiler_lang.php:13
+#: language/english/profiler_lang.php:19
 msgid "HTTP HEADERS"
 msgstr "CABECERAS HTTP"
 
-#: language/english/profiler_lang.php:14
+#: language/english/profiler_lang.php:20
 msgid "Database driver is not currently loaded"
 msgstr "El driver para la base de datos no ha sido cargado"
 
-#: language/english/profiler_lang.php:15
+#: language/english/profiler_lang.php:21
 msgid "No queries were run"
 msgstr "No se han ejecutado consultas"
 
-#: language/english/profiler_lang.php:16
+#: language/english/profiler_lang.php:22
 msgid "No POST data exists"
 msgstr "No existen datos de tipo POST"
 
-#: language/english/profiler_lang.php:17
+#: language/english/profiler_lang.php:23
 msgid "No GET data exists"
 msgstr "No existen datos de tipo GET"
 
-#: language/english/profiler_lang.php:18
+#: language/english/profiler_lang.php:24
 msgid "No URI data exists"
 msgstr "No existen datos URI"
 
-#: language/english/profiler_lang.php:19
+#: language/english/profiler_lang.php:25
 msgid "Memory Usage Unavailable"
 msgstr "Uso de memoria no disponible"
 
-#: language/english/profiler_lang.php:20
+#: language/english/profiler_lang.php:26
 msgid "No Profile data - all Profiler sections have been disabled."
 msgstr "Sin datos de Perfil - todas las secciones del Perfilador han sido deshabilitadas."
 
-#: language/english/profiler_lang.php:21
+#: language/english/profiler_lang.php:27
 msgid "Hide"
-msgstr ""
+msgstr "Ocultar"
 
-#: language/english/profiler_lang.php:22
+#: language/english/profiler_lang.php:28
 msgid "Show"
-msgstr ""
+msgstr "Mostrar"
 
-#: language/english/unit_test_lang.php:3
+#: language/english/unit_test_lang.php:9
 msgid "Test Name"
 msgstr "Nombre del test"
 
-#: language/english/unit_test_lang.php:4
+#: language/english/unit_test_lang.php:10
 msgid "Test Datatype"
 msgstr "Tipo de datos del test"
 
-#: language/english/unit_test_lang.php:5
+#: language/english/unit_test_lang.php:11
 msgid "Expected Datatype"
 msgstr "Tipo de datos esperados"
 
-#: language/english/unit_test_lang.php:6
+#: language/english/unit_test_lang.php:12
 msgid "Result"
 msgstr "Resultado"
 
-#: language/english/unit_test_lang.php:7
+#: language/english/unit_test_lang.php:13
 msgid "Undefined Test Name"
 msgstr "Nombre de test no definido"
 
-#: language/english/unit_test_lang.php:8
+#: language/english/unit_test_lang.php:14
 msgid "File Name"
 msgstr "Nombre fichero"
 
-#: language/english/unit_test_lang.php:9
+#: language/english/unit_test_lang.php:15
 msgid "Line Number"
 msgstr "Número de línea"
 
-#: language/english/unit_test_lang.php:10
+#: language/english/unit_test_lang.php:16
 msgid "Passed"
 msgstr "Pasado"
 
-#: language/english/unit_test_lang.php:11
+#: language/english/unit_test_lang.php:17
 msgid "Failed"
 msgstr "Fallido"
 
-#: language/english/unit_test_lang.php:12
+#: language/english/unit_test_lang.php:18
 msgid "Boolean"
 msgstr "Booleano"
 
-#: language/english/unit_test_lang.php:13
+#: language/english/unit_test_lang.php:19
 msgid "Integer"
 msgstr "Entero"
 
-#: language/english/unit_test_lang.php:14
-#: language/english/unit_test_lang.php:15
+#: language/english/unit_test_lang.php:20
+#: language/english/unit_test_lang.php:21
 msgid "Float"
 msgstr "Flotante"
 
-#: language/english/unit_test_lang.php:16
+#: language/english/unit_test_lang.php:22
 msgid "String"
-msgstr ""
+msgstr "Cadena"
 
-#: language/english/unit_test_lang.php:17
+#: language/english/unit_test_lang.php:23
 msgid "Array"
 msgstr "Matriz"
 
-#: language/english/unit_test_lang.php:18
+#: language/english/unit_test_lang.php:24
 msgid "Object"
 msgstr "Objeto"
 
-#: language/english/unit_test_lang.php:19
+#: language/english/unit_test_lang.php:25
 msgid "Resource"
 msgstr "Recurso"
 
-#: language/english/unit_test_lang.php:20
+#: language/english/unit_test_lang.php:26
 msgid "Null"
 msgstr "Null"
 
-#: language/english/unit_test_lang.php:21
+#: language/english/unit_test_lang.php:27
 msgid "Notes"
 msgstr "Notas"
 
-#: language/english/upload_lang.php:3
+#: language/english/upload_lang.php:9
 msgid "Unable to find a post variable called userfile."
 msgstr "No se ha podido encontrar una variable de tipo POST llamada userfile."
 
-#: language/english/upload_lang.php:4
+#: language/english/upload_lang.php:10
 msgid "The uploaded file exceeds the maximum allowed size in your PHP configuration file."
 msgstr "El archivo subido excede el tamaño máximo permitido en la configuración de PHP."
 
-#: language/english/upload_lang.php:5
+#: language/english/upload_lang.php:11
 msgid "The uploaded file exceeds the maximum size allowed by the submission form."
 msgstr "El archivo subido excede el tamaño máximo permitido para el envio mediante formularios."
 
-#: language/english/upload_lang.php:6
+#: language/english/upload_lang.php:12
 msgid "The file was only partially uploaded."
 msgstr "El archivo fue subido sólo parcialmente"
 
-#: language/english/upload_lang.php:7
+#: language/english/upload_lang.php:13
 msgid "The temporary folder is missing."
 msgstr "No se ha encontrado la carpeta temporal."
 
-#: language/english/upload_lang.php:8
+#: language/english/upload_lang.php:14
 msgid "The file could not be written to disk."
 msgstr "No se ha podido escribir el archivo a disco."
 
-#: language/english/upload_lang.php:9
+#: language/english/upload_lang.php:15
 msgid "The file upload was stopped by extension."
 msgstr "Se ha detenido la subida del archivo debido a su extensión."
 
-#: language/english/upload_lang.php:10
+#: language/english/upload_lang.php:16
 msgid "You did not select a file to upload."
 msgstr "No ha seleccionado ningún archivo para subir"
 
-#: language/english/upload_lang.php:11
+#: language/english/upload_lang.php:17
 msgid "The filetype you are attempting to upload is not allowed."
 msgstr "El tipo de archivo que esta tratando de subir no está permitido"
 
-#: language/english/upload_lang.php:12
+#: language/english/upload_lang.php:18
 msgid "The file you are attempting to upload is larger than the permitted size."
 msgstr "El archivo que está tratando de subir excede el tamaño permitido"
 
-#: language/english/upload_lang.php:13
+#: language/english/upload_lang.php:19
 msgid "The image you are attempting to upload exceedes the maximum height or width."
 msgstr "La imagen que está tratando de subir excede los tamaños máximos para el alto y/o ancho"
 
-#: language/english/upload_lang.php:14
+#: language/english/upload_lang.php:20
 msgid "A problem was encountered while attempting to move the uploaded file to the final destination."
 msgstr "Se encontraron problemas mientras se trataba de mover el archivo subido al directorio de destino final."
 
-#: language/english/upload_lang.php:15
+#: language/english/upload_lang.php:21
 msgid "The upload path does not appear to be valid."
 msgstr "La dirección para subir el archivo parece no ser válida."
 
-#: language/english/upload_lang.php:16
+#: language/english/upload_lang.php:22
 msgid "You have not specified any allowed file types."
 msgstr "Todavía no ha especificado ningún tipo de archivo permitido."
 
-#: language/english/upload_lang.php:17
+#: language/english/upload_lang.php:23
 msgid "The file name you submitted already exists on the server."
 msgstr "El archivo enviado ya existe en el servidor."
 
-#: language/english/upload_lang.php:18
+#: language/english/upload_lang.php:24
 msgid "The upload destination folder does not appear to be writable."
-msgstr "Parece que no se puede escribir en el directorio de destino."
+msgstr "El directorio de destino parace no tener permisos de escritura"
+
+#: views/error_404.php:8
+msgid "The page you requested was not found"
+msgstr "La página solicitada no ha sido encontrada."
+
+#: views/error_404.php:9
+msgid "It looks like this was the result of either a mistyped address or an out-of-date link"
+msgstr "Parece que es el resultado de una dirección incorrecta o un enlace obsoleto"
+
+#: views/template.php:33
+msgid "News"
+msgstr "Noticias"
