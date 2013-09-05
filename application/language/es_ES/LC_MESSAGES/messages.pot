@@ -8,910 +8,1343 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-11 15:00+0200\n"
+"POT-Creation-Date: 2013-09-05 14:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: language/english/calendar_lang.php:3
-msgid "Su"
+#: controllers/auth.php:31
+#: views/test/login.php:17
+msgid "User"
 msgstr ""
 
-#: language/english/calendar_lang.php:4
-msgid "Mo"
+#: controllers/auth.php:32
+#: views/test/login.php:26
+msgid "Password"
 msgstr ""
 
-#: language/english/calendar_lang.php:5
-msgid "Tu"
+#: controllers/auth.php:42
+msgid "Wrong credentials"
 msgstr ""
 
-#: language/english/calendar_lang.php:6
-msgid "We"
+#: controllers/auth.php:63
+msgid "Login"
 msgstr ""
 
-#: language/english/calendar_lang.php:7
-msgid "Th"
+#: controllers/error_404.php:17
+#: views/error_404.php:6
+msgid "Page Not Found"
 msgstr ""
 
-#: language/english/calendar_lang.php:8
-msgid "Fr"
+#: controllers/welcome.php:38
+msgid "log out"
+msgstr ""
+
+#: controllers/welcome.php:49
+msgid "es_ES"
+msgstr ""
+
+#: controllers/welcome.php:377
+msgid "Pagination library test page"
+msgstr ""
+
+#: controllers/welcome.php:393
+msgid "Markdown library test page"
+msgstr ""
+
+#: controllers/welcome.php:408
+msgid "Rickshaw toolkit test page"
 msgstr ""
 
 #: language/english/calendar_lang.php:9
-msgid "Sa"
+msgid "Su"
 msgstr ""
 
 #: language/english/calendar_lang.php:10
-msgid "Sun"
+msgid "Mo"
 msgstr ""
 
 #: language/english/calendar_lang.php:11
-msgid "Mon"
+msgid "Tu"
 msgstr ""
 
 #: language/english/calendar_lang.php:12
-msgid "Tue"
+msgid "We"
 msgstr ""
 
 #: language/english/calendar_lang.php:13
-msgid "Wed"
+msgid "Th"
 msgstr ""
 
 #: language/english/calendar_lang.php:14
-msgid "Thu"
+msgid "Fr"
 msgstr ""
 
 #: language/english/calendar_lang.php:15
-msgid "Fri"
+msgid "Sa"
 msgstr ""
 
 #: language/english/calendar_lang.php:16
-msgid "Sat"
+msgid "Sun"
 msgstr ""
 
 #: language/english/calendar_lang.php:17
-msgid "Sunday"
+msgid "Mon"
 msgstr ""
 
 #: language/english/calendar_lang.php:18
-msgid "Monday"
+msgid "Tue"
 msgstr ""
 
 #: language/english/calendar_lang.php:19
-msgid "Tuesday"
+msgid "Wed"
 msgstr ""
 
 #: language/english/calendar_lang.php:20
-msgid "Wednesday"
+msgid "Thu"
 msgstr ""
 
 #: language/english/calendar_lang.php:21
-msgid "Thursday"
+msgid "Fri"
 msgstr ""
 
 #: language/english/calendar_lang.php:22
-msgid "Friday"
+msgid "Sat"
 msgstr ""
 
 #: language/english/calendar_lang.php:23
-msgid "Saturday"
+msgid "Sunday"
 msgstr ""
 
 #: language/english/calendar_lang.php:24
-msgid "Jan"
+msgid "Monday"
 msgstr ""
 
 #: language/english/calendar_lang.php:25
-msgid "Feb"
+msgid "Tuesday"
 msgstr ""
 
 #: language/english/calendar_lang.php:26
-msgid "Mar"
+msgid "Wednesday"
 msgstr ""
 
 #: language/english/calendar_lang.php:27
-msgid "Apr"
+msgid "Thursday"
 msgstr ""
 
 #: language/english/calendar_lang.php:28
-#: language/english/calendar_lang.php:40
-msgid "May"
+msgid "Friday"
 msgstr ""
 
 #: language/english/calendar_lang.php:29
-msgid "Jun"
+msgid "Saturday"
 msgstr ""
 
 #: language/english/calendar_lang.php:30
-msgid "Jul"
+msgid "Jan"
 msgstr ""
 
 #: language/english/calendar_lang.php:31
-msgid "Aug"
+msgid "Feb"
 msgstr ""
 
 #: language/english/calendar_lang.php:32
-msgid "Sep"
+msgid "Mar"
 msgstr ""
 
 #: language/english/calendar_lang.php:33
-msgid "Oct"
+msgid "Apr"
 msgstr ""
 
 #: language/english/calendar_lang.php:34
-msgid "Nov"
+#: language/english/calendar_lang.php:46
+msgid "May"
 msgstr ""
 
 #: language/english/calendar_lang.php:35
-msgid "Dec"
+msgid "Jun"
 msgstr ""
 
 #: language/english/calendar_lang.php:36
-msgid "January"
+msgid "Jul"
 msgstr ""
 
 #: language/english/calendar_lang.php:37
-msgid "February"
+msgid "Aug"
 msgstr ""
 
 #: language/english/calendar_lang.php:38
-msgid "March"
+msgid "Sep"
 msgstr ""
 
 #: language/english/calendar_lang.php:39
-msgid "April"
+msgid "Oct"
+msgstr ""
+
+#: language/english/calendar_lang.php:40
+msgid "Nov"
 msgstr ""
 
 #: language/english/calendar_lang.php:41
-msgid "June"
+msgid "Dec"
 msgstr ""
 
 #: language/english/calendar_lang.php:42
-msgid "July"
+msgid "January"
 msgstr ""
 
 #: language/english/calendar_lang.php:43
-msgid "August"
+msgid "February"
 msgstr ""
 
 #: language/english/calendar_lang.php:44
-msgid "September"
+msgid "March"
 msgstr ""
 
 #: language/english/calendar_lang.php:45
-msgid "October"
-msgstr ""
-
-#: language/english/calendar_lang.php:46
-msgid "November"
+msgid "April"
 msgstr ""
 
 #: language/english/calendar_lang.php:47
+msgid "June"
+msgstr ""
+
+#: language/english/calendar_lang.php:48
+msgid "July"
+msgstr ""
+
+#: language/english/calendar_lang.php:49
+msgid "August"
+msgstr ""
+
+#: language/english/calendar_lang.php:50
+msgid "September"
+msgstr ""
+
+#: language/english/calendar_lang.php:51
+msgid "October"
+msgstr ""
+
+#: language/english/calendar_lang.php:52
+msgid "November"
+msgstr ""
+
+#: language/english/calendar_lang.php:53
 msgid "December"
 msgstr ""
 
-#: language/english/date_lang.php:3
-msgid "Year"
+#: language/english/datamapper_lang.php:9
+#, php-format
+msgid "The %s field may only contain alpha-numeric characters, underscores, dashes, and full stops."
 msgstr ""
 
-#: language/english/date_lang.php:4
-msgid "Years"
+#: language/english/datamapper_lang.php:10
+#, php-format
+msgid "The %s field may only contain alpha-numeric characters, underscores, dashes, slashes, and full stops."
 msgstr ""
 
-#: language/english/date_lang.php:5
-msgid "Month"
+#: language/english/datamapper_lang.php:11
+#: language/english/datamapper_lang.php:13
+#, php-format
+msgid "The %s field must be at least %s."
 msgstr ""
 
-#: language/english/date_lang.php:6
-msgid "Months"
+#: language/english/datamapper_lang.php:12
+#: language/english/datamapper_lang.php:14
+#, php-format
+msgid "The %s field can not exceed %s."
 msgstr ""
 
-#: language/english/date_lang.php:7
-msgid "Week"
+#: language/english/datamapper_lang.php:15
+#, php-format
+msgid "The %s failed to %s."
 msgstr ""
 
-#: language/english/date_lang.php:8
-msgid "Weeks"
+#: language/english/datamapper_lang.php:16
+#, php-format
+msgid "The %s you supplied is already taken."
+msgstr ""
+
+#: language/english/datamapper_lang.php:17
+#, php-format
+msgid "The combination of %s and %s you supplied is already taken."
+msgstr ""
+
+#: language/english/datamapper_lang.php:18
+#, php-format
+msgid "The %s field must contain a valid date."
+msgstr ""
+
+#: language/english/datamapper_lang.php:19
+#, php-format
+msgid "The %2$s fields must contain a valid date."
+msgstr ""
+
+#: language/english/datamapper_lang.php:20
+#, php-format
+msgid "The %s field may only be %s."
+msgstr ""
+
+#: language/english/datamapper_lang.php:22
+#, php-format
+msgid "The %s relationship is required."
+msgstr ""
+
+#: language/english/datamapper_lang.php:23
+#, php-format
+msgid "The %s relationship must be at least %s."
+msgstr ""
+
+#: language/english/datamapper_lang.php:24
+#, php-format
+msgid "The %s relationship can not exceed %s."
+msgstr ""
+
+#: language/english/datamapper_lang.php:26
+#, php-format
+msgid "The %s relationship is not properly defined."
+msgstr ""
+
+#: language/english/datamapper_lang.php:27
+#, php-format
+msgid "Unable to save the %s relationship: This object is not saved."
+msgstr ""
+
+#: language/english/datamapper_lang.php:28
+#, php-format
+msgid "Unable to save the %s relationship: The related object was not saved."
 msgstr ""
 
 #: language/english/date_lang.php:9
-msgid "Day"
+msgid "Year"
 msgstr ""
 
 #: language/english/date_lang.php:10
-msgid "Days"
+msgid "Years"
 msgstr ""
 
 #: language/english/date_lang.php:11
-msgid "Hour"
+msgid "Month"
 msgstr ""
 
 #: language/english/date_lang.php:12
-msgid "Hours"
+msgid "Months"
 msgstr ""
 
 #: language/english/date_lang.php:13
-msgid "Minute"
+msgid "Week"
 msgstr ""
 
 #: language/english/date_lang.php:14
-msgid "Minutes"
+msgid "Weeks"
 msgstr ""
 
 #: language/english/date_lang.php:15
-msgid "Second"
+msgid "Day"
 msgstr ""
 
 #: language/english/date_lang.php:16
+msgid "Days"
+msgstr ""
+
+#: language/english/date_lang.php:17
+msgid "Hour"
+msgstr ""
+
+#: language/english/date_lang.php:18
+msgid "Hours"
+msgstr ""
+
+#: language/english/date_lang.php:19
+msgid "Minute"
+msgstr ""
+
+#: language/english/date_lang.php:20
+msgid "Minutes"
+msgstr ""
+
+#: language/english/date_lang.php:21
+msgid "Second"
+msgstr ""
+
+#: language/english/date_lang.php:22
 msgid "Seconds"
 msgstr ""
 
-#: language/english/db_lang.php:3
+#: language/english/db_lang.php:9
 msgid "Unable to determine the database settings based on the connection string you submitted."
 msgstr ""
 
-#: language/english/db_lang.php:4
+#: language/english/db_lang.php:10
 msgid "Unable to connect to your database server using the provided settings."
 msgstr ""
 
-#: language/english/db_lang.php:5
+#: language/english/db_lang.php:11
 #, php-format
 msgid "Unable to select the specified database: %s"
 msgstr ""
 
-#: language/english/db_lang.php:6
+#: language/english/db_lang.php:12
 #, php-format
 msgid "Unable to create the specified database: %s"
 msgstr ""
 
-#: language/english/db_lang.php:7
+#: language/english/db_lang.php:13
 msgid "The query you submitted is not valid."
 msgstr ""
 
-#: language/english/db_lang.php:8
+#: language/english/db_lang.php:14
 msgid "You must set the database table to be used with your query."
 msgstr ""
 
-#: language/english/db_lang.php:9
+#: language/english/db_lang.php:15
 msgid "You must use the \"set\" method to update an entry."
 msgstr ""
 
-#: language/english/db_lang.php:10
+#: language/english/db_lang.php:16
 msgid "You must specify an index to match on for batch updates."
 msgstr ""
 
-#: language/english/db_lang.php:11
+#: language/english/db_lang.php:17
 msgid "One or more rows submitted for batch updating is missing the specified index."
 msgstr ""
 
-#: language/english/db_lang.php:12
+#: language/english/db_lang.php:18
 msgid "Updates are not allowed unless they contain a \"where\" clause."
 msgstr ""
 
-#: language/english/db_lang.php:13
+#: language/english/db_lang.php:19
 msgid "Deletes are not allowed unless they contain a \"where\" or \"like\" clause."
 msgstr ""
 
-#: language/english/db_lang.php:14
+#: language/english/db_lang.php:20
 msgid "To fetch fields requires the name of the table as a parameter."
 msgstr ""
 
-#: language/english/db_lang.php:15
+#: language/english/db_lang.php:21
 msgid "This feature is not available for the database you are using."
 msgstr ""
 
-#: language/english/db_lang.php:16
+#: language/english/db_lang.php:22
 msgid "Transaction failure: Rollback performed."
 msgstr ""
 
-#: language/english/db_lang.php:17
+#: language/english/db_lang.php:23
 msgid "Unable to drop the specified database."
 msgstr ""
 
-#: language/english/db_lang.php:18
+#: language/english/db_lang.php:24
 msgid "Unsupported feature of the database platform you are using."
 msgstr ""
 
-#: language/english/db_lang.php:19
+#: language/english/db_lang.php:25
 msgid "The file compression format you chose is not supported by your server."
 msgstr ""
 
-#: language/english/db_lang.php:20
+#: language/english/db_lang.php:26
 msgid "Unable to write data to the file path you have submitted."
 msgstr ""
 
-#: language/english/db_lang.php:21
+#: language/english/db_lang.php:27
 msgid "The cache path you submitted is not valid or writable."
 msgstr ""
 
-#: language/english/db_lang.php:22
+#: language/english/db_lang.php:28
 msgid "A table name is required for that operation."
 msgstr ""
 
-#: language/english/db_lang.php:23
+#: language/english/db_lang.php:29
 msgid "A column name is required for that operation."
 msgstr ""
 
-#: language/english/db_lang.php:24
+#: language/english/db_lang.php:30
 msgid "A column definition is required for that operation."
 msgstr ""
 
-#: language/english/db_lang.php:25
+#: language/english/db_lang.php:31
 #, php-format
 msgid "Unable to set client connection character set: %s"
 msgstr ""
 
-#: language/english/db_lang.php:26
+#: language/english/db_lang.php:32
 msgid "A Database Error Occurred"
 msgstr ""
 
-#: language/english/email_lang.php:3
+#: language/english/email_lang.php:9
 msgid "The email validation method must be passed an array."
 msgstr ""
 
-#: language/english/email_lang.php:4
+#: language/english/email_lang.php:10
 #, php-format
 msgid "Invalid email address: %s"
 msgstr ""
 
-#: language/english/email_lang.php:5
+#: language/english/email_lang.php:11
 #, php-format
 msgid "Unable to locate the following email attachment: %s"
 msgstr ""
 
-#: language/english/email_lang.php:6
+#: language/english/email_lang.php:12
 #, php-format
 msgid "Unable to open this attachment: %s"
 msgstr ""
 
-#: language/english/email_lang.php:7
+#: language/english/email_lang.php:13
 msgid "You must include recipients: To, Cc, or Bcc"
 msgstr ""
 
-#: language/english/email_lang.php:8
+#: language/english/email_lang.php:14
 msgid "Unable to send email using PHP mail().  Your server might not be configured to send mail using this method."
 msgstr ""
 
-#: language/english/email_lang.php:9
+#: language/english/email_lang.php:15
 msgid "Unable to send email using PHP Sendmail.  Your server might not be configured to send mail using this method."
 msgstr ""
 
-#: language/english/email_lang.php:10
-msgid "Unable to send email using PHP SMTP.  Your server might not be configured to send mail using this method."
-msgstr ""
-
-#: language/english/email_lang.php:11
-#, php-format
-msgid "Your message has been successfully sent using the following protocol: %s"
-msgstr ""
-
-#: language/english/email_lang.php:12
-msgid "Unable to open a socket to Sendmail. Please check settings."
-msgstr ""
-
-#: language/english/email_lang.php:13
-msgid "You did not specify a SMTP hostname."
-msgstr ""
-
-#: language/english/email_lang.php:14
-#, php-format
-msgid "The following SMTP error was encountered: %s"
-msgstr ""
-
-#: language/english/email_lang.php:15
-msgid "Error: You must assign a SMTP username and password."
-msgstr ""
-
 #: language/english/email_lang.php:16
-#, php-format
-msgid "Failed to send AUTH LOGIN command. Error: %s"
+msgid "Unable to send email using PHP SMTP.  Your server might not be configured to send mail using this method."
 msgstr ""
 
 #: language/english/email_lang.php:17
 #, php-format
-msgid "Failed to authenticate username. Error: %s"
+msgid "Your message has been successfully sent using the following protocol: %s"
 msgstr ""
 
 #: language/english/email_lang.php:18
-#, php-format
-msgid "Failed to authenticate password. Error: %s"
+msgid "Unable to open a socket to Sendmail. Please check settings."
 msgstr ""
 
 #: language/english/email_lang.php:19
-#, php-format
-msgid "Unable to send data: %s"
+msgid "You did not specify a SMTP hostname."
 msgstr ""
 
 #: language/english/email_lang.php:20
 #, php-format
+msgid "The following SMTP error was encountered: %s"
+msgstr ""
+
+#: language/english/email_lang.php:21
+msgid "Error: You must assign a SMTP username and password."
+msgstr ""
+
+#: language/english/email_lang.php:22
+#, php-format
+msgid "Failed to send AUTH LOGIN command. Error: %s"
+msgstr ""
+
+#: language/english/email_lang.php:23
+#, php-format
+msgid "Failed to authenticate username. Error: %s"
+msgstr ""
+
+#: language/english/email_lang.php:24
+#, php-format
+msgid "Failed to authenticate password. Error: %s"
+msgstr ""
+
+#: language/english/email_lang.php:25
+#, php-format
+msgid "Unable to send data: %s"
+msgstr ""
+
+#: language/english/email_lang.php:26
+#, php-format
 msgid "Exit status code: %s"
-msgstr ""
-
-#: language/english/form_validation_lang.php:3
-#, php-format
-msgid "The %s field is required."
-msgstr ""
-
-#: language/english/form_validation_lang.php:4
-#, php-format
-msgid "The %s field must have a value."
-msgstr ""
-
-#: language/english/form_validation_lang.php:5
-#, php-format
-msgid "The %s field must contain a valid email address."
-msgstr ""
-
-#: language/english/form_validation_lang.php:6
-#, php-format
-msgid "The %s field must contain all valid email addresses."
-msgstr ""
-
-#: language/english/form_validation_lang.php:7
-#, php-format
-msgid "The %s field must contain a valid URL."
-msgstr ""
-
-#: language/english/form_validation_lang.php:8
-#, php-format
-msgid "The %s field must contain a valid IP."
 msgstr ""
 
 #: language/english/form_validation_lang.php:9
 #, php-format
-msgid "The %s field must be at least %s characters in length."
+msgid "The %s field is required."
 msgstr ""
 
 #: language/english/form_validation_lang.php:10
 #, php-format
-msgid "The %s field can not exceed %s characters in length."
+msgid "The %s field must have a value."
 msgstr ""
 
 #: language/english/form_validation_lang.php:11
 #, php-format
-msgid "The %s field must be exactly %s characters in length."
+msgid "The %s field must contain a valid email address."
 msgstr ""
 
 #: language/english/form_validation_lang.php:12
 #, php-format
-msgid "The %s field may only contain alphabetical characters."
+msgid "The %s field must contain all valid email addresses."
 msgstr ""
 
 #: language/english/form_validation_lang.php:13
+#: language/english/form_validation_lang.php:38
 #, php-format
-msgid "The %s field may only contain alpha-numeric characters."
+msgid "The %s field must contain a valid URL."
 msgstr ""
 
 #: language/english/form_validation_lang.php:14
 #, php-format
-msgid "The %s field may only contain alpha-numeric characters, underscores, and dashes."
+msgid "The %s field must contain a valid IP."
 msgstr ""
 
 #: language/english/form_validation_lang.php:15
 #, php-format
-msgid "The %s field must contain only numbers."
+msgid "The %s field must be at least %s characters in length."
 msgstr ""
 
 #: language/english/form_validation_lang.php:16
 #, php-format
-msgid "The %s field must contain only numeric characters."
+msgid "The %s field can not exceed %s characters in length."
 msgstr ""
 
 #: language/english/form_validation_lang.php:17
 #, php-format
-msgid "The %s field must contain an integer."
+msgid "The %s field must be exactly %s characters in length."
 msgstr ""
 
 #: language/english/form_validation_lang.php:18
 #, php-format
-msgid "The %s field is not in the correct format."
+msgid "The %s field may only contain alphabetical characters."
 msgstr ""
 
 #: language/english/form_validation_lang.php:19
 #, php-format
-msgid "The %s field does not match the %s field."
+msgid "The %s field may only contain alpha-numeric characters."
 msgstr ""
 
 #: language/english/form_validation_lang.php:20
 #, php-format
-msgid "The %s field must contain a unique value."
+msgid "The %s field may only contain alpha-numeric characters, underscores, and dashes."
 msgstr ""
 
 #: language/english/form_validation_lang.php:21
 #, php-format
-msgid "The %s field must contain only positive numbers."
+msgid "The %s field must contain only numbers."
 msgstr ""
 
 #: language/english/form_validation_lang.php:22
 #, php-format
-msgid "The %s field must contain a number greater than zero."
+msgid "The %s field must contain only numeric characters."
 msgstr ""
 
 #: language/english/form_validation_lang.php:23
 #, php-format
-msgid "The %s field must contain a decimal number."
+msgid "The %s field must contain an integer."
 msgstr ""
 
 #: language/english/form_validation_lang.php:24
 #, php-format
-msgid "The %s field must contain a number less than %s."
+msgid "The %s field is not in the correct format."
 msgstr ""
 
 #: language/english/form_validation_lang.php:25
 #, php-format
+msgid "The %s field does not match the %s field."
+msgstr ""
+
+#: language/english/form_validation_lang.php:26
+#, php-format
+msgid "The %s field must contain a unique value."
+msgstr ""
+
+#: language/english/form_validation_lang.php:27
+#, php-format
+msgid "The %s field must contain only positive numbers."
+msgstr ""
+
+#: language/english/form_validation_lang.php:28
+#, php-format
+msgid "The %s field must contain a number greater than zero."
+msgstr ""
+
+#: language/english/form_validation_lang.php:29
+#, php-format
+msgid "The %s field must contain a decimal number."
+msgstr ""
+
+#: language/english/form_validation_lang.php:30
+#, php-format
+msgid "The %s field must contain a number less than %s."
+msgstr ""
+
+#: language/english/form_validation_lang.php:31
+#, php-format
 msgid "The %s field must contain a number greater than %s."
 msgstr ""
 
-#: language/english/ftp_lang.php:3
-msgid "Unable to locate a valid connection ID. Please make sure you are connected before peforming any file routines."
+#: language/english/form_validation_lang.php:34
+msgid "Invalid date"
 msgstr ""
 
-#: language/english/ftp_lang.php:4
-msgid "Unable to connect to your FTP server using the supplied hostname."
+#: language/english/form_validation_lang.php:36
+#, php-format
+msgid "The %s field must differ from the %s field."
 msgstr ""
 
-#: language/english/ftp_lang.php:5
-msgid "Unable to login to your FTP server. Please check your username and password."
+#: language/english/form_validation_lang.php:37
+#, php-format
+msgid "The %s field must contain a number less than or equal to %s."
 msgstr ""
 
-#: language/english/ftp_lang.php:6
-msgid "Unable to create the directory you have specified."
-msgstr ""
-
-#: language/english/ftp_lang.php:7
-msgid "Unable to change directories."
-msgstr ""
-
-#: language/english/ftp_lang.php:8
-msgid "Unable to set file permissions. Please check your path. Note: This feature is only available in PHP 5 or higher."
+#: language/english/form_validation_lang.php:39
+#, php-format
+msgid "The %s field must contain a number greater than or equal to %s."
 msgstr ""
 
 #: language/english/ftp_lang.php:9
-msgid "Unable to upload the specified file. Please check your path."
+msgid "Unable to locate a valid connection ID. Please make sure you are connected before peforming any file routines."
 msgstr ""
 
 #: language/english/ftp_lang.php:10
-msgid "Unable to download the specified file. Please check your path."
+msgid "Unable to connect to your FTP server using the supplied hostname."
 msgstr ""
 
 #: language/english/ftp_lang.php:11
-msgid "Unable to locate the source file. Please check your path."
+msgid "Unable to login to your FTP server. Please check your username and password."
 msgstr ""
 
 #: language/english/ftp_lang.php:12
-msgid "Unable to rename the file."
+msgid "Unable to create the directory you have specified."
 msgstr ""
 
 #: language/english/ftp_lang.php:13
-msgid "Unable to delete the file."
+msgid "Unable to change directories."
 msgstr ""
 
 #: language/english/ftp_lang.php:14
+msgid "Unable to set file permissions. Please check your path. Note: This feature is only available in PHP 5 or higher."
+msgstr ""
+
+#: language/english/ftp_lang.php:15
+msgid "Unable to upload the specified file. Please check your path."
+msgstr ""
+
+#: language/english/ftp_lang.php:16
+msgid "Unable to download the specified file. Please check your path."
+msgstr ""
+
+#: language/english/ftp_lang.php:17
+msgid "Unable to locate the source file. Please check your path."
+msgstr ""
+
+#: language/english/ftp_lang.php:18
+msgid "Unable to rename the file."
+msgstr ""
+
+#: language/english/ftp_lang.php:19
+msgid "Unable to delete the file."
+msgstr ""
+
+#: language/english/ftp_lang.php:20
 msgid "Unable to move the file. Please make sure the destination directory exists."
 msgstr ""
 
-#: language/english/imglib_lang.php:3
+#: language/english/imglib_lang.php:9
 msgid "You must specify a source image in your preferences."
 msgstr ""
 
-#: language/english/imglib_lang.php:4
+#: language/english/imglib_lang.php:10
 msgid "The GD image library is required for this feature."
 msgstr ""
 
-#: language/english/imglib_lang.php:5
+#: language/english/imglib_lang.php:11
 msgid "Your server must support the GD image library in order to determine the image properties."
 msgstr ""
 
-#: language/english/imglib_lang.php:6
+#: language/english/imglib_lang.php:12
 msgid "Your server does not support the GD function required to process this type of image."
 msgstr ""
 
-#: language/english/imglib_lang.php:7
+#: language/english/imglib_lang.php:13
 msgid "GIF images are often not supported due to licensing restrictions.  You may have to use JPG or PNG images instead."
 msgstr ""
 
-#: language/english/imglib_lang.php:8
+#: language/english/imglib_lang.php:14
 msgid "JPG images are not supported."
 msgstr ""
 
-#: language/english/imglib_lang.php:9
+#: language/english/imglib_lang.php:15
 msgid "PNG images are not supported."
 msgstr ""
 
-#: language/english/imglib_lang.php:10
+#: language/english/imglib_lang.php:16
 msgid "The image resize protocol specified in your preferences only works with JPEG or PNG image types."
 msgstr ""
 
-#: language/english/imglib_lang.php:11
+#: language/english/imglib_lang.php:17
 msgid "An error was encountered while attempting to replace the file.  Please make sure your file directory is writable."
 msgstr ""
 
-#: language/english/imglib_lang.php:12
+#: language/english/imglib_lang.php:18
 msgid "Image rotation does not appear to be supported by your server."
 msgstr ""
 
-#: language/english/imglib_lang.php:13
+#: language/english/imglib_lang.php:19
 msgid "The path to your image library is not correct.  Please set the correct path in your image preferences."
 msgstr ""
 
-#: language/english/imglib_lang.php:14
+#: language/english/imglib_lang.php:20
 msgid "Image processing failed.  Please verify that your server supports the chosen protocol and that the path to your image library is correct."
 msgstr ""
 
-#: language/english/imglib_lang.php:15
+#: language/english/imglib_lang.php:21
 msgid "An angle of rotation is required to rotate the image."
 msgstr ""
 
-#: language/english/imglib_lang.php:16
+#: language/english/imglib_lang.php:22
 msgid "GIF image."
 msgstr ""
 
-#: language/english/imglib_lang.php:17
+#: language/english/imglib_lang.php:23
 msgid "The path to the image is not correct."
 msgstr ""
 
-#: language/english/imglib_lang.php:18
+#: language/english/imglib_lang.php:24
 msgid "The image copy routine failed."
 msgstr ""
 
-#: language/english/imglib_lang.php:19
+#: language/english/imglib_lang.php:25
 msgid "Unable to find a font to use."
 msgstr ""
 
-#: language/english/imglib_lang.php:20
+#: language/english/imglib_lang.php:26
 msgid "Unable to save the image.  Please make sure the image and file directory are writable."
 msgstr ""
 
-#: language/english/migration_lang.php:3
+#: language/english/migration_lang.php:9
 msgid "No migrations were found."
 msgstr ""
 
-#: language/english/migration_lang.php:4
+#: language/english/migration_lang.php:10
 msgid "This migration could not be found."
 msgstr ""
 
-#: language/english/migration_lang.php:5
+#: language/english/migration_lang.php:11
 #, php-format
 msgid "This are multiple migrations with the same version number: %d."
 msgstr ""
 
-#: language/english/migration_lang.php:6
+#: language/english/migration_lang.php:12
 #, php-format
 msgid "The migration class \"%s\" could not be found."
 msgstr ""
 
-#: language/english/migration_lang.php:7
+#: language/english/migration_lang.php:13
 #, php-format
 msgid "The migration class \"%s\" is missing an 'up' method."
 msgstr ""
 
-#: language/english/migration_lang.php:8
+#: language/english/migration_lang.php:14
 #, php-format
 msgid "The migration class \"%s\" is missing an 'down' method."
 msgstr ""
 
-#: language/english/migration_lang.php:9
+#: language/english/migration_lang.php:15
 #, php-format
 msgid "Migration \"%s\" has an invalid filename."
 msgstr ""
 
-#: language/english/profiler_lang.php:3
+#: language/english/profiler_lang.php:9
 msgid "DATABASE"
 msgstr ""
 
-#: language/english/profiler_lang.php:4
+#: language/english/profiler_lang.php:10
 msgid "CLASS/METHOD"
 msgstr ""
 
-#: language/english/profiler_lang.php:5
+#: language/english/profiler_lang.php:11
 msgid "BENCHMARKS"
 msgstr ""
 
-#: language/english/profiler_lang.php:6
+#: language/english/profiler_lang.php:12
 msgid "QUERIES"
 msgstr ""
 
-#: language/english/profiler_lang.php:7
+#: language/english/profiler_lang.php:13
 msgid "GET DATA"
 msgstr ""
 
-#: language/english/profiler_lang.php:8
+#: language/english/profiler_lang.php:14
 msgid "POST DATA"
 msgstr ""
 
-#: language/english/profiler_lang.php:9
+#: language/english/profiler_lang.php:15
 msgid "URI STRING"
 msgstr ""
 
-#: language/english/profiler_lang.php:10
+#: language/english/profiler_lang.php:16
 msgid "MEMORY USAGE"
 msgstr ""
 
-#: language/english/profiler_lang.php:11
+#: language/english/profiler_lang.php:17
 msgid "CONFIG VARIABLES"
 msgstr ""
 
-#: language/english/profiler_lang.php:12
+#: language/english/profiler_lang.php:18
 msgid "SESSION DATA"
 msgstr ""
 
-#: language/english/profiler_lang.php:13
+#: language/english/profiler_lang.php:19
 msgid "HTTP HEADERS"
 msgstr ""
 
-#: language/english/profiler_lang.php:14
+#: language/english/profiler_lang.php:20
 msgid "Database driver is not currently loaded"
 msgstr ""
 
-#: language/english/profiler_lang.php:15
+#: language/english/profiler_lang.php:21
 msgid "No queries were run"
 msgstr ""
 
-#: language/english/profiler_lang.php:16
+#: language/english/profiler_lang.php:22
 msgid "No POST data exists"
 msgstr ""
 
-#: language/english/profiler_lang.php:17
+#: language/english/profiler_lang.php:23
 msgid "No GET data exists"
 msgstr ""
 
-#: language/english/profiler_lang.php:18
+#: language/english/profiler_lang.php:24
 msgid "No URI data exists"
 msgstr ""
 
-#: language/english/profiler_lang.php:19
+#: language/english/profiler_lang.php:25
 msgid "Memory Usage Unavailable"
 msgstr ""
 
-#: language/english/profiler_lang.php:20
+#: language/english/profiler_lang.php:26
 msgid "No Profile data - all Profiler sections have been disabled."
 msgstr ""
 
-#: language/english/profiler_lang.php:21
+#: language/english/profiler_lang.php:27
 msgid "Hide"
 msgstr ""
 
-#: language/english/profiler_lang.php:22
+#: language/english/profiler_lang.php:28
 msgid "Show"
 msgstr ""
 
-#: language/english/unit_test_lang.php:3
+#: language/english/unit_test_lang.php:9
 msgid "Test Name"
 msgstr ""
 
-#: language/english/unit_test_lang.php:4
+#: language/english/unit_test_lang.php:10
 msgid "Test Datatype"
 msgstr ""
 
-#: language/english/unit_test_lang.php:5
+#: language/english/unit_test_lang.php:11
 msgid "Expected Datatype"
 msgstr ""
 
-#: language/english/unit_test_lang.php:6
+#: language/english/unit_test_lang.php:12
 msgid "Result"
 msgstr ""
 
-#: language/english/unit_test_lang.php:7
+#: language/english/unit_test_lang.php:13
 msgid "Undefined Test Name"
 msgstr ""
 
-#: language/english/unit_test_lang.php:8
+#: language/english/unit_test_lang.php:14
 msgid "File Name"
 msgstr ""
 
-#: language/english/unit_test_lang.php:9
+#: language/english/unit_test_lang.php:15
 msgid "Line Number"
 msgstr ""
 
-#: language/english/unit_test_lang.php:10
+#: language/english/unit_test_lang.php:16
 msgid "Passed"
 msgstr ""
 
-#: language/english/unit_test_lang.php:11
+#: language/english/unit_test_lang.php:17
 msgid "Failed"
 msgstr ""
 
-#: language/english/unit_test_lang.php:12
+#: language/english/unit_test_lang.php:18
 msgid "Boolean"
 msgstr ""
 
-#: language/english/unit_test_lang.php:13
+#: language/english/unit_test_lang.php:19
 msgid "Integer"
 msgstr ""
 
-#: language/english/unit_test_lang.php:14
-#: language/english/unit_test_lang.php:15
+#: language/english/unit_test_lang.php:20
+#: language/english/unit_test_lang.php:21
 msgid "Float"
 msgstr ""
 
-#: language/english/unit_test_lang.php:16
+#: language/english/unit_test_lang.php:22
 msgid "String"
 msgstr ""
 
-#: language/english/unit_test_lang.php:17
+#: language/english/unit_test_lang.php:23
 msgid "Array"
 msgstr ""
 
-#: language/english/unit_test_lang.php:18
+#: language/english/unit_test_lang.php:24
 msgid "Object"
 msgstr ""
 
-#: language/english/unit_test_lang.php:19
+#: language/english/unit_test_lang.php:25
 msgid "Resource"
 msgstr ""
 
-#: language/english/unit_test_lang.php:20
+#: language/english/unit_test_lang.php:26
 msgid "Null"
 msgstr ""
 
-#: language/english/unit_test_lang.php:21
+#: language/english/unit_test_lang.php:27
 msgid "Notes"
 msgstr ""
 
-#: language/english/upload_lang.php:3
+#: language/english/upload_lang.php:9
 msgid "Unable to find a post variable called userfile."
 msgstr ""
 
-#: language/english/upload_lang.php:4
+#: language/english/upload_lang.php:10
 msgid "The uploaded file exceeds the maximum allowed size in your PHP configuration file."
 msgstr ""
 
-#: language/english/upload_lang.php:5
+#: language/english/upload_lang.php:11
 msgid "The uploaded file exceeds the maximum size allowed by the submission form."
 msgstr ""
 
-#: language/english/upload_lang.php:6
+#: language/english/upload_lang.php:12
 msgid "The file was only partially uploaded."
 msgstr ""
 
-#: language/english/upload_lang.php:7
+#: language/english/upload_lang.php:13
 msgid "The temporary folder is missing."
 msgstr ""
 
-#: language/english/upload_lang.php:8
+#: language/english/upload_lang.php:14
 msgid "The file could not be written to disk."
 msgstr ""
 
-#: language/english/upload_lang.php:9
+#: language/english/upload_lang.php:15
 msgid "The file upload was stopped by extension."
 msgstr ""
 
-#: language/english/upload_lang.php:10
+#: language/english/upload_lang.php:16
 msgid "You did not select a file to upload."
 msgstr ""
 
-#: language/english/upload_lang.php:11
+#: language/english/upload_lang.php:17
 msgid "The filetype you are attempting to upload is not allowed."
 msgstr ""
 
-#: language/english/upload_lang.php:12
+#: language/english/upload_lang.php:18
 msgid "The file you are attempting to upload is larger than the permitted size."
 msgstr ""
 
-#: language/english/upload_lang.php:13
+#: language/english/upload_lang.php:19
 msgid "The image you are attempting to upload exceedes the maximum height or width."
 msgstr ""
 
-#: language/english/upload_lang.php:14
+#: language/english/upload_lang.php:20
 msgid "A problem was encountered while attempting to move the uploaded file to the final destination."
 msgstr ""
 
-#: language/english/upload_lang.php:15
+#: language/english/upload_lang.php:21
 msgid "The upload path does not appear to be valid."
 msgstr ""
 
-#: language/english/upload_lang.php:16
+#: language/english/upload_lang.php:22
 msgid "You have not specified any allowed file types."
 msgstr ""
 
-#: language/english/upload_lang.php:17
+#: language/english/upload_lang.php:23
 msgid "The file name you submitted already exists on the server."
 msgstr ""
 
-#: language/english/upload_lang.php:18
+#: language/english/upload_lang.php:24
 msgid "The upload destination folder does not appear to be writable."
+msgstr ""
+
+#: views/error_404.php:8
+msgid "The page you requested was not found"
+msgstr ""
+
+#: views/error_404.php:9
+msgid "It looks like this was the result of either a mistyped address or an out-of-date link"
+msgstr ""
+
+#: views/template.php:33
+msgid "News"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:6
+msgid "menu"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:14
+msgid "The Grid"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:16
+#: views/test/foundation/version3/top_bar.php:52
+msgid "Basics"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:17
+msgid "Float and collapse"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:18
+#: views/test/foundation/version3/top_bar.php:20
+msgid "Offset"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:19
+#: views/test/foundation/version3/top_bar.php:21
+msgid "Centered"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:20
+#: views/test/foundation/version3/top_bar.php:22
+msgid "Ordering"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:21
+msgid "Block grid"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:27
+#: views/test/foundation/top_bar.php:29
+msgid "Buttons"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:30
+msgid "Button Groups"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:31
+msgid "Even button Groups"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:32
+msgid "Button Bar"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:33
+msgid "Dropdown Buttons"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:34
+msgid "Split Buttons"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:40
+msgid "Sections"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:42
+msgid "Default"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:43
+#: views/test/foundation/version3/top_bar.php:80
+msgid "Accordion"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:44
+#: views/test/foundation/version3/top_bar.php:79
+msgid "Tabs"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:45
+#: views/test/foundation/version3/top_bar.php:66
+msgid "Vertical tabs"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:46
+msgid "Vertical nav"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:47
+msgid "Horizontal nav"
+msgstr ""
+
+#: views/test/foundation/top_bar.php:89
+msgid "Docs"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:12
+msgid "Grid"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:15
+msgid "Two per row"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:16
+msgid "N per row"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:17
+msgid "Don't float last"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:23
+msgid "Mobile"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:31
+msgid "Typo"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:34
+msgid "Headers"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:35
+msgid "Subheaders"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:38
+msgid "Lists"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:39
+msgid "Align/Float/Print"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:47
+msgid "Elements"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:53
+msgid "Group"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:54
+msgid "Bar"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:55
+msgid "Evenly sized"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:56
+msgid "Dropdown/split"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:63
+msgid "Link list"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:64
+msgid "Sub nav"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:65
+msgid "Phill tabs"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:67
+msgid "Horizontal bar"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:68
+msgid "Vertical bar"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:69
+msgid "Side nav"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:70
+msgid "Pagination"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:71
+msgid "Breadcrumbs"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:78
+msgid "Block grids"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:81
+msgid "Panels"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:86
+msgid "Alerts"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:87
+msgid "Labels"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:88
+msgid "Tooltips"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:89
+msgid "Progress Bars"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:90
+msgid "Thumbnails"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:91
+msgid "Video"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:99
+msgid "Forms"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:101
+msgid "Row layout"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:102
+msgid "Floating labels"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:103
+msgid "Pre/Post-fix"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:112
+msgid "Plugins"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:115
+msgid "Reveal"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:119
+msgid "Orbit"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:123
+msgid "Clearing"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:127
+msgid "Magellan"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:131
+msgid "Joyride"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:135
+msgid "Press Ctrl + M"
+msgstr ""
+
+#: views/test/foundation/version3/top_bar.php:177
+msgid "Button"
+msgstr ""
+
+#: views/test/login.php:33
+msgid "Log in"
+msgstr ""
+
+#: views/test/login.php:37
+msgid "Remember me"
 msgstr ""
