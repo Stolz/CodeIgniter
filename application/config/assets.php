@@ -17,7 +17,7 @@ For 'css' and 'js', if the filename starts with 'http' or '//' then it's assumed
 /******************************************************************************/
 
 $config['jquery'] = array(
-	'cdn'		=> '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js',
+	'cdn'		=> '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
 	'fallback'	=> 'typeof jQuery == "undefined"',
 	'js'		=> 'jquery.min',
 );
