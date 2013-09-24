@@ -56,7 +56,13 @@ class Welcome extends CI_Controller {
 		bindtextdomain('messages', APPPATH.'language/');
 		textdomain('messages');
 
-		$output = 'If the translation is not working check if the laguage is available in your system server (locale -a) and/or restart your web server <hr/>';
+
+		$this->load->library('cimarkdown');
+		$this->load->helper('file');
+		$output = $this->cimarkdown->markit(read_file(APPPATH.'language/README_LANG.md'));
+
+
+		$output .= 'If you followd the steps above you should see the gettext translations below the line. If the translation is not working check if the laguage is available in your system server (locale -a) and/or restart your web server <hr/>';
 		foreach(glob(APPPATH.'language/english/*.php') as $filename)
 		{
 			include $filename;
