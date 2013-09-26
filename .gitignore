@@ -8,11 +8,11 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 
-#Ignore editor backup files
 *~
 .*~
-.nfs00*
-
-#Ignore KDE stuff
+*.nfs00*
+*.kate-swp
+*.old
 .directory
 .inotify
+
