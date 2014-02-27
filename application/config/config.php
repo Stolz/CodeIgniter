@@ -221,9 +221,10 @@ $config['cache_path'] = '';
 |--------------------------------------------------------------------------
 |
 | If you use the Encryption class or the Session class you
-| MUST set an encryption key.  See the user guide for info.
+| MUST set an encryption key (32 characters in length).  See the user guide for info.
 |
 */
+// Length checker ========> '12345678901234567890123456789012';
 $config['encryption_key'] = 'to-do set a new key for every new project';
 
 /*
