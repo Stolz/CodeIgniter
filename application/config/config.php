@@ -251,7 +251,7 @@ $config['cache_path'] = '';
 |
 */
 // Length checker ========> '12345678901234567890123456789012';
-$config['encryption_key'] = 'to-do set a new key for every new project';
+$config['encryption_key'] = '12345678901234567890123456789012'; //to-do set a new key for every new project
 
 /*
 |--------------------------------------------------------------------------

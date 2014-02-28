@@ -13,6 +13,9 @@
 	}
 */
 
+require_once SYSDIR . '/libraries/Driver.php';
+require_once SYSDIR . '/libraries/Session/Session.php';
+
 class MY_Session extends CI_Session {
 
 	function __construct()

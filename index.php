@@ -33,7 +33,7 @@ switch (ENVIRONMENT)
 		error_reporting(-1);
 		ini_set('display_errors', 1);
 		break;
-		
+
 	case 'testing':
 		error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT);
 		ini_set('display_errors', 1);
@@ -41,7 +41,7 @@ switch (ENVIRONMENT)
 		error_reporting(0);
 		ini_set('display_errors', 0);
 		break;
-		
+
 	default:
 		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
 		echo 'The application environment is not set correctly.';
@@ -240,6 +240,14 @@ switch (ENVIRONMENT)
 	}
 
 	define('VIEWPATH', $view_folder);
+
+/* --------------------------------------------------------------------
+* Load the Datamapper ORM bootstrap file http://datamapper.wanwizard.eu/
+* --------------------------------------------------------------------
+*/
+// require_once APPPATH.'third_party/datamapper/bootstrap.php'; //to-do comment out if you want to use DATAMAPPER ORM
+
+
 
 /*
  * --------------------------------------------------------------------

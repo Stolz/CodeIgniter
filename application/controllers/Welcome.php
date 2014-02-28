@@ -30,7 +30,7 @@ class Welcome extends CI_Controller {
 	// Tests included basic auth system
 	public function login()
 	{
-		$this->load->library('session');
+		$this->load->driver('session');
 
 		if( ! $user = $this->session->user_is_logged())
 			redirect('auth/login');
@@ -274,7 +274,7 @@ class Welcome extends CI_Controller {
 			show_error('Unknown provider');
 
 		$this->load->library('OAuth2/OAuth2');
-		$this->load->library('session');
+		$this->load->driver('session');
 
 		$provider = $this->oauth2->provider($provider, $providers[$provider]);
 
