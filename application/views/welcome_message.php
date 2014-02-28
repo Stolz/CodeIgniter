@@ -8,9 +8,7 @@
 		<code>application/views/welcome_message.php</code>
 
 		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/index.html">User Guide</a>.</p>
+		<code>application/controllers/Welcome.php</code>
 
 		<?php if(ENVIRONMENT == 'development') : ?>
 		<hr/>
@@ -48,7 +46,7 @@
 		<?php endif ?>
 	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
+	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
 
 <script type="text/javascript">
