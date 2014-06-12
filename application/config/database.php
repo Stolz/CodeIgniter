@@ -50,9 +50,9 @@ $active_record = TRUE;
 
 //Production
 $db['production']['hostname'] = 'localhost';
-$db['production']['username'] = 'ci';
-$db['production']['password'] = 'to-do set your db passw';
-$db['production']['database'] = 'ci';
+$db['production']['username'] = 'to-do';
+$db['production']['password'] = 'to-do';
+$db['production']['database'] = 'to-do';
 $db['production']['dbdriver'] = 'mysqli'; //Set to 'mysql' if your PHP package is compiled without mysqli support
 $db['production']['dbprefix'] = '';
 $db['production']['pconnect'] = TRUE;
@@ -71,6 +71,9 @@ $db['testing']['db_debug'] = TRUE;
 
 //Development
 $db['development'] = $db['production'];
+$db['development']['username'] = 'codeigniter';
+$db['development']['password'] = 'codeigniter';
+$db['development']['database'] = 'codeigniter';
 $db['development']['db_debug'] = TRUE;
 $db['development']['stricton'] = TRUE;
 
