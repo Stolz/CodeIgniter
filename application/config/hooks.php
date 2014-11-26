@@ -17,6 +17,13 @@ $hook['display_override'][] = array(
 	'filepath' => 'hooks'
 );
 
+// This is required for https://github.com/dhrrgn/codeigniter-uhoh
+$hook['pre_system'] = array(
+	'function' => 'load_exceptions',
+	'filename' => 'uhoh.php',
+	'filepath' => 'hooks',
+);
+
 
 /* End of file hooks.php */
 /* Location: ./application/config/hooks.php */
